@@ -1,0 +1,45 @@
+.inicio{
+    padding: 120px 40px 60px; /* padding-top:120px + padding:60px 40px */
+    text-align: center;
+    background-color: #f3f2f9;
+}
+.card {
+    background: #eaf4ff;
+    /* navy blue oscuro */
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.card span {
+    font-size: 2.0rem;
+    opacity: 0.9;
+}
+
+/* Efecto hover */
+.card.hoverable:hover {
+    background: #1b263b;
+    /* un poco más claro */
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card.hoverable:hover h3 {
+    color: #ffffff;
+}

@@ -1,0 +1,141 @@
+/* Sección de inicio */
+.inicio {
+    padding: 60px 40px;
+    padding-top: 130px;
+    text-align: center;
+    background-color: #f3f2f9;
+}
+
+.inicio h1 {
+    font-size: 1.5em;
+}
+
+.inicio p {
+    font-size: 1em;
+}
+
+.servicio-small {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.1);
+    color: #9a9a9a;
+    transition: all .25s ease;
+}
+
+.servicio-small:hover {
+    background-color: #cbd0ff;
+}
+
+/* Seccion de servicios */
+.servicios {
+    color: #263238;
+    padding: 0;
+}
+
+.servicio {
+    padding: 80px;
+    color: #263238;
+}
+
+.servicio:nth-child(even) {
+    background-color: #f3f2f9;
+}
+
+.servicio:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.servicio .actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.servicio a {
+    background-color: #263238;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 30px;
+    transition: all 0.25s ease;
+}
+
+.servicio a:hover {
+    background-color: #34434b;
+}
+
+
+.panel-servicio-detalle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.servicio-detalle{
+    max-width: 46%;
+    background: #fff;
+    border-radius: 36px 6px 36px;
+    padding: 12px;
+    box-shadow: 3px 3px 9px #dfdfdf;
+    margin-bottom: 10px;
+}
+
+.servicio-detalle img{
+    float: left;
+    width: 75px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+
+.servicio-detalle h3{
+    margin: 0;
+    font-size: 1.5rem;
+}
+.servicio-detalle p{
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .inicio {
+        padding: 30px 20px;
+    }
+
+    .servicio .actions {
+        top: -15px;
+    }
+    
+    .servicio a {
+        padding: 10px;
+    }
+
+    .servicio {
+        padding: 40px;
+    }
+
+    .servicio-detalle{
+        max-width: 100%;
+    }
+
+    .servicio-detalle img{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio {
+        padding: 15px 10px;
+    }
+
+    .servicios a {
+        padding: 2px 15px;
+    }
+
+    .servicio {
+        padding: 10px;
+    }
+}
