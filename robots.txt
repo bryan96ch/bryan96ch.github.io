@@ -1,0 +1,8 @@
+# Permitir a todos los rastreadores acceder al sitio, excepto ciertas rutas privadas
+User-agent: *
+
+# Permitir acceso a las demás secciones
+Allow: /
+
+# Indicar el mapa del sitio para un mejor rastreo
+Sitemap: https://sysdevup.com/sitemap.xml
