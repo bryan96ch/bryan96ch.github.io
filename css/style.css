@@ -49,8 +49,9 @@
 :root {
   --fuente-titulo: Outfit, "Segoe UI", system-ui, sans-serif;
   --fuente-cuerpo: Karla, "Segoe UI", system-ui, sans-serif;
-  --crema: #fdf8f3;
+  --crema: #f4f7fb;
   --azul: #00478f;
+  --azul-hover: #0e72c5;
   --azul-suave: #e6f0f8;
   --arena: #f0e4d6;
   --arena-texto: #8a4a15;
@@ -62,7 +63,7 @@
   --borde: #d6c9ba;
   --divisor: #eee6dc;
   --radio-tarjeta: 20px;
-  --sombra-tarjeta: 0 2px 18px rgba(28, 43, 63, 0.06);
+  --sombra-tarjeta: 0 2px 18px rgba(0, 0, 0, 0.06);
 }
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,
@@ -276,20 +277,6 @@ a {
   font-weight: 700;
 }
 a:hover {
-  color: #007fff;
-}
-pre {
-  overflow-x: auto;
-  padding: 1.25em;
-  border: 1px solid #e6e6e6;
-  border-left-width: 5px;
-  margin: 1.6em 0;
-  font-size: 0.875em;
-  background: #fcfcfc;
-  white-space: pre;
-  word-wrap: normal;
-}
-code {
   color: #007fff;
 }
 .layout {
@@ -2076,18 +2063,6 @@ body[data-aos-easing="ease-out"] [data-aos] {
 body[data-aos-easing="ease-in-out"] [data-aos] {
   transition-timing-function: ease-in-out;
 }
-[data-aos][data-aos][data-aos-easing="ease-in-back"],
-body[data-aos-easing="ease-in-back"] [data-aos] {
-  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
-[data-aos][data-aos][data-aos-easing="ease-out-back"],
-body[data-aos-easing="ease-out-back"] [data-aos] {
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-[data-aos][data-aos][data-aos-easing="ease-in-out-back"],
-body[data-aos-easing="ease-in-out-back"] [data-aos] {
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
 [data-aos][data-aos][data-aos-easing="ease-in-sine"],
 body[data-aos-easing="ease-in-sine"] [data-aos] {
   transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -2475,7 +2450,7 @@ footer p {
   margin-top: 2rem;
   text-align: center;
 }
-.site-map h4 {
+.site-map h3 {
   color: #fff;
   margin-bottom: 0.5rem;
 }
@@ -2864,7 +2839,7 @@ footer p {
   transition: all 0.25s ease;
 }
 .inicio a:hover {
-  background-color: #1c9efb;
+  background-color: var(--azul-hover);
 }
 .inicio img {
   margin: 80px 0;
@@ -2924,7 +2899,7 @@ footer p {
   margin-bottom: 15px;
 }
 .servicio a:hover {
-  background-color: #db540c;
+  background-color: #a94109;
 }
 @media (max-width: 768px) {
   .inicio img {
@@ -3071,7 +3046,6 @@ ul li {
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
   text-transform: uppercase;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .plan .icon {
   font-size: 2.5rem;
@@ -3103,7 +3077,7 @@ ul li {
 }
 .plan.destacado {
   border: 2px solid var(--azul);
-  box-shadow: 0 6px 26px rgba(0, 71, 143, 0.12);
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.12);
 }
 .btn-contactar {
   margin-top: auto;
@@ -3136,9 +3110,9 @@ nav ul li a.btn-sistema {
   white-space: nowrap;
 }
 nav ul li a.btn-sistema:hover {
-  background: #1c9efb;
+  background: var(--azul-hover);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 71, 143, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 .header.scrolled nav ul li a.btn-sistema {
   color: #fff;
@@ -3187,25 +3161,18 @@ footer .contacto a:hover {
     no-repeat center / contain;
 }
 
-/* Cuadro de icono de tarjeta */
+/* Icono de tarjeta, suelto (sin cuadro contenedor) */
 .icon {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
   margin-bottom: 0.85rem;
-  border-radius: 15px;
-  background: var(--azul-suave);
   color: var(--azul);
 }
 .icon.calido {
-  background: #fbe9d8;
   color: var(--naranja);
 }
 .icon svg {
-  width: 25px;
-  height: 25px;
+  width: 34px;
+  height: 34px;
 }
 
 /* Aviso con icono al margen */
