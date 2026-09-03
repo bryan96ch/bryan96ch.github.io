@@ -3295,3 +3295,79 @@ footer .contacto a {
 footer .contacto a:hover {
   text-decoration: underline;
 }
+
+/* Listas de caracteristicas: el check se dibuja una vez en CSS,
+   en vez de repetir un emoji o un SVG en cada elemento. */
+.lista-check {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+}
+.lista-check li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.55;
+}
+.lista-check li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 1.05rem;
+  height: 1.05rem;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233d8f52' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+}
+
+/* Cuadro de icono de tarjeta */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.85rem;
+  border-radius: 15px;
+  background: var(--azul-suave);
+  color: var(--azul);
+}
+.icon.calido {
+  background: #fbe9d8;
+  color: var(--naranja);
+}
+.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* Aviso con icono al margen */
+.aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  text-align: left;
+}
+.aviso svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-top: 0.15rem;
+}
+
+.aviso-arena {
+  background: var(--arena);
+  color: var(--arena-texto);
+  padding: 1.5rem;
+  border-radius: var(--radio-tarjeta);
+  margin: 1.5rem 0;
+}
+.aviso-tarjeta {
+  max-width: 700px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+}
