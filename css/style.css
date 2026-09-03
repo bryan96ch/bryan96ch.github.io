@@ -1,3 +1,69 @@
+/* Fuentes del sitio: Outfit para titulos y botones, Karla para el cuerpo.
+   Ambas son variables, asi que un archivo por subconjunto cubre todos los pesos. */
+@font-face {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(../fonts/outfit-latin.woff2) format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(../fonts/outfit-latin-ext.woff2) format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(../fonts/karla-latin.woff2) format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(../fonts/karla-latin-ext.woff2) format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Sistema de diseno */
+:root {
+  --fuente-titulo: Outfit, "Segoe UI", system-ui, sans-serif;
+  --fuente-cuerpo: Karla, "Segoe UI", system-ui, sans-serif;
+  --crema: #fdf8f3;
+  --azul: #00478f;
+  --azul-suave: #e6f0f8;
+  --arena: #f0e4d6;
+  --arena-texto: #8a4a15;
+  --naranja: #c2601f;
+  --marino: #051634;
+  --texto: #1c2b3f;
+  --texto-suave: #5a6b80;
+  --verde: #3d8f52;
+  --borde: #d6c9ba;
+  --divisor: #eee6dc;
+  --radio-tarjeta: 20px;
+  --sombra-tarjeta: 0 2px 18px rgba(28, 43, 63, 0.06);
+}
 @font-face {
   font-family: Roboto;
   font-style: normal;
@@ -322,10 +388,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:
-    Gibson, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #001a33;
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--texto);
 }
 h2 {
   font-size: 2rem;
@@ -2321,10 +2387,11 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   transform: perspective(2500px) rotateX(0);
 }
 body {
-  font-family: Roboto, sans-serif;
+  font-family: var(--fuente-cuerpo);
   font-size: 16px;
-  line-height: 1.5;
-  color: #001c36;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--crema);
   overflow-x: hidden;
 }
 .center {
@@ -2352,7 +2419,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f6f8;
+  background-color: var(--crema);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition:
@@ -2905,7 +2972,7 @@ footer p {
   }
 }
 .inicio {
-  background-color: #f3f2f9;
+  background-color: var(--crema);
 }
 :where(h1) {
   font-size: 1em;
@@ -2938,7 +3005,7 @@ footer p {
   margin: 80px 0;
 }
 .servicios {
-  background-color: #fcfcfc;
+  background-color: var(--crema);
 }
 .servicios h2 {
   font-size: 3rem;
@@ -3020,7 +3087,7 @@ footer p {
   color: #263238;
 }
 .srv-servicios:nth-child(even) {
-  background-color: #f3f2f9;
+  background-color: var(--crema);
 }
 .srv-servicios:nth-child(odd) {
   background-color: #fff;
@@ -3102,7 +3169,7 @@ ul li {
   list-style: none;
 }
 .sec-planes {
-  background-color: #f3f2f9;
+  background-color: var(--crema);
 }
 .planes {
   display: grid;
