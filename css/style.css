@@ -3371,3 +3371,132 @@ footer .contacto a:hover {
   border-radius: var(--radio-tarjeta);
   box-shadow: var(--sombra-tarjeta);
 }
+
+/* Hero */
+.inicio h1 {
+  font-size: 3.6rem;
+  line-height: 1.08;
+  margin: 0 0 1.25rem;
+}
+.inicio p {
+  font-size: 1.05rem;
+  text-align: left;
+  color: var(--texto-suave);
+  max-width: 34rem;
+}
+.etiqueta-local {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: var(--arena);
+  color: var(--arena-texto);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.etiqueta-local svg {
+  width: 15px;
+  height: 15px;
+}
+.acciones-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.inicio a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.inicio a svg {
+  width: 19px;
+  height: 19px;
+}
+.inicio a.btn-secundario {
+  background: 0 0;
+  color: var(--texto);
+  border: 1.5px solid var(--borde);
+}
+.inicio a.btn-secundario:hover {
+  border-color: var(--azul);
+  color: var(--azul);
+}
+
+/* Banda de cierre */
+.banda-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 4.5rem;
+  padding: 3rem 3.5rem;
+  border-radius: 28px;
+  background: var(--azul);
+  color: #fff;
+}
+.banda-cta h2 {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+  color: #fff;
+}
+.banda-cta p {
+  margin: 0;
+  max-width: 30rem;
+  color: #c7ddf0;
+}
+.banda-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--azul);
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.banda-cta a svg {
+  width: 19px;
+  height: 19px;
+}
+.subtitulo-seccion {
+  margin: 0 0 2rem;
+  color: var(--texto-suave);
+}
+
+@media (max-width: 768px) {
+  .inicio h1 {
+    font-size: 2.4rem;
+  }
+  .acciones-hero {
+    margin-top: 1.5rem;
+  }
+  .banda-cta {
+    padding: 2.25rem 1.75rem;
+    border-radius: 22px;
+  }
+  .banda-cta h2 {
+    font-size: 1.6rem;
+  }
+  .banda-cta a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .inicio h1 {
+    font-size: 2.05rem;
+  }
+  .acciones-hero a {
+    width: 100%;
+    justify-content: center;
+  }
+}
