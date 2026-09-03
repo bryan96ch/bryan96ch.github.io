@@ -2432,6 +2432,7 @@ footer p {
   transition: all 0.5s ease;
 }
 .breadcrumb {
+  display: block;
   font-size: 0.7rem;
   margin-top: 1rem;
   color: #6a6a6a;
@@ -3262,6 +3263,13 @@ footer .contacto a:hover {
 .inicio a.btn-secundario:hover {
   border-color: var(--azul);
   color: var(--azul);
+}
+.inicio .breadcrumb a {
+  display: inline;
+  background: none;
+  padding: 0;
+  color: #6a6a6a;
+  border-radius: 0;
 }
 
 /* Banda de cierre */
