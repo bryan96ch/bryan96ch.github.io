@@ -4,7 +4,7 @@
     <!-- Página de inicio -->
     <url>
         <loc>https://sysdevup.com/</loc>
-        <lastmod>2026-09-02</lastmod>
+        <lastmod>2026-09-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -13,6 +13,14 @@
     <url>
         <loc>https://sysdevup.com/facturacion-electronica</loc>
         <lastmod>2026-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Asistente de WhatsApp con IA -->
+    <url>
+        <loc>https://sysdevup.com/asistente-whatsapp-con-ia</loc>
+        <lastmod>2026-09-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Asistente de WhatsApp con inteligencia artificial para tu negocio en Ecuador. Contesta horarios, precios y productos con tus propios datos, y pasa la conversación a una persona cuando hace falta. Desde $9,99 al mes.">
+    <meta name="keywords" content="asistente WhatsApp Ecuador, chatbot WhatsApp con IA, atención al cliente automática, WhatsApp Business API Ecuador, SysDevUp">
+    <meta name="author" content="SysDevUp">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Asistente de WhatsApp con IA | SysDevUp">
+    <meta property="og:description" content="Contesta a tus clientes por WhatsApp con los datos de tu negocio, día y noche. Desde $9,99 al mes.">
+    <meta property="og:image" content="https://sysdevup.com/media/img/fondo_servicios.png">
+    <meta property="og:image:alt" content="Asistente de WhatsApp con inteligencia artificial de SysDevUp">
+    <meta property="og:url" content="https://sysdevup.com/asistente-whatsapp-con-ia">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SysDevUp">
+    <meta property="og:locale" content="es_EC">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Asistente de WhatsApp con IA | SysDevUp">
+    <meta name="twitter:description" content="Atiende WhatsApp automáticamente con los datos de tu negocio. Desde $9,99 al mes.">
+    <meta name="twitter:image" content="https://sysdevup.com/media/img/fondo_servicios.png">
+    <link rel="icon" type="image/png" href="media/img/icono.png">
+    <title>Asistente de WhatsApp con IA en Ecuador | Desde $9,99/mes | SysDevUp</title>
+    <link rel="canonical" href="https://sysdevup.com/asistente-whatsapp-con-ia">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Atención Inteligente SysDevUp",
+        "description": "Asistente de WhatsApp con inteligencia artificial que responde a tus clientes con los datos de tu negocio y pasa la conversación a una persona cuando hace falta.",
+        "brand": {
+            "@type": "Organization",
+            "@id": "https://sysdevup.com/#organizacion",
+            "name": "SysDevUp"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "9.99",
+            "highPrice": "129.99",
+            "priceCurrency": "USD",
+            "offerCount": "4"
+        },
+        "image": "https://sysdevup.com/media/img/fondo_servicios.png",
+        "url": "https://sysdevup.com/asistente-whatsapp-con-ia"
+    }
+    </script>
+    <link rel="stylesheet" href="css/style.min.css?1.2.7">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué necesito para usar el asistente de WhatsApp?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un número de teléfono dedicado al asistente. Un número conectado a la API de WhatsApp de Meta deja de funcionar en la aplicación normal de WhatsApp, así que conviene usar uno distinto al que llevas en el bolsillo. Nosotros nos encargamos de la conexión con Meta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿El asistente inventa precios o respuestas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Los precios y los productos salen del catálogo que tú cargas, y si le preguntan algo que no tiene que ver con tu negocio, no lo contesta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa cuando un cliente quiere hablar con una persona?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El asistente avisa por WhatsApp al asesor de turno y le deja el hilo. Si nadie puede atenderlo en ese momento, la conversación queda marcada en la bandeja para que tu equipo la vea y nadie se quede sin respuesta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo se cuentan los mensajes del plan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Solo se cuentan los mensajes que salen, los conteste el asistente o una persona de tu equipo. Lo que te escriben tus clientes no consume nada, y seguir recibiendo mensajes nunca se corta, aunque se termine el cupo del mes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo responder yo mismo desde el sistema?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Tienes una bandeja con todas las conversaciones, y cuando tomas una el asistente deja de responder en ese hilo hasta que se lo devuelves."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Sirve para enviar promociones a toda mi lista de clientes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. El asistente responde a quien te escribe; no es una herramienta de envíos masivos ni de campañas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo contratarlo junto con la facturación electrónica?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Son servicios separados con su propio plan: puedes contratar solo la atención por WhatsApp, solo la facturación electrónica, o los dos en la misma cuenta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo cambiar lo que responde el asistente?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, desde el sistema y sin programar. Tú escribes los datos de tu negocio, eliges qué productos puede ofrecer, decides qué temas contesta y cómo se presenta."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body class="color-dark-blue">
+    <header>
+        <div class="header">
+            <a href="./" class="logo hide-on-small"><img src="media/img/logo.png" alt="SysDevUp" height="70"></a>
+            <nav class="nav hide-on-medium" id="nav">
+                <ul>
+                    <li><a href="./">Inicio</a></li>
+                    <li><a href="crear-paginas-web-para-tu-negocio">Páginas web</a></li>
+                    <li><a href="facturacion-electronica">Facturación electrónica</a></li>
+                    <li><a href="asistente-whatsapp-con-ia">Atención IA</a></li>
+                    <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer" class="btn-sistema">Acceder al sistema</a></li>
+                </ul>
+            </nav>
+            <a href="#!" class="menu-btn" id="btn_menu_mobile" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="inicio">
+            <div class="row middle-lg">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-7">
+                    <h1 data-aos="fade-right">Tu WhatsApp contestado,<br>también cuando cierras</h1>
+                    <p data-aos="zoom-in">Un asistente que responde con los datos de tu negocio y le pasa la conversación a tu equipo cuando el cliente pide hablar con alguien.</p>
+                    <nav class="breadcrumb" data-aos="fade-in" data-aos-delay="600">
+                        <a href="./">Inicio</a>&nbsp;/&nbsp;
+                        <span>Atención Inteligente</span>
+                    </nav>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-5">
+                    <img src="media/img/hero-asistente.svg" alt="Asistente de WhatsApp respondiendo a un cliente" width="100%" data-aos="zoom-in">
+                </div>
+            </div>
+        </section>
+
+        <section style="max-width:900px;margin:3rem auto;padding:1rem;">
+            <h2>Contesta con lo tuyo, no con frases genéricas</h2>
+            <p>La mayoría de los mensajes que recibe un negocio son las mismas cinco preguntas: a qué hora abren, dónde quedan, cuánto cuesta, si hay envío y cómo se paga. El asistente las contesta con lo que tú cargaste una sola vez, y deja para tu equipo las conversaciones que de verdad necesitan una persona.</p>
+
+            <div class="aviso-arena">
+                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M12 8v5M12 16.2v.1"></path></svg><span><strong>Importante:</strong> el asistente necesita un número de teléfono dedicado. Un número conectado a la API de WhatsApp de Meta deja de funcionar en la aplicación normal de WhatsApp, así que no conviene usar el que llevas en el bolsillo. Nosotros nos encargamos de la conexión con Meta.</span></p>
+            </div>
+
+            <h2>Qué hace el asistente</h2>
+            <ul class="lista-check">
+                <li>Responde por WhatsApp todos los días, a cualquier hora</li>
+                <li>Contesta horarios, ubicación, formas de pago y envíos con los datos de tu negocio</li>
+                <li>Dice precios y disponibilidad tomándolos de tu catálogo, sin inventar ninguno</li>
+                <li>Ofrece un menú de opciones que tú escribes y ordenas</li>
+                <li>Pasa la conversación a una persona de tu equipo cuando el cliente lo pide</li>
+                <li>Deja marcada la conversación cuando nadie pudo atender el pedido</li>
+                <li>Guarda todas las conversaciones en una bandeja que puedes leer y responder a mano</li>
+                <li>No se sale del tema de tu negocio, por más que le pregunten</li>
+                <li>Se configura desde el sistema, sin programar y sin depender de nosotros</li>
+            </ul>
+        </section>
+
+        <section style="max-width:1100px;margin:3rem auto;padding:1rem;">
+            <h2 style="text-align:center;">Cómo funciona</h2>
+            <p class="subtitulo-seccion" style="text-align:center;max-width:700px;margin:0 auto 1.5rem;">Cuatro pasos, y solo el segundo lo haces tú.</p>
+            <div class="row" style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-top:1.5rem;">
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"></rect><path d="M10.5 5.5h3M11 18.5h2"></path></svg></div>
+                    <h3>1. Conectamos tu número</h3>
+                    <p>Nos ocupamos del trámite con Meta y de dejar el número respondiendo.</p>
+                </div>
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon calido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h10"></path></svg></div>
+                    <h3>2. Cargas tus datos</h3>
+                    <p>Horarios, dirección, pagos, envíos y los productos que quieres que ofrezca.</p>
+                </div>
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.6A8.5 8.5 0 1 1 20.5 12z"></path><path d="M8.5 11h7M8.5 14.5h4"></path></svg></div>
+                    <h3>3. Empieza a contestar</h3>
+                    <p>Desde el primer mensaje, con tu información y sin frases prestadas.</p>
+                </div>
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M17 7.5h5M19.5 5v5"></path></svg></div>
+                    <h3>4. Tu equipo entra</h3>
+                    <p>Cuando el cliente pide una persona, el hilo llega al asesor de turno.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="max-width:1100px;margin:3rem auto;padding:1rem;">
+            <h2 style="text-align:center;">Por qué no es un chatbot cualquiera</h2>
+            <div class="row" style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-top:1.5rem;">
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"></rect><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2.5"></path></svg></div>
+                    <h3>No inventa precios</h3>
+                    <p>Si un precio no está en tu catálogo, el asistente no lo dice. Prefiere no responder antes que darle a tu cliente un número equivocado.</p>
+                </div>
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z"></path></svg></div>
+                    <h3>Escribe, no repite</h3>
+                    <p>Redacta cada respuesta con tus datos en vez de pegar un texto fijo, así que contesta lo que le preguntaron y no lo más parecido.</p>
+                </div>
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon calido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16.5 12.5a3.5 3.5 0 1 0 0-7M17 20a6.6 6.6 0 0 0-2-4.7"></path></svg></div>
+                    <h3>Sabe cuándo salirse</h3>
+                    <p>Cuando el cliente pide una persona, avisa al asesor de turno; y si nadie pudo atenderlo, la conversación queda marcada para que no se pierda.</p>
+                </div>
+                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M3 12h3M18 12h3M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"></path><circle cx="12" cy="12" r="3.4"></circle></svg></div>
+                    <h3>Lo manejas tú</h3>
+                    <p>Cambias horarios, precios, productos y respuestas desde el sistema, cuando quieras, sin pedirle nada a nadie.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-planes">
+            <h2 style="text-align:center;">Planes de atención inteligente</h2>
+            <p style="text-align:center;max-width:700px;margin:0 auto 1rem;">Elige según cuántos mensajes envías al mes. Todos incluyen el asistente completo, la bandeja de conversaciones y el pase a una persona: lo que cambia es el volumen.</p>
+            <p style="text-align:center;max-width:700px;margin:0 auto 2rem;">Solo se cuentan los mensajes que salen. Lo que te escriben tus clientes no consume nada, y seguir recibiendo nunca se corta.</p>
+            <div class="planes">
+
+                <div class="plan gratis" data-aos="fade-up">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5h5v3.6l3.8 8.4a3 3 0 0 1-2.7 4.3H8.4a3 3 0 0 1-2.7-4.3l3.8-8.4z"></path><path d="M8 3.5h8M7.4 13.5h9.2"></path></svg></div>
+                    <h3>Bot Inicio</h3>
+                    <p class="tagline">Para probar el asistente en tu negocio</p>
+                    <p><span class="precio">$9,99</span> /mes</p>
+                    <p>Hasta <strong>200 mensajes al mes</strong></p>
+                    <ul class="lista-check">
+                        <li>4 temas que el asistente contesta</li>
+                        <li>Hasta 10 productos en el catálogo</li>
+                        <li>Datos del negocio: horarios, ubicación, pagos y envíos</li>
+                        <li>Bandeja de conversaciones</li>
+                        <li>Pase a una persona</li>
+                        <li>Volumen pensado para probarlo: a este ritmo todavía puedes responder tú</li>
+                    </ul>
+                    <a href="https://wa.me/+593999823447?text=Quiero probar el plan BOT INICIO de atención inteligente." target="_blank" rel="noopener noreferrer" class="btn-contactar">Quiero probarlo</a>
+                </div>
+
+                <div class="plan basico" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 8.5v7L12 20l-8.5-4.5v-7L12 4z"></path><path d="M3.5 8.5L12 13l8.5-4.5M12 13v7"></path></svg></div>
+                    <h3>Bot Emprende</h3>
+                    <p class="tagline">Para negocios con consultas todos los días</p>
+                    <p><span class="precio">$39,99</span> /mes</p>
+                    <p>Hasta <strong>1.000 mensajes al mes</strong></p>
+                    <ul class="lista-check">
+                        <li>Todo lo del plan Inicio</li>
+                        <li>6 temas que el asistente contesta</li>
+                        <li>Hasta 15 productos en el catálogo</li>
+                        <li>Asesores con turnos para el pase a una persona</li>
+                        <li>Multiusuario para tu equipo</li>
+                        <li>Soporte por WhatsApp</li>
+                    </ul>
+                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan BOT EMPRENDE de atención inteligente." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
+                </div>
+
+                <div class="plan negocio destacado" data-aos="fade-up" data-aos-delay="200">
+                    <div class="badge">Más elegido</div>
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.9l6.1-.8z"></path></svg></div>
+                    <h3>Bot Negocio</h3>
+                    <p class="tagline">Para quien ya vende por WhatsApp y no quiere perder mensajes</p>
+                    <p><span class="precio">$69,99</span> /mes</p>
+                    <p>Hasta <strong>1.650 mensajes al mes</strong></p>
+                    <ul class="lista-check">
+                        <li>Todo lo del plan Emprende</li>
+                        <li>10 temas que el asistente contesta</li>
+                        <li>Hasta 25 productos en el catálogo</li>
+                        <li>Bandeja compartida con avisos de quien espera a una persona</li>
+                        <li>Acompañamiento en la configuración inicial</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan BOT NEGOCIO de atención inteligente." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
+                </div>
+
+                <div class="plan premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4zM8 5.5H5.5A2.5 2.5 0 0 0 8 10M16 5.5h2.5A2.5 2.5 0 0 1 16 10M10 13.5h4M12 13.5V17M9 20h6"></path></svg></div>
+                    <h3>Bot Pro</h3>
+                    <p class="tagline">Para alto volumen de conversaciones</p>
+                    <p><span class="precio">$129,99</span> /mes</p>
+                    <p>Hasta <strong>2.900 mensajes al mes</strong></p>
+                    <ul class="lista-check">
+                        <li>Todo lo del plan Negocio</li>
+                        <li>15 temas que el asistente contesta</li>
+                        <li>Hasta 35 productos en el catálogo</li>
+                        <li>Configuración inicial hecha con tu equipo</li>
+                        <li>Revisión de las respuestas del asistente</li>
+                        <li>Atención preferencial</li>
+                    </ul>
+                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan BOT PRO de atención inteligente." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
+                </div>
+
+            </div>
+            <div class="aviso-tarjeta">
+                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 17v.1"></path></svg><span><strong>¿No sabes cuántos mensajes envías?</strong> Escríbenos y lo estimamos juntos mirando tu WhatsApp de un mes normal. Puedes empezar por un plan y cambiarlo después.</span></p>
+            </div>
+        </section>
+
+        <section id="preguntas-frecuentes" style="max-width:900px;margin:3rem auto;padding:1rem;">
+            <h2>Preguntas frecuentes sobre el asistente de WhatsApp</h2>
+            <h3 style="margin-bottom:.35rem;">¿Qué necesito para usar el asistente de WhatsApp?</h3>
+            <p style="margin-top:0;">Un número de teléfono dedicado al asistente. Un número conectado a la API de WhatsApp de Meta deja de funcionar en la aplicación normal de WhatsApp, así que conviene usar uno distinto al que llevas en el bolsillo. Nosotros nos encargamos de la conexión con Meta.</p>
+            <h3 style="margin-bottom:.35rem;">¿El asistente inventa precios o respuestas?</h3>
+            <p style="margin-top:0;">No. Los precios y los productos salen del catálogo que tú cargas, y si le preguntan algo que no tiene que ver con tu negocio, no lo contesta.</p>
+            <h3 style="margin-bottom:.35rem;">¿Qué pasa cuando un cliente quiere hablar con una persona?</h3>
+            <p style="margin-top:0;">El asistente avisa por WhatsApp al asesor de turno y le deja el hilo. Si nadie puede atenderlo en ese momento, la conversación queda marcada en la bandeja para que tu equipo la vea y nadie se quede sin respuesta.</p>
+            <h3 style="margin-bottom:.35rem;">¿Cómo se cuentan los mensajes del plan?</h3>
+            <p style="margin-top:0;">Solo se cuentan los mensajes que salen, los conteste el asistente o una persona de tu equipo. Lo que te escriben tus clientes no consume nada, y seguir recibiendo mensajes nunca se corta, aunque se termine el cupo del mes.</p>
+            <h3 style="margin-bottom:.35rem;">¿Puedo responder yo mismo desde el sistema?</h3>
+            <p style="margin-top:0;">Sí. Tienes una bandeja con todas las conversaciones, y cuando tomas una el asistente deja de responder en ese hilo hasta que se lo devuelves.</p>
+            <h3 style="margin-bottom:.35rem;">¿Sirve para enviar promociones a toda mi lista de clientes?</h3>
+            <p style="margin-top:0;">No. El asistente responde a quien te escribe; no es una herramienta de envíos masivos ni de campañas.</p>
+            <h3 style="margin-bottom:.35rem;">¿Puedo contratarlo junto con la facturación electrónica?</h3>
+            <p style="margin-top:0;">Sí. Son servicios separados con su propio plan: puedes contratar solo la atención por WhatsApp, solo la <a href="facturacion-electronica">facturación electrónica</a>, o los dos en la misma cuenta.</p>
+            <h3 style="margin-bottom:.35rem;">¿Puedo cambiar lo que responde el asistente?</h3>
+            <p style="margin-top:0;">Sí, desde el sistema y sin programar. Tú escribes los datos de tu negocio, eliges qué productos puede ofrecer, decides qué temas contesta y cómo se presenta.</p>
+        </section>
+
+        <section class="banda-cta">
+            <div>
+                <h2>¿Vemos cómo contestaría en tu negocio?</h2>
+                <p>Cuéntanos qué te preguntan tus clientes todos los días y te mostramos cómo quedaría el asistente respondiéndolo.</p>
+            </div>
+            <a href="https://wa.me/+593999823447?text=Hola, quiero información sobre el asistente de WhatsApp con IA. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"></path></svg> Escribir por WhatsApp</a>
+        </section>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 center">
+                <img src="media/img/logo_blanco.png" alt="SysDevUp" height="150">
+                <address class="contacto">
+                    <span>Quito, Ecuador</span>
+                    <a href="tel:+593999823447">+593 99 982 3447</a>
+                </address>
+                <p>&copy; 2026 <strong><a href="https://sysdevup.com" target="_blank" rel="noopener noreferrer">SysDevUp.</a></strong> Todos los derechos reservados.</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+                <div class="site-map">
+                    <h3>Mapa del sitio</h3>
+                    <ul>
+                        <li><a href="./">Inicio</a></li>
+                        <li><a href="crear-paginas-web-para-tu-negocio">Páginas web</a></li>
+                        <li><a href="facturacion-electronica">Facturación electrónica</a></li>
+                        <li><a href="asistente-whatsapp-con-ia">Atención inteligente</a></li>
+                        <li><a href="politica-de-privacidad">Política de Privacidad</a></li>
+                        <li><a href="terminos-y-condiciones">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="Consultar por WhatsApp"><img src="media/img/whatsapp.png" alt="WhatsApp" width="64"></a>
+    <script src="js/index.min.js?1.1.1"></script>
+</body>
+
+</html>
