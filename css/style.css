@@ -60,6 +60,8 @@
   --texto: #1c2b3f;
   --texto-suave: #5a6b80;
   --verde: #3d8f52;
+  --verde-suave: #e7f3ea;
+  --verde-texto: #1f5c33;
   --borde: #d6c9ba;
   --divisor: #eee6dc;
   --radio-tarjeta: 20px;
@@ -3199,6 +3201,13 @@ footer .contacto a:hover {
 .aviso-arena {
   background: var(--arena);
   color: var(--arena-texto);
+  padding: 1.5rem;
+  border-radius: var(--radio-tarjeta);
+  margin: 1.5rem 0;
+}
+.aviso-verde {
+  background: var(--verde-suave);
+  color: var(--verde-texto);
   padding: 1.5rem;
   border-radius: var(--radio-tarjeta);
   margin: 1.5rem 0;
