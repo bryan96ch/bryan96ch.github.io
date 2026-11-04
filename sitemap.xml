@@ -33,14 +33,6 @@
         <priority>0.9</priority>
     </url>
 
-    <!-- Página de creación de páginas web -->
-    <url>
-        <loc>https://sysdevup.com/crear-paginas-web-para-tu-negocio</loc>
-        <lastmod>2026-09-02</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
     <!-- Política de privacidad -->
     <url>
         <loc>https://sysdevup.com/politica-de-privacidad</loc>
