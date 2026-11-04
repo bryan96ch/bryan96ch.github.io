@@ -25,6 +25,14 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- Sistema contable -->
+    <url>
+        <loc>https://sysdevup.com/sistema-contable</loc>
+        <lastmod>2026-11-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- Consultorios médicos -->
     <url>
         <loc>https://sysdevup.com/software-para-consultorios-medicos</loc>
