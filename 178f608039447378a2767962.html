@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="es-EC">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Revisión contable SYSDEVUP</title>
+<style>
+:root {
+  --fondo: #f4f3ee;
+  --papel: #ffffff;
+  --tinta: #1c222a;
+  --suave: #5b6571;
+  --linea: #dedbd2;
+  --linea-fuerte: #c9c5b9;
+  --acento: #0e5b6e;
+  --acento-suave: #e2eff1;
+  --sobre-acento: #ffffff;
+  --ok: #1d7347;
+  --ok-suave: #e3f2e9;
+  --cambiar: #9a5600;
+  --cambiar-suave: #fbeedb;
+  --duda: #2d56a1;
+  --duda-suave: #e4ebf7;
+  --marca: #fff4c2;
+  --sombra: 0 1px 2px rgba(20, 24, 30, .06), 0 4px 14px rgba(20, 24, 30, .05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #14171b;
+    --papel: #1c2026;
+    --tinta: #e6e9ed;
+    --suave: #9aa4af;
+    --linea: #2e343c;
+    --linea-fuerte: #3b424b;
+    --acento: #5fb6c9;
+    --acento-suave: #1d3138;
+    --sobre-acento: #0d1418;
+    --ok: #6ccf98;
+    --ok-suave: #1b3226;
+    --cambiar: #f0b45e;
+    --cambiar-suave: #3a2c17;
+    --duda: #8fb0ee;
+    --duda-suave: #1e2a40;
+    --marca: #3d3615;
+    --sombra: none;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #14171b;
+  --papel: #1c2026;
+  --tinta: #e6e9ed;
+  --suave: #9aa4af;
+  --linea: #2e343c;
+  --linea-fuerte: #3b424b;
+  --acento: #5fb6c9;
+  --acento-suave: #1d3138;
+  --sobre-acento: #0d1418;
+  --ok: #6ccf98;
+  --ok-suave: #1b3226;
+  --cambiar: #f0b45e;
+  --cambiar-suave: #3a2c17;
+  --duda: #8fb0ee;
+  --duda-suave: #1e2a40;
+  --marca: #3d3615;
+  --sombra: none;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 84px; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.envoltura { max-width: 940px; margin: 0 auto; padding: 0 16px; }
+.puerta {
+  position: fixed; inset: 0; z-index: 100; background: var(--fondo);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+}
+.puerta[hidden] { display: none; }
+.puerta form { max-width: 420px; width: 100%; }
+.puerta h1 { font-size: 26px; }
+.puerta .fila { display: flex; gap: 8px; margin-top: 10px; }
+.puerta .error { color: var(--cambiar); font-size: 14px; min-height: 22px; margin: 6px 0 0; }
+header.portada { padding: 40px 0 24px; }
+.sello { display: inline-block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--acento); font-weight: 700; margin-bottom: 10px; }
+h1 { font-size: clamp(26px, 4.4vw, 36px); line-height: 1.2; margin: 0 0 12px; letter-spacing: -.01em; }
+.bajada { font-size: 18px; color: var(--suave); margin: 0 0 22px; max-width: 780px; }
+.tarjeta { background: var(--papel); border: 1px solid var(--linea); border-radius: 12px; padding: 22px 24px; box-shadow: var(--sombra); }
+.tarjeta + .tarjeta { margin-top: 16px; }
+.datos-clave { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 16px; }
+.dato { background: var(--acento-suave); border-radius: 10px; padding: 12px 14px; }
+.dato strong { display: block; font-size: 20px; color: var(--acento); line-height: 1.2; }
+.dato span { font-size: 14px; color: var(--suave); }
+label.campo { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--suave); }
+input[type="text"], input[type="password"], input[type="search"], select, textarea {
+  font: inherit; font-size: 15px; color: var(--tinta); background: var(--papel);
+  border: 1px solid var(--linea-fuerte); border-radius: 8px; padding: 8px 10px; width: 100%;
+}
+input:disabled, textarea:disabled, select:disabled { background: var(--fondo); cursor: not-allowed; }
+input:focus, select:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--acento); outline-offset: 1px; }
+ol.pasos { margin: 8px 0 0; padding-left: 22px; }
+ol.pasos li { margin: 6px 0; }
+.nombre-fila { display: flex; gap: 10px; align-items: end; margin-top: 16px; }
+.nombre-fila .campo { flex: 1; }
+.como { margin: 10px 0 0; font-size: 15px; }
+.como strong { color: var(--acento); }
+.boton {
+  font: inherit; font-size: 15px; font-weight: 600; border-radius: 8px; padding: 8px 14px; cursor: pointer;
+  border: 1px solid var(--acento); background: var(--acento); color: var(--sobre-acento); white-space: nowrap;
+}
+.boton.secundario { background: transparent; color: var(--acento); }
+.punto .boton { white-space: normal; text-align: left; }
+.boton:hover:not(:disabled) { filter: brightness(1.08); }
+.boton:disabled { opacity: .45; cursor: not-allowed; }
+.enlace { font: inherit; font-size: 14px; background: none; border: 0; color: var(--acento); text-decoration: underline; cursor: pointer; padding: 0; }
+.barra {
+  position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--fondo) 94%, transparent);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--linea);
+}
+.barra .envoltura { display: flex; align-items: center; gap: 14px; padding-top: 10px; padding-bottom: 10px; }
+.progreso { flex: 1 1 auto; min-width: 0; }
+.progreso-texto { font-size: 14px; color: var(--suave); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.progreso-barra { height: 6px; background: var(--linea); border-radius: 99px; overflow: hidden; margin-top: 4px; }
+.progreso-barra span { display: block; height: 100%; width: 0; background: var(--acento); transition: width .25s; }
+.barra .indice-enlace { font-size: 14px; color: var(--acento); white-space: nowrap; }
+.aviso-nombre { background: var(--cambiar-suave); color: var(--cambiar); border-radius: 10px; padding: 10px 14px; margin: 14px 0 0; font-size: 15px; }
+.aviso-nombre[hidden] { display: none; }
+nav.indice { margin: 24px 0 8px; }
+nav.indice ol { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+nav.indice li a { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; color: var(--tinta); text-decoration: none; border-bottom: 1px dashed var(--linea); }
+nav.indice li a:hover .t { color: var(--acento); text-decoration: underline; }
+nav.indice .n { color: var(--acento); font-weight: 700; min-width: 18px; }
+nav.indice .t { flex: 1; }
+nav.indice .min, nav.indice .hecho { font-size: 13px; color: var(--suave); white-space: nowrap; }
+nav.indice .hecho.completo { color: var(--ok); font-weight: 600; }
+.pie-indice { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; font-size: 14px; color: var(--suave); }
+section.parte { margin: 40px 0; }
+section.parte > h2 { font-size: 24px; line-height: 1.25; margin: 0 0 4px; }
+section.parte > h2 .num { color: var(--acento); font-variant-numeric: tabular-nums; margin-right: 8px; }
+section.parte > h2 .min { font-size: 14px; font-weight: 400; color: var(--suave); margin-left: 8px; white-space: nowrap; }
+section.parte > .intro { color: var(--suave); margin: 0 0 16px; }
+h3 { font-size: 18px; margin: 0 0 6px; line-height: 1.35; }
+h4 { font-size: 16px; margin: 18px 0 6px; }
+p { margin: 0 0 10px; }
+ul, ol { margin: 0 0 10px; }
+li { margin: 3px 0; }
+.punto { background: var(--papel); border: 1px solid var(--linea); border-left: 4px solid var(--linea-fuerte); border-radius: 10px; padding: 16px 18px; margin: 14px 0; box-shadow: var(--sombra); }
+.punto.est-ok { border-left-color: var(--ok); }
+.punto.est-cambiar { border-left-color: var(--cambiar); }
+.punto.est-duda { border-left-color: var(--duda); }
+.punto.est-escrito { border-left-color: var(--acento); }
+.punto h3 .id { color: var(--acento); margin-right: 6px; font-variant-numeric: tabular-nums; }
+.resp { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--linea); }
+.opciones { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.opciones button {
+  font: inherit; font-size: 14px; cursor: pointer; border-radius: 99px; padding: 5px 14px;
+  border: 1px solid var(--linea-fuerte); background: transparent; color: var(--tinta);
+}
+.opciones button:disabled { cursor: not-allowed; opacity: .55; }
+.opciones button.ok.sel { background: var(--ok-suave); border-color: var(--ok); color: var(--ok); font-weight: 600; }
+.opciones button.cambiar.sel { background: var(--cambiar-suave); border-color: var(--cambiar); color: var(--cambiar); font-weight: 600; }
+.opciones button.duda.sel { background: var(--duda-suave); border-color: var(--duda); color: var(--duda); font-weight: 600; }
+.resp textarea { min-height: 64px; resize: vertical; }
+.punto[data-tipo="abierta"] .resp textarea { min-height: 96px; }
+.nota-al-pie { font-size: 14px; color: var(--suave); }
+.tabla-scroll { overflow: auto; border: 1px solid var(--linea); border-radius: 10px; background: var(--papel); }
+.tabla-scroll.alta { max-height: 72vh; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 7px 10px; border-bottom: 1px solid var(--linea); }
+thead th { position: sticky; top: 0; background: var(--papel); z-index: 2; font-size: 13px; color: var(--suave); font-weight: 600; box-shadow: inset 0 -1px 0 var(--linea-fuerte); }
+tbody tr:last-child td { border-bottom: 0; }
+td.num, .mono { font-family: "Cascadia Mono", Consolas, "SFMono-Regular", Menlo, monospace; font-size: 13px; white-space: nowrap; }
+td.importe, th.importe { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.grupo td.nombre { font-weight: 600; }
+tr.propia td { background: var(--marca); }
+tr.con-nota td { background: var(--cambiar-suave); }
+td.nota-celda { min-width: 210px; }
+td.nota-celda input { padding: 5px 8px; font-size: 13px; }
+.etiqueta { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px; background: var(--acento-suave); color: var(--acento); margin-left: 6px; vertical-align: 1px; }
+.etiqueta.alerta { background: var(--cambiar-suave); color: var(--cambiar); }
+tr.titulo-grupo td { background: var(--acento-suave); font-weight: 700; color: var(--acento); }
+.filtros { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; margin: 12px 0; }
+.filtros .campo { flex: 1 1 170px; }
+.filtros .campo.ancho { flex: 2 1 260px; }
+.filtros label.casilla { display: flex; gap: 6px; align-items: center; font-size: 14px; white-space: nowrap; }
+.contador { font-size: 14px; color: var(--suave); margin: 6px 0 0; }
+.matriz td:first-child { font-weight: 600; min-width: 170px; }
+.matriz td { min-width: 190px; }
+.ejemplo { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+.ejemplo > strong { color: var(--acento); }
+.ejemplo table.asiento { margin: 8px 0 4px; }
+.ejemplo table.asiento td:first-child { width: 110px; }
+.ejemplo table.asiento tr.total td { font-weight: 700; border-top: 1px solid var(--linea-fuerte); }
+.ejemplo .titulo-asiento { font-size: 14px; font-weight: 600; margin: 10px 0 0; }
+details { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 10px 16px; margin: 12px 0; }
+details summary { cursor: pointer; font-weight: 600; color: var(--acento); }
+details[open] summary { margin-bottom: 10px; }
+footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top: 1px solid var(--linea); margin-top: 40px; }
+.guardado { font-size: 13px; color: var(--suave); }
+.guardado.mal { color: var(--cambiar); }
+@media (max-width: 700px) {
+  nav.indice ol { grid-template-columns: 1fr; }
+  .datos-clave { grid-template-columns: 1fr; }
+  .tarjeta { padding: 18px 16px; }
+  .punto { padding: 14px 14px; }
+  header.portada { padding-top: 28px; }
+  .nombre-fila { flex-direction: column; align-items: stretch; }
+  html { scroll-padding-top: 16px; }
+  body { padding-bottom: 84px; }
+  .barra { position: fixed; top: auto; bottom: 0; left: 0; right: 0; border-bottom: 0; border-top: 1px solid var(--linea); background: var(--fondo); }
+  .barra .indice-enlace { display: none; }
+}
+@media print {
+  body { background: #fff; color: #000; font-size: 12pt; padding: 0; }
+  .barra, .filtros, .no-imprimir, .puerta, nav.indice, .aviso-nombre { display: none !important; }
+  .tarjeta, .punto, details, .ejemplo { box-shadow: none; break-inside: avoid; }
+  .tabla-scroll, .tabla-scroll.alta { max-height: none; overflow: visible; }
+  thead th { position: static; }
+  .opciones button:not(.sel) { display: none; }
+  .resp textarea { border: 1px solid #999; min-height: 40px; }
+}
+</style>
+</head>
+<body>
+
+<div class="puerta" id="puerta">
+  <form class="tarjeta" id="form-clave" autocomplete="off">
+    <span class="sello">SYSDEVUP · Módulo de Contabilidad</span>
+    <h1>Guía de revisión contable</h1>
+    <p>Esta página es privada. Escriba la clave que le compartieron; en este navegador se la pide una sola vez.</p>
+    <label class="campo" for="clave">Clave</label>
+    <div class="fila">
+      <input type="password" id="clave" autocomplete="current-password">
+      <button type="submit" class="boton">Entrar</button>
+    </div>
+    <p class="error" id="clave-error" role="alert"></p>
+  </form>
+</div>
+
+<div id="contenido" inert>
+
+<header class="portada envoltura">
+  <span class="sello">SYSDEVUP · Módulo de Contabilidad</span>
+  <h1>Guía de revisión contable</h1>
+  <p class="bajada">SYSDEVUP es un sistema de facturación electrónica en la nube, hecho en Ecuador, con un módulo de contabilidad para empresas obligadas a llevarla. Antes de ofrecerlo queremos que un contador revise los criterios contables y tributarios con que está construido, y conocer cómo trabaja usted para saber qué le falta. No se trata de revisar programación.</p>
+
+  <div class="tarjeta">
+    <div class="datos-clave">
+      <div class="dato"><strong>Una hora y media a dos</strong><span>en total, según cuánto escriba. Puede hacerlo en varias sesiones.</span></div>
+      <div class="dato"><strong>No necesita el sistema</strong><span>Esta página trae la plantilla completa, las cuentas de cada asiento y ejemplos con cifras.</span></div>
+      <div class="dato"><strong>Se guarda solo</strong><span>en este navegador y bajo su nombre, mientras escribe.</span></div>
+    </div>
+    <strong>Cómo se responde</strong>
+    <ol class="pasos">
+      <li>Escriba su nombre y pulse <strong>Comenzar</strong>: las preguntas se habilitan con su nombre, y sus respuestas quedan guardadas con él. Si vuelve otro día en este mismo equipo y navegador, encontrará todo como lo dejó.</li>
+      <li>En cada punto de revisión marque <em>De acuerdo</em>, <em>Hay que cambiarlo</em> o <em>Tengo una duda</em>, y escriba su comentario si quiere; cuanto más concreto, más fácil será corregirlo. En la sección 8 las preguntas son abiertas.</li>
+      <li>En la tabla del plan de cuentas y en la de las cuentas de los asientos puede dejar una nota en cualquier fila.</li>
+      <li>Al terminar, o cuando quiera, pulse <strong>Descargar mis respuestas</strong> (está siempre a la vista) y envíe ese archivo a quien le compartió esta guía.</li>
+    </ol>
+    <div class="nombre-fila">
+      <label class="campo">Su nombre
+        <input type="text" id="nombre" autocomplete="name" placeholder="Nombre y apellido">
+      </label>
+      <button type="button" class="boton" id="btn-comenzar">Comenzar</button>
+    </div>
+    <p class="como" id="como" hidden>Respondiendo como <strong id="como-nombre"></strong>. <button type="button" class="enlace" id="btn-cambiar">Cambiar de nombre</button></p>
+    <p class="aviso-nombre" id="aviso-nombre">Escriba su nombre y pulse Comenzar para habilitar las preguntas.</p>
+  </div>
+</header>
+
+<div class="barra">
+  <div class="envoltura">
+    <div class="progreso">
+      <div class="progreso-texto"><span id="progreso-texto">0 de 0 respondidas</span> <span class="guardado" id="guardado"></span></div>
+      <div class="progreso-barra"><span id="progreso-barra"></span></div>
+    </div>
+    <a href="#indice" class="indice-enlace">Índice</a>
+    <button type="button" class="boton" id="btn-descargar" disabled>Descargar mis respuestas</button>
+  </div>
+</div>
+
+<main class="envoltura">
+
+<nav class="indice tarjeta" id="indice" aria-label="Índice">
+  <strong>Índice</strong>
+  <ol id="indice-lista"></ol>
+  <div class="pie-indice">
+    <span id="indice-total"></span>
+    <button type="button" class="enlace no-imprimir" id="btn-imprimir">Imprimir la guía con mis respuestas</button>
+  </div>
+</nav>
+
+<section class="parte" id="s1" data-titulo="Qué hace el módulo y cómo se trabaja" data-min="10">
+  <h2><span class="num">1</span> Qué hace el módulo y cómo se trabaja</h2>
+  <p class="intro">El contexto para todo lo demás. Al final, una sola pregunta.</p>
+  <div class="tarjeta">
+    <h4 style="margin-top:0">Lo que hace</h4>
+    <ul>
+      <li><strong>Plan de cuentas por empresa.</strong> Nace como copia de una plantilla (la de la sección 2) y cada empresa la adapta: agrega, renombra o desactiva cuentas, o importa su propio plan desde una hoja de cálculo.</li>
+      <li><strong>Asientos automáticos</strong> desde los documentos del sistema: facturas, notas de crédito y de débito emitidas y su anulación; el costo de ventas desde el kardex (inventario perpetuo a costo promedio); las retenciones emitidas; las facturas, notas de crédito y de débito recibidas; las compras y los ajustes de inventario; los cobros, los pagos, las retenciones que le hacen los clientes y las transferencias entre bancos.</li>
+      <li><strong>Asientos manuales</strong>, con borrador, y el asiento de apertura con los saldos iniciales. Un asiento contabilizado no se edita ni se borra: se corrige con un reverso. Las líneas de un asiento manual se pueden cargar desde una hoja de cálculo.</li>
+      <li><strong>Numeración correlativa por año</strong>, cierre mensual (bloquea el mes) y cierre anual.</li>
+      <li><strong>Cartera:</strong> cuentas por cobrar y por pagar por documento, cobros y pagos aplicados a una o varias facturas, antigüedad de saldos (por vencer, 1–30, 31–60, 61–90 y más de 90 días) y estado de cuenta por cliente o proveedor, en PDF para enviárselo. Lo que no tiene comprobante electrónico (una factura física, un préstamo, la planilla del IESS) se carga como documento manual.</li>
+      <li><strong>Bancos:</strong> cuentas bancarias y cajas, transferencias entre ellas, y conciliación bancaria mes a mes contra el extracto, con sugerencias de emparejamiento.</li>
+      <li><strong>Cuadres:</strong> el inventario de los libros contra el kardex, y las cuentas por cobrar y por pagar contra la cartera, con cada diferencia explicada documento por documento y por cliente o proveedor.</li>
+      <li><strong>ATS mensual:</strong> compras y ventas físicas, validado contra el esquema del SRI.</li>
+      <li><strong>Roles:</strong> uno que trabaja la contabilidad y otro de solo consulta (libros, estados y cartera), para un gerente o un auditor.</li>
+    </ul>
+    <h4>Los informes</h4>
+    <ul>
+      <li><strong>Libro diario:</strong> cada asiento con su fecha, número y concepto, y sus líneas con cuenta, detalle, debe y haber. Un asiento nunca queda partido entre dos páginas.</li>
+      <li><strong>Libro mayor</strong> de una cuenta: el saldo inicial, cada movimiento con su saldo acumulado, y el desglose del saldo por cliente o proveedor (mayor auxiliar).</li>
+      <li><strong>Balance de comprobación:</strong> las sumas del debe y del haber y el saldo deudor o acreedor de cada cuenta, hasta el nivel que se elija, con la opción de verlo antes del asiento de cierre.</li>
+      <li><strong>Estado de situación financiera</strong> a una fecha y <strong>estado de resultados</strong> de un período, en árbol hasta el nivel elegido y comparativos con el año anterior. Mientras el año no se cierra, su resultado se suma al patrimonio en la situación.</li>
+      <li><strong>Flujo de efectivo</strong> por el método directo y <strong>cambios en el patrimonio</strong> (sección 3).</li>
+      <li>Todo se exporta a hoja de cálculo (CSV) y a PDF.</li>
+    </ul>
+    <h4>Cómo se trabaja</h4>
+    <ul>
+      <li><strong>Una vez:</strong> la empresa fija su <strong>fecha de inicio</strong>, revisa el plan de cuentas (o importa el suyo) y las cuentas que usa cada asiento automático (sección 4), registra sus bancos y carga el asiento de apertura con los saldos a esa fecha. Lo anterior a la fecha de inicio no se contabiliza: entra con la apertura.</li>
+      <li><strong>Cada día:</strong> las facturas que emite y las que recibe, los cobros, los pagos y los ajustes de inventario generan sus asientos solos. Lo que no puede contabilizarse (una cuenta mal configurada, un mes ya cerrado) queda en una lista de <strong>pendientes</strong> con el motivo, y se contabiliza con un botón cuando se corrige. Si una configuración estaba mal, los asientos automáticos de un mes se pueden reversar en bloque y rehacer.</li>
+      <li><strong>Cada mes:</strong> se concilia cada banco con su extracto, se revisan los cuadres, se completa lo que falta del ATS y se genera su archivo, y se cierra el mes.</li>
+      <li><strong>Cada año:</strong> se registran los ajustes de fin de año con asientos manuales y se cierra el ejercicio.</li>
+    </ul>
+    <p style="margin:0">Dos principios que atraviesan todo: <strong>solo lo emitido o recibido en el ambiente de Producción del SRI genera asientos</strong> (las pruebas nunca), y <strong>la fecha de un asiento automático es la de emisión del documento</strong>.</p>
+  </div>
+
+  <div class="punto" data-id="1.1">
+    <h3>¿Se ajusta a su forma de trabajar?</h3>
+    <p>¿Falta algún paso o algún informe en lo que acaba de leer, o algo está planteado de una forma que a usted no le serviría?</p>
+  </div>
+</section>
+
+<section class="parte" id="s2" data-titulo="La plantilla del plan de cuentas" data-min="20">
+  <h2><span class="num">2</span> La plantilla del plan de cuentas</h2>
+  <p class="intro">Toda empresa empieza con una copia de esta plantilla. Conviene que sirva tal cual a un comercio o a una empresa de servicios típica.</p>
+  <div class="tarjeta">
+    <p>Sale del <strong>catálogo de cuentas NIIF de la Superintendencia de Compañías, Valores y Seguros</strong> (PDF del 20 de enero de 2023), con sus códigos tal cual. Tomamos las ramas que usa un comercio o una empresa de servicios: <strong>227 cuentas</strong>, 216 del catálogo oficial y 11 propias, de las que <strong>162 son de movimiento</strong>.</p>
+    <p style="margin:0">Dos reglas de forma: una cuenta es de movimiento si no tiene subcuentas, y el número de una subcuenta empieza con el de su cuenta padre. Las cuentas de cada banco no están en la plantilla: al registrar un banco, el sistema crea su subcuenta bajo 1010103 (instituciones financieras privadas), por ejemplo 101010301.</p>
+  </div>
+
+  <div class="punto" data-id="2.1">
+    <h3>Lo que quedó fuera de la plantilla</h3>
+    <p>Las líneas que el estado de resultados <strong>calcula</strong> (402 ganancia bruta, 600, 602, 604 y 607), las secciones de operaciones discontinuadas (7) y de otro resultado integral (8), los renglones del flujo de efectivo y de cambios en el patrimonio, los de consolidación (30 y 31) y las ramas de sectores especiales: casas de valores, fiduciarias, fondos, construcción, activos biológicos y producción.</p>
+    <p>¿Está de acuerdo en dejarlas fuera de la plantilla de un comercio o empresa de servicios?</p>
+  </div>
+
+  <div class="punto" data-id="2.2">
+    <h3>El costo de ventas es una sola cuenta</h3>
+    <p>El costo de ventas es una sola cuenta de movimiento, <span class="mono">50101</span>, y no el desglose de inventario periódico del catálogo (inventario inicial más compras menos inventario final): el inventario del sistema es perpetuo y el costo sale del kardex a costo promedio, en cada venta.</p>
+  </div>
+
+  <div class="punto" data-id="2.3">
+    <h3>Las 11 cuentas propias</h3>
+    <p>Las raíces 4, 5 y 6 (el catálogo empieza los resultados en 401, 501 y 601) y ocho subcuentas que los asientos automáticos necesitan. Las subcuentas informan en la línea de la Supercias de su cuenta padre.</p>
+    <div class="tabla-scroll" style="margin:10px 0">
+      <table>
+        <thead><tr><th>Número</th><th>Nombre</th><th>Naturaleza</th><th>Tipo</th><th>Informa en</th></tr></thead>
+        <tbody id="tabla-propias"></tbody>
+      </table>
+    </div>
+    <p>¿Son las que usted usaría? ¿Cambiaría algún nombre, o separaría algo más? Por ejemplo, hoy el IVA pagado en compras es una sola cuenta; si conviene separarlo entre bienes y servicios, se agrega.</p>
+  </div>
+
+  <div class="punto" data-id="2.4">
+    <h3>¿Falta o sobra alguna cuenta?</h3>
+    <p>Revise el plan completo en la tabla de abajo. ¿Falta alguna rama o cuenta que un comercio o una empresa de servicios típica necesite? ¿Sobra alguna? Puede dejar la nota en la fila de la cuenta padre donde iría la que falta.</p>
+  </div>
+
+  <div class="punto" data-id="2.5">
+    <h3>Naturaleza y tipo de cada cuenta</h3>
+    <p>Cada cuenta tiene una naturaleza (deudora o acreedora) y un tipo (activo, pasivo, patrimonio, ingreso, costo, gasto u orden). Con el tipo se arman los estados. ¿Son correctos en la tabla? Mire en especial las cuentas de valuación con «(-)», que llevan la naturaleza contraria a la de su grupo.</p>
+  </div>
+
+  <h3 id="plan-completo" style="margin-top:26px">El plan completo</h3>
+  <div class="filtros">
+    <label class="campo ancho">Buscar por número o nombre
+      <input type="search" id="f-buscar" placeholder="Ej.: 10103 o inventario">
+    </label>
+    <label class="campo">Tipo
+      <select id="f-tipo"><option value="">Todos</option></select>
+    </label>
+    <label class="campo">Flujo de efectivo
+      <select id="f-flujo">
+        <option value="">Todas</option>
+        <option value="X">Todas menos operación</option>
+      </select>
+    </label>
+    <label class="casilla"><input type="checkbox" id="f-hoja"> Solo de movimiento</label>
+    <label class="casilla"><input type="checkbox" id="f-propia"> Solo las propias</label>
+    <label class="casilla"><input type="checkbox" id="f-nota"> Solo con nota</label>
+  </div>
+  <div class="tabla-scroll alta">
+    <table id="tabla-plan">
+      <thead><tr><th>Número</th><th>Nombre</th><th>Naturaleza</th><th>Tipo</th><th>Flujo</th><th>Nota</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="contador" id="plan-contador"></p>
+</section>
+
+<section class="parte" id="s3" data-titulo="El flujo de efectivo" data-min="5">
+  <h2><span class="num">3</span> El flujo de efectivo</h2>
+  <p class="intro">Cada cuenta del plan lleva una marca para el estado de flujo de efectivo. El catálogo de la Supercias (sección 95) dice qué va en cada actividad, pero no asigna cuentas: la asignación es nuestra.</p>
+  <div class="tarjeta">
+    <p>El estado se arma por el <strong>método directo, por contrapartida</strong>: de cada asiento que toca una cuenta de efectivo, cada una de sus otras líneas dice de dónde vino o adónde fue el dinero, y va a la actividad de esa cuenta. Cuadra al centavo con la variación del efectivo. Cada cuenta lleva una sola marca:</p>
+    <ul>
+      <li><strong>Efectivo:</strong> caja e instituciones financieras (10101 y sus subcuentas).</li>
+      <li><strong>Inversión:</strong> propiedad, planta y equipo, con su depreciación acumulada y la ganancia o pérdida en su venta (así la venta cae entera en inversión); intangibles; otros activos no corrientes; depósitos a plazo; y lo que deben accionistas y compañías relacionadas.</li>
+      <li><strong>Financiamiento:</strong> los préstamos recibidos (de instituciones financieras, de accionistas y de relacionadas), los dividendos por pagar y todo el patrimonio. Los dividendos pagados, que el catálogo admite en operación o en financiamiento, van en financiamiento.</li>
+      <li><strong>Operación:</strong> todo lo demás.</li>
+    </ul>
+    <p>Por ejemplo, un cobro de un cliente por transferencia (banco al debe, cuentas por cobrar al haber) es <strong>operación</strong>; una computadora pagada con cheque (equipo de computación al debe, banco al haber) es <strong>inversión</strong>; un préstamo bancario recibido es <strong>financiamiento</strong>. Una transferencia entre dos bancos propios no aparece, porque no sale efectivo.</p>
+    <p style="margin:0">Una subcuenta hereda la marca de su padre, y la empresa la puede cambiar cuando quiera. Un asiento que mezcla efectivo con cuentas de dos actividades (un equipo pagado en parte con un préstamo) pone cada línea en la suya; la ayuda del sistema recomienda partirlo en dos. El estado de cambios en el patrimonio va con una columna por cuenta de patrimonio y una fila por clase de movimiento: saldo inicial, resultado del período, aumentos, disminuciones, transferencias entre cuentas del patrimonio y saldo final.</p>
+  </div>
+
+  <div class="punto" data-id="3.1">
+    <h3>El criterio y la marca de cada cuenta</h3>
+    <p>¿Está de acuerdo con el criterio y con la marca que lleva cada cuenta? En la tabla del plan puede ver la columna «Flujo».</p>
+    <p class="no-imprimir"><button type="button" class="boton secundario" id="btn-ver-flujo">Ver en la tabla las cuentas que no son de operación</button></p>
+  </div>
+
+  <div class="punto" data-id="3.2">
+    <h3>Solo el método directo</h3>
+    <p>No se construyó la conciliación del flujo con la utilidad (el método indirecto, secciones 96 a 98 del catálogo), ni los estados en el formato de carga de la Supercias. ¿Es suficiente para sus clientes presentar el flujo por el método directo?</p>
+  </div>
+</section>
+
+<section class="parte" id="s4" data-titulo="Las cuentas de los asientos automáticos" data-min="10">
+  <h2><span class="num">4</span> Las cuentas de los asientos automáticos</h2>
+  <p class="intro">Los asientos automáticos no eligen cuentas: las toman de la configuración contable de cada empresa. Al empezar, el sistema le propone estas, de la plantilla, y el contador las cambia cuando quiera.</p>
+  <div class="tarjeta">
+    <p style="margin:0">Además de estas cuentas por defecto, la configuración permite una cuenta propia por <strong>categoría de producto</strong> (ventas, inventario y costo, heredada por las subcategorías), por <strong>categoría de gasto</strong>, por <strong>forma de pago</strong> (la caja o el banco de cada una) y por <strong>código de retención</strong> del SRI. Una pantalla de diagnóstico dice qué falta configurar antes de que los asientos puedan salir.</p>
+  </div>
+  <div class="tabla-scroll" style="margin-top:14px">
+    <table id="tabla-usos">
+      <thead><tr><th>Para qué se usa</th><th>Cuenta propuesta</th><th>Nota</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="punto" data-id="4.1">
+    <h3>Las cuentas propuestas</h3>
+    <p>¿Son las cuentas correctas para cada uso? Si alguna no lo es, dígalo en la nota de su fila.</p>
+  </div>
+
+  <div class="punto" data-id="4.2">
+    <h3>Dos cuentas que reciben dos cosas cada una</h3>
+    <p><span class="mono">40303</span> «Otros» (otros ingresos) recibe el ingreso de las notas de débito emitidas y los sobrantes de inventario. <span class="mono">5020402</span> «Otros» (otros gastos) recibe los faltantes de inventario y las notas de crédito recibidas. ¿Conviene que cada uso tenga su propia subcuenta?</p>
+  </div>
+
+  <div class="punto" data-id="4.3">
+    <h3>Los gastos sin categoría</h3>
+    <p><span class="mono">5020229</span> «Otros gastos» (gastos administrativos) recibe las líneas de gasto de una compra cuya categoría no tiene cuenta propia, las notas de débito recibidas, y el ICE, los otros impuestos y la propina de una factura recibida. ¿Es la cuenta adecuada para eso?</p>
+  </div>
+</section>
+
+<section class="parte" id="s5" data-titulo="Qué asiento genera cada documento" data-min="20">
+  <h2><span class="num">5</span> Qué asiento genera cada documento</h2>
+  <p class="intro">Primero cuatro ejemplos con cifras, después la tabla de todos los documentos, y al final las decisiones que conviene que usted mire. Las cuentas son las de la sección 4.</p>
+
+  <div class="ejemplo">
+    <strong>Ejemplo 1 · Una venta a crédito</strong>
+    <p>Factura 001-001-000000123 a 30 días: productos de la categoría «Repuestos» por US$ 100,00 de base, IVA 15 % US$ 15,00, total US$ 115,00. Lo que salió del kardex cuesta US$ 60,00 a costo promedio. Al autorizarse la factura salen dos asientos, con su fecha de emisión:</p>
+    <p class="titulo-asiento">Asiento de la venta</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">10102050201</td><td>Cuentas y documentos a cobrar a clientes (con el cliente)</td><td class="importe">115,00</td><td></td></tr>
+      <tr><td class="num">40101</td><td>Venta de bienes</td><td></td><td class="importe">100,00</td></tr>
+      <tr><td class="num">201070101</td><td>IVA cobrado en ventas</td><td></td><td class="importe">15,00</td></tr>
+    </tbody></table></div>
+    <p class="titulo-asiento">Asiento del costo</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">50101</td><td>Materiales utilizados o productos vendidos</td><td class="importe">60,00</td><td></td></tr>
+      <tr><td class="num">1010306</td><td>Inventarios de prod. term. y mercad. en almacén, comprado a terceros</td><td></td><td class="importe">60,00</td></tr>
+    </tbody></table></div>
+    <p class="nota-al-pie" style="margin:6px 0 0">El costo va en un asiento aparte porque sale del kardex, que puede no existir (un servicio, una empresa que no lleva inventario). Si se anula la factura, los dos asientos se reversan solos.</p>
+  </div>
+
+  <div class="ejemplo">
+    <strong>Ejemplo 2 · La retención del cliente y el cobro</strong>
+    <p>El cliente le retiene US$ 1,75 de renta y US$ 4,50 de IVA (montos de ejemplo). La retención le llega electrónica; cuando el SRI la confirma, el sistema la aplica sola a la factura 123 (la encuentra por su número y por el cliente):</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">101050201</td><td>Retenciones en la fuente de impuesto a la renta que le efectuaron</td><td class="importe">1,75</td><td></td></tr>
+      <tr><td class="num">101050102</td><td>Retenciones de IVA que le efectuaron</td><td class="importe">4,50</td><td></td></tr>
+      <tr><td class="num">10102050201</td><td>Cuentas y documentos a cobrar a clientes (con el cliente)</td><td></td><td class="importe">6,25</td></tr>
+    </tbody></table></div>
+    <p class="titulo-asiento">Después paga US$ 108,75 por transferencia, y se registra el cobro de la factura 123</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">101010301</td><td>Banco de la empresa, cuenta corriente (la subcuenta que creó el sistema)</td><td class="importe">108,75</td><td></td></tr>
+      <tr><td class="num">10102050201</td><td>Cuentas y documentos a cobrar a clientes (con el cliente)</td><td></td><td class="importe">108,75</td></tr>
+    </tbody></table></div>
+    <p class="nota-al-pie" style="margin:6px 0 0">El saldo de la factura queda en cero: 115,00 − 6,25 − 108,75. Un cobro puede cubrir varias facturas del mismo cliente.</p>
+  </div>
+
+  <div class="ejemplo">
+    <strong>Ejemplo 3 · Una compra, su retención y el pago</strong>
+    <p>Llega la factura electrónica de un proveedor: mercadería de la categoría «Repuestos» por US$ 150,00 y un servicio de mantenimiento por US$ 50,00 (la categoría de gasto «Mantenimiento», configurada a 5020208), IVA 15 % US$ 30,00, total US$ 230,00. Al registrarla en la bandeja de comprobantes recibidos:</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">1010306</td><td>Inventarios de prod. term. y mercad. en almacén, comprado a terceros</td><td class="importe">150,00</td><td></td></tr>
+      <tr><td class="num">5020208</td><td>Mantenimiento y reparaciones</td><td class="importe">50,00</td><td></td></tr>
+      <tr><td class="num">101050101</td><td>IVA pagado en compras</td><td class="importe">30,00</td><td></td></tr>
+      <tr><td class="num">201030102</td><td>Proveedores (con el proveedor)</td><td></td><td class="importe">230,00</td></tr>
+    </tbody></table></div>
+    <p class="titulo-asiento">La empresa le emite una retención de US$ 3,00 de renta y US$ 9,00 de IVA (montos de ejemplo); al autorizarse</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">201030102</td><td>Proveedores (con el proveedor)</td><td class="importe">12,00</td><td></td></tr>
+      <tr><td class="num">201070102</td><td>Retenciones en la fuente de impuesto a la renta por pagar</td><td></td><td class="importe">3,00</td></tr>
+      <tr><td class="num">201070103</td><td>Retenciones de IVA por pagar</td><td></td><td class="importe">9,00</td></tr>
+    </tbody></table></div>
+    <p class="titulo-asiento">Y le paga el saldo por transferencia</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">201030102</td><td>Proveedores (con el proveedor)</td><td class="importe">218,00</td><td></td></tr>
+      <tr><td class="num">101010301</td><td>Banco de la empresa, cuenta corriente</td><td></td><td class="importe">218,00</td></tr>
+    </tbody></table></div>
+    <p class="nota-al-pie" style="margin:6px 0 0">La factura vence al plazo que el proveedor declaró en su comprobante. Si la mercadería se había cargado antes a mano como compra de inventario y después se enlaza a este comprobante, la compra no se contabiliza dos veces: el asiento sale del comprobante.</p>
+  </div>
+
+  <div class="ejemplo">
+    <strong>Ejemplo 4 · El cierre del ejercicio</strong>
+    <p>Al 31 de diciembre, las cuentas de ingreso suman US$ 10.000,00 y las de costos y gastos US$ 8.000,00. El cierre deja en cero cada una contra la ganancia del ejercicio:</p>
+    <div class="tabla-scroll"><table class="asiento"><thead><tr><th>Cuenta</th><th>Nombre</th><th class="importe">Debe</th><th class="importe">Haber</th></tr></thead><tbody>
+      <tr><td class="num">4…</td><td>Cada cuenta de ingreso, por su saldo</td><td class="importe">10.000,00</td><td></td></tr>
+      <tr><td class="num">5… y 6…</td><td>Cada cuenta de costo y de gasto, por su saldo</td><td></td><td class="importe">8.000,00</td></tr>
+      <tr><td class="num">30701</td><td>Ganancia neta del periodo</td><td></td><td class="importe">2.000,00</td></tr>
+    </tbody></table></div>
+    <p class="nota-al-pie" style="margin:6px 0 0">Con pérdida, la diferencia va al debe de 30702. No hay asiento de apertura del año siguiente (punto 5.12).</p>
+  </div>
+
+  <h3 style="margin-top:24px">Todos los documentos</h3>
+  <p class="nota-al-pie">La línea de cuentas por cobrar o por pagar lleva siempre al cliente o al proveedor, que es lo que llena el mayor auxiliar.</p>
+  <div class="tabla-scroll">
+    <table class="matriz">
+      <thead><tr><th>Documento</th><th>Debe</th><th>Haber</th></tr></thead>
+      <tbody>
+        <tr><td>Factura emitida</td><td>Cuentas por cobrar clientes, por el total</td><td>Ventas por categoría de producto (base neta de descuento; los servicios, a ventas de servicios) · IVA cobrado · Propinas por pagar</td></tr>
+        <tr><td>Costo de esa venta (asiento aparte, desde el kardex)</td><td>Costo de ventas por categoría (cantidad por costo promedio de salida)</td><td>Inventario por categoría</td></tr>
+        <tr><td>Nota de crédito emitida</td><td>Devoluciones en ventas, por la base · IVA cobrado</td><td>Cuentas por cobrar clientes</td></tr>
+        <tr><td>Devolución física de esa nota de crédito</td><td>Inventario</td><td>Costo de ventas</td></tr>
+        <tr><td>Nota de débito emitida</td><td>Cuentas por cobrar clientes</td><td>Ingreso de las notas de débito · IVA cobrado</td></tr>
+        <tr><td>Anulación de un comprobante autorizado</td><td colspan="2">Reverso del asiento de la venta y del de su costo</td></tr>
+        <tr><td>Retención emitida a un proveedor</td><td>Cuentas por pagar proveedores, por lo retenido</td><td>Retenciones de renta y de IVA por pagar, por código del SRI</td></tr>
+        <tr><td>Factura recibida y registrada</td><td>Inventario por categoría (mercadería sin IVA, neta de descuento) · Gasto por categoría de gasto · IVA pagado (el que declaró el proveedor por tarifa) · Gastos sin categoría (ICE, otros impuestos y propina)</td><td>Cuentas por pagar proveedores, por el total</td></tr>
+        <tr><td>Nota de crédito recibida</td><td>Cuentas por pagar proveedores</td><td>Notas de crédito recibidas (faltantes de inventario) · IVA pagado · Gastos sin categoría (otros impuestos)</td></tr>
+        <tr><td>Nota de débito recibida</td><td>Gastos sin categoría · IVA pagado</td><td>Cuentas por pagar proveedores</td></tr>
+        <tr><td>Registro de un comprobante recibido que se deshace</td><td colspan="2">Reverso del asiento del registro</td></tr>
+        <tr><td>Compra de inventario cargada a mano (sin comprobante electrónico)</td><td>Inventario por categoría (sin IVA)</td><td>Cuentas por pagar proveedores</td></tr>
+        <tr><td>Ajuste de inventario: entrada</td><td>Inventario</td><td>Sobrantes de inventario</td></tr>
+        <tr><td>Ajuste de inventario: salida</td><td>Faltantes de inventario</td><td>Inventario</td></tr>
+        <tr><td>Inventario inicial</td><td colspan="2">No genera asiento: entra con el asiento de apertura</td></tr>
+        <tr><td>Cobro a un cliente</td><td>Caja o banco (el banco elegido, o la cuenta de la forma de pago)</td><td>Cuentas por cobrar (clientes, o la del documento manual)</td></tr>
+        <tr><td>Retención que le hizo un cliente</td><td>Retenciones de renta y de IVA que le efectuaron, por código</td><td>Cuentas por cobrar clientes</td></tr>
+        <tr><td>Pago a un proveedor</td><td>Cuentas por pagar (proveedores, o la del documento manual)</td><td>Caja o banco</td></tr>
+        <tr><td>Documento manual por pagar (factura física, préstamo, IESS)</td><td>Cada línea, en la cuenta que elige la persona</td><td>La cuenta del documento (un pasivo), con el proveedor</td></tr>
+        <tr><td>Documento manual por cobrar (factura física, préstamo a un empleado)</td><td>La cuenta del documento (un activo), con el cliente</td><td>Cada línea, en la cuenta que elige la persona</td></tr>
+        <tr><td>Transferencia entre bancos, o depósito de la caja al banco</td><td>Banco de destino</td><td>Banco o caja de origen</td></tr>
+        <tr><td>Cierre del ejercicio</td><td>Cada cuenta de ingreso por su saldo · Pérdida del ejercicio, si la hubo</td><td>Cada cuenta de costo y de gasto por su saldo · Ganancia del ejercicio, si la hubo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="punto" data-id="5.1">
+    <h3>Los ejemplos y la tabla</h3>
+    <p>¿Algún asiento de los ejemplos o de la tabla está mal planteado, o le falta alguna línea?</p>
+  </div>
+
+  <div class="punto" data-id="5.2">
+    <h3>La fecha del asiento es la de emisión</h3>
+    <p>Un asiento automático lleva la fecha de emisión del documento, no la de autorización ni la de registro: es la que se declara, y así los libros de cada mes coinciden con los informes de ventas y de IVA. Si esa fecha cae en un mes cerrado, el documento queda pendiente hasta que el contador reabra el mes; el asiento nunca se muda a otro mes. Solo el reverso de una anulación se registra con la fecha de hoy cuando el mes del original está cerrado.</p>
+  </div>
+
+  <div class="punto" data-id="5.3">
+    <h3>Una sola cuenta de ventas para todas las tarifas de IVA</h3>
+    <p>Las ventas al 15 % y al 0 % van a la misma cuenta de su categoría. El reparto por tarifa para el formulario 104 sale del informe de IVA de los comprobantes, no del saldo de la cuenta.</p>
+  </div>
+
+  <div class="punto" data-id="5.4">
+    <h3>Las ventas van netas de descuento</h3>
+    <p>A ventas va la base ya descontada, que es la que se declara en cada comprobante. Por eso no se usa la cuenta de descuentos en ventas (40112), aunque esté en la plantilla.</p>
+  </div>
+
+  <div class="punto" data-id="5.5">
+    <h3>La nota de crédito emitida no se reparte por categoría</h3>
+    <p>Su base va entera a «Devoluciones en ventas» (40113), sin repartirla entre las categorías de producto como la factura.</p>
+  </div>
+
+  <div class="punto" data-id="5.6">
+    <h3>Toda factura nace como cuenta por cobrar</h3>
+    <p>Aunque sea de contado: es lo único que permite cuadrar después la retención que hace el cliente, que llega días más tarde. En cada forma de pago hay una casilla «se cobra sola», apagada por omisión: marcada, la factura con esa forma de pago y sin plazo se cancela al autorizarse con un cobro automático. Si después llega una retención del cliente, ese cobro se rehace por lo que de verdad entró. Pensado para el comercio que le vende a consumidores, que no retienen.</p>
+  </div>
+
+  <div class="punto" data-id="5.7">
+    <h3>La nota de crédito recibida va a faltantes de inventario</h3>
+    <p>La devolución física de mercadería al proveedor se registra con un ajuste de salida, que ya baja el inventario y carga «Faltantes de inventario»; la nota de crédito descarga esa misma cuenta, y así queda proveedores contra inventario una sola vez. Un descuento sin devolución rebaja ese gasto.</p>
+  </div>
+
+  <div class="punto" data-id="5.8">
+    <h3>ICE, botellas plásticas y propina de una compra</h3>
+    <p>El ICE, el impuesto a las botellas plásticas y la propina de una factura recibida van a «Gastos sin categoría», sin sumarse al costo del inventario: el costo con que la mercadería entra al kardex tampoco los incluye, y así el inventario de los libros sigue igual al del kardex.</p>
+  </div>
+
+  <div class="punto" data-id="5.9">
+    <h3>El inventario se carga al registrar la factura recibida</h3>
+    <p>El asiento de la factura recibida carga el inventario al registrarla, aunque la compra quede en borrador en Inventarios; el kardex la recibe al confirmarla. Mientras tanto los libros y el kardex difieren, y el cuadre de inventario lo muestra. No hay cuenta de mercaderías en tránsito.</p>
+  </div>
+
+  <div class="punto" data-id="5.10">
+    <h3>La compra cargada a mano entra sin IVA</h3>
+    <p>Una compra de inventario sin comprobante electrónico (pensada para la nota de venta de un negocio popular del RIMPE) entra sin IVA. Una compra con factura electrónica entra por la bandeja de comprobantes recibidos, con su IVA.</p>
+  </div>
+
+  <div class="punto" data-id="5.11">
+    <h3>El inventario inicial entra con la apertura</h3>
+    <p>El inventario inicial que se carga en el kardex no genera asiento: el valor entra con el asiento de apertura, y el cuadre de inventario muestra la diferencia si no se puso.</p>
+  </div>
+
+  <div class="punto" data-id="5.12">
+    <h3>El cierre del ejercicio</h3>
+    <p>El cierre lleva los ingresos, costos y gastos a la ganancia o la pérdida del ejercicio, el 31 de diciembre, y bloquea el año (ejemplo 4). <strong>No hay asiento de apertura del año siguiente</strong>: los libros son continuos, así que la situación al 31 de diciembre es el balance de apertura del año nuevo, y volver a asentar los saldos los contaría dos veces. Llevar la ganancia a resultados acumulados, o constituir la reserva legal, se hace con un asiento manual. La participación de trabajadores y el impuesto a la renta del año también van con asiento manual, antes del cierre.</p>
+  </div>
+
+  <div class="punto" data-id="5.13">
+    <h3>Corregir y reabrir</h3>
+    <p>Un asiento contabilizado no se edita ni se borra: se corrige con un reverso, que lleva la fecha del original (o la de hoy, si ese mes está cerrado). Un mes o un año cerrado lo reabre el mismo rol que lo cierra, escribiendo el motivo, que queda registrado.</p>
+  </div>
+</section>
+
+<section class="parte" id="s6" data-titulo="El ATS" data-min="10">
+  <h2><span class="num">6</span> El ATS</h2>
+  <p class="intro">El sistema genera el archivo del Anexo Transaccional Simplificado de cada mes, validado contra el esquema del SRI. Esto es lo que reporta y cómo propone lo que falta.</p>
+  <div class="tarjeta">
+    <ul>
+      <li><strong>Compras:</strong> todo lo comprado en el mes, también lo electrónico: los comprobantes recibidos y registrados, las compras de inventario cargadas a mano y las facturas físicas y notas de venta cargadas como documento manual. El mes es el de la fecha de emisión, la misma del asiento.</li>
+      <li><strong>Ventas:</strong> solo lo físico (facturas y notas de venta en papel), porque las ventas electrónicas no se reportan en el ATS desde 2016; tampoco los comprobantes electrónicos anulados ni las retenciones electrónicas que le hicieron.</li>
+      <li><strong>La retención que emite el sistema es la versión 1.0.0</strong>, que no lleva el módulo de compras adentro: por eso las compras se reportan todas.</li>
+      <li>Las formas de pago se piden cuando el total pasa de USD 500, y una factura o nota de venta sin retención de renta se reporta con el concepto 332.</li>
+      <li>Lo que el sistema no sabe de un documento físico (la autorización, las bases por tarifa) se completa en la pantalla del ATS, y el archivo no se genera mientras falte algo: la pantalla dice qué le falta a cada compra.</li>
+    </ul>
+  </div>
+
+  <div class="punto" data-id="6.1">
+    <h3>El sustento tributario que se propone</h3>
+    <p>El sistema propone el sustento de cada compra y la persona lo corrige compra por compra:</p>
+    <ul>
+      <li>una factura con toda su mercadería: <strong>06</strong> (inventario, crédito tributario de IVA);</li>
+      <li>una factura con alguna línea de gasto, o una factura física: <strong>01</strong> (bienes y servicios, crédito tributario de IVA);</li>
+      <li>una nota de crédito o de débito: el de su factura;</li>
+      <li>una nota de venta: sin crédito tributario, <strong>07</strong> si es compra de inventario y <strong>02</strong> si es un documento manual.</li>
+    </ul>
+    <p>¿Es una buena regla por omisión? Una empresa sin derecho a crédito tributario (por ejemplo, la que solo vende con tarifa 0 %) tendría que cambiar casi todas: ¿propondría otra regla para ese caso?</p>
+  </div>
+
+  <div class="punto" data-id="6.2">
+    <h3>Una compra en un solo registro</h3>
+    <p>Un comprobante con una parte de crédito tributario y otra de costo o gasto, que la ficha técnica pide en dos registros, va en uno solo. ¿Es aceptable, o es un caso frecuente en sus clientes?</p>
+  </div>
+
+  <div class="punto" data-id="6.3" data-opciones="Sí está calificada|No lo está|No lo sé">
+    <h3>¿Las empresas que lleva son agentes de retención calificados?</h3>
+    <p>Desde el 30 de noviembre de 2022, los obligados a emitir electrónicamente que fueron calificados como agentes de retención (resolución NAC-DGERCGC22-00000024) emiten la retención en la <strong>versión ATS 2.0</strong>. El sistema todavía no la emite, y en una empresa calificada el ATS ya no reporta en compras lo que la retención lleva. ¿Alguna de las empresas que usted lleva está calificada?</p>
+  </div>
+
+  <div class="punto" data-id="6.4" data-opciones="Sí, puedo hacerlo|No puedo|Tengo una duda">
+    <h3>Probar un ATS en el validador del SRI</h3>
+    <p>El archivo pasa la validación del esquema del SRI, pero falta cargarlo en el programa del SRI (DIMM) o en su validador en línea, que además revisa el contenido. ¿Podría cargar uno de prueba si se lo enviamos?</p>
+  </div>
+
+  <details>
+    <summary>Los códigos de sustento tributario del catálogo</summary>
+    <div class="tabla-scroll">
+      <table>
+        <thead><tr><th>Código</th><th>Sustento</th></tr></thead>
+        <tbody id="tabla-sustentos"></tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
+<section class="parte" id="s7" data-titulo="Lo que el módulo no hace" data-min="5">
+  <h2><span class="num">7</span> Lo que el módulo no hace</h2>
+  <p class="intro">Quedó fuera a propósito, para no construir lo que nadie pidió todavía. Díganos si a sus clientes les hace falta.</p>
+
+  <div class="punto" data-id="7.1" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Activos fijos y depreciación</h3>
+    <p>No hay registro de activos fijos: la depreciación se registra con un asiento manual mensual.</p>
+  </div>
+  <div class="punto" data-id="7.2" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Nómina y roles de pago</h3>
+    <p>Los sueldos, el IESS y los beneficios entran como asiento manual o como documento por pagar.</p>
+  </div>
+  <div class="punto" data-id="7.3" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Anticipos y saldos a favor</h3>
+    <p>Un cobro o un pago se aplica entero a documentos: no se registra un anticipo de un cliente o a un proveedor, ni se aplica un saldo a favor (una nota de crédito sin su factura) a otra factura.</p>
+  </div>
+  <div class="punto" data-id="7.4" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Pago automático de las compras de contado</h3>
+    <p>Toda compra queda por pagar hasta que alguien registra el pago: la forma de pago que el proveedor pone en su comprobante no es confiable para darla por pagada.</p>
+  </div>
+  <div class="punto" data-id="7.5" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Préstamos en cuotas</h3>
+    <p>Un documento manual tiene un solo vencimiento. Un préstamo con tabla de amortización se carga como un documento o como uno por cuota.</p>
+  </div>
+  <div class="punto" data-id="7.6" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Formularios 103, 104 y 101 prellenados</h3>
+    <p>Los saldos de las cuentas de impuestos y los informes de Facturación dan los totales, pero el sistema no llena los casilleros de los formularios.</p>
+  </div>
+  <div class="punto" data-id="7.7" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Importar el extracto bancario</h3>
+    <p>En la conciliación, el extracto se carga a mano: el importador espera a tener extractos reales de los bancos de los clientes.</p>
+  </div>
+  <div class="punto" data-id="7.8" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Centros de costo, presupuestos y otras monedas</h3>
+    <p>No hay centros de costo, presupuestos, varias monedas ni consolidación.</p>
+  </div>
+  <div class="punto" data-id="7.9" data-opciones="No hace falta|Hace falta|Tengo una duda">
+    <h3>Un usuario por empresa</h3>
+    <p>Un contador que lleva varias empresas tiene un usuario en cada una: no se cambia de empresa sin salir de la sesión.</p>
+  </div>
+</section>
+
+<section class="parte" id="s8" data-titulo="Su práctica y lo que le falta al módulo" data-min="20">
+  <h2><span class="num">8</span> Su práctica y lo que le falta al módulo</h2>
+  <p class="intro">Preguntas abiertas para entender cómo trabaja usted y qué tendría que hacer el módulo para servirle. Responda las que quiera, con la extensión que quiera.</p>
+
+  <div class="punto" data-id="8.1" data-tipo="abierta">
+    <h3>Sus clientes</h3>
+    <p>¿Cuántas empresas lleva, de qué tipo (sociedades, personas naturales obligadas a llevar contabilidad) y de qué actividad? ¿Cuántos comprobantes al mes maneja una empresa típica suya?</p>
+  </div>
+  <div class="punto" data-id="8.2" data-tipo="abierta">
+    <h3>Su sistema actual</h3>
+    <p>¿Qué sistema contable usa hoy? ¿Qué es lo que más le sirve de él y lo que más le estorba?</p>
+  </div>
+  <div class="punto" data-id="8.3" data-tipo="abierta">
+    <h3>Cómo le llega la información</h3>
+    <p>¿Cómo recibe hoy la información de sus clientes: los XML del SRI, reportes de su sistema de facturación, hojas de cálculo, papel? ¿Qué es lo que más tiempo le toma digitar?</p>
+  </div>
+  <div class="punto" data-id="8.4" data-tipo="abierta">
+    <h3>Su cierre de mes</h3>
+    <p>Describa en pocas líneas lo que hace al cerrar un mes: los pasos, en qué orden y qué informes revisa.</p>
+  </div>
+  <div class="punto" data-id="8.5" data-tipo="abierta">
+    <h3>Los informes que le piden</h3>
+    <p>¿Qué informes le piden sus clientes o la gerencia cada mes, aparte de los estados financieros? ¿En qué formato los entrega?</p>
+  </div>
+  <div class="punto" data-id="8.6" data-tipo="abierta">
+    <h3>Las declaraciones</h3>
+    <p>¿Cómo prepara hoy los formularios 103 y 104? ¿Qué parte le tomaría menos tiempo si el sistema la hiciera?</p>
+  </div>
+  <div class="punto" data-id="8.7" data-tipo="abierta">
+    <h3>Otros anexos y obligaciones</h3>
+    <p>Además del ATS, ¿qué otros anexos presenta al SRI (por ejemplo, el de relación de dependencia o el de accionistas) y qué presenta a la Superintendencia de Compañías? ¿Le serviría que el sistema genere alguno?</p>
+  </div>
+  <div class="punto" data-id="8.8" data-tipo="abierta">
+    <h3>Los bancos</h3>
+    <p>¿Con qué bancos trabajan sus clientes? ¿Puede bajar el extracto en Excel o CSV? Si puede compartirnos un extracto de ejemplo con los datos borrados, nos sirve para construir el importador.</p>
+  </div>
+  <div class="punto" data-id="8.9" data-tipo="abierta">
+    <h3>El fin de año</h3>
+    <p>¿Qué ajustes registra cada fin de año (provisiones, jubilación patronal y desahucio, participación de trabajadores, impuesto a la renta, impuestos diferidos…)? ¿Cuáles le gustaría que el sistema calculara?</p>
+  </div>
+  <div class="punto" data-id="8.10" data-tipo="abierta">
+    <h3>Quién carga y quién revisa</h3>
+    <p>En las empresas que lleva, ¿quién registra la información y quién la revisa? ¿Necesitaría que un asistente cargue los asientos y que usted los apruebe antes de contabilizarlos?</p>
+  </div>
+  <div class="punto" data-id="8.11" data-tipo="abierta">
+    <h3>Empezar a mitad de año</h3>
+    <p>Si una empresa se pasa a este sistema a mitad de año, ¿qué tendría que traer del anterior: solo los saldos a la fecha de inicio, o también los movimientos del año? ¿En qué formato los podría exportar su sistema actual?</p>
+  </div>
+  <div class="punto" data-id="8.12" data-tipo="abierta">
+    <h3>Lo primero que haría falta</h3>
+    <p>De todo lo que falta (la sección 7 y lo que haya mencionado aquí), ¿qué tres cosas pondría primero, y por qué?</p>
+  </div>
+  <div class="punto" data-id="8.13" data-opciones="Me parece razonable|Me parece caro|Tengo una duda">
+    <h3>El precio</h3>
+    <p>El módulo se ofrece a US$ 199 al año por empresa, además del plan de facturación electrónica. ¿Cómo lo ve para sus clientes? Si quiere, cuéntenos cuánto pagan hoy por su sistema contable.</p>
+  </div>
+  <div class="punto" data-id="8.14" data-tipo="abierta">
+    <h3>Recomendarlo o descartarlo</h3>
+    <p>¿Qué haría que usted recomiende este sistema a sus clientes? ¿Y qué le haría descartarlo?</p>
+  </div>
+</section>
+
+<section class="parte" id="s9" data-titulo="Comentarios generales" data-min="5">
+  <h2><span class="num">9</span> Comentarios generales</h2>
+  <p class="intro">Cualquier otra cosa: lo que le preocupe, lo que haría distinto, lo que no le quedó claro de esta guía.</p>
+  <div class="punto" data-id="9.1" data-tipo="abierta">
+    <h3>Sus comentarios</h3>
+    <p>Escriba aquí lo que no encontró dónde poner.</p>
+  </div>
+  <p class="no-imprimir" style="margin-top:16px">Cuando termine, pulse <strong>Descargar mis respuestas</strong> en la barra y envíe el archivo a quien le compartió esta guía. Gracias por su tiempo.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="envoltura">Guía preparada por SYSDEVUP el 8 de noviembre de 2026. Describe el módulo de Contabilidad a esa fecha.</div>
+</footer>
+
+</div>
+
+<script id="datos" type="application/json">{"plan":[{"n":"1","nombre":"ACTIVO","nat":"D","tipo":"A","sc":"1","flujo":"O","nivel":1,"hoja":false,"propia":false},{"n":"101","nombre":"ACTIVO CORRIENTE","nat":"D","tipo":"A","sc":"101","flujo":"O","nivel":2,"hoja":false,"propia":false},{"n":"10101","nombre":"EFECTIVO Y EQUIVALENTES DE EFECTIVO","nat":"D","tipo":"A","sc":"10101","flujo":"E","nivel":3,"hoja":false,"propia":false},{"n":"1010101","nombre":"CAJA","nat":"D","tipo":"A","sc":"1010101","flujo":"E","nivel":4,"hoja":true,"propia":false},{"n":"1010102","nombre":"INSTITUCIONES FINANCIERAS PÚBLICAS","nat":"D","tipo":"A","sc":"1010102","flujo":"E","nivel":4,"hoja":true,"propia":false},{"n":"1010103","nombre":"INSTITUCIONES FINANCIERAS PRIVADAS","nat":"D","tipo":"A","sc":"1010103","flujo":"E","nivel":4,"hoja":true,"propia":false},{"n":"10102","nombre":"ACTIVOS FINANCIEROS","nat":"D","tipo":"A","sc":"10102","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"1010203","nombre":"ACTIVOS FINANCIEROS AL COSTO AMORTIZADO","nat":"D","tipo":"A","sc":"1010203","flujo":"I","nivel":4,"hoja":false,"propia":false},{"n":"101020302","nombre":"RENTA FIJA","nat":"D","tipo":"A","sc":"101020302","flujo":"I","nivel":5,"hoja":false,"propia":false},{"n":"10102030210","nombre":"DEPÓSITOS A PLAZO","nat":"D","tipo":"A","sc":"10102030210","flujo":"I","nivel":6,"hoja":true,"propia":false},{"n":"10102030223","nombre":"OTROS","nat":"D","tipo":"A","sc":"10102030223","flujo":"I","nivel":6,"hoja":true,"propia":false},{"n":"1010205","nombre":"DEUDORES COMERCIALES Y OTRAS CUENTAS POR COBRAR NO RELACIONADOS","nat":"D","tipo":"A","sc":"1010205","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"101020502","nombre":"DE ACTIVIDADES ORDINARIAS QUE NO GENEREN INTERESES","nat":"D","tipo":"A","sc":"101020502","flujo":"O","nivel":5,"hoja":false,"propia":false},{"n":"10102050201","nombre":"CUENTAS Y DOCUMENTOS A COBRAR A CLIENTES","nat":"D","tipo":"A","sc":"10102050201","flujo":"O","nivel":6,"hoja":true,"propia":false},{"n":"10102050202","nombre":"CUENTAS Y DOCUMENTOS A COBRAR A TERCEROS","nat":"D","tipo":"A","sc":"10102050202","flujo":"O","nivel":6,"hoja":true,"propia":false},{"n":"10102050221","nombre":"OTRAS CUENTAS POR COBRAR NO RELACIONADAS","nat":"D","tipo":"A","sc":"10102050221","flujo":"O","nivel":6,"hoja":true,"propia":false},{"n":"1010206","nombre":"DOCUMENTOS Y CUENTAS POR COBRAR RELACIONADOS","nat":"D","tipo":"A","sc":"1010206","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"101020601","nombre":"POR COBRAR A ACCIONISTAS","nat":"D","tipo":"A","sc":"101020601","flujo":"I","nivel":5,"hoja":true,"propia":false},{"n":"101020602","nombre":"POR COBRAR A COMPAÑÍAS RELACIONADAS","nat":"D","tipo":"A","sc":"101020602","flujo":"I","nivel":5,"hoja":true,"propia":false},{"n":"101020603","nombre":"POR COBRAR A CLIENTES","nat":"D","tipo":"A","sc":"101020603","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"101020604","nombre":"OTRAS CUENTAS POR COBRAR RELACIONADAS","nat":"D","tipo":"A","sc":"101020604","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"1010207","nombre":"PROVISIÓN POR CUENTAS INCOBRABLES Y DETERIORO","nat":"A","tipo":"A","sc":"1010207","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"10103","nombre":"INVENTARIOS","nat":"D","tipo":"A","sc":"10103","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"1010304","nombre":"INVENTARIOS DE SUMINISTROS O MATERIALES A SER CONSUMIDOS EN LA PRESTACION DEL SERVICIO","nat":"D","tipo":"A","sc":"1010304","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010306","nombre":"INVENTARIOS DE PROD. TERM. Y MERCAD. EN ALMACÉN - COMPRADO A TERCEROS","nat":"D","tipo":"A","sc":"1010306","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010307","nombre":"MERCADERÍAS EN TRÁNSITO","nat":"D","tipo":"A","sc":"1010307","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010311","nombre":"INVENTARIOS REPUESTOS, HERRAMIENTAS Y ACCESORIOS","nat":"D","tipo":"A","sc":"1010311","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010312","nombre":"OTROS INVENTARIOS","nat":"D","tipo":"A","sc":"1010312","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010313","nombre":"(-) PROVISIÓN POR VALOR NETO DE REALIZACIÓN Y OTRAS PERDIDAS EN INVENTARIO","nat":"A","tipo":"A","sc":"1010313","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"10104","nombre":"SERVICIOS Y OTROS PAGOS ANTICIPADOS","nat":"D","tipo":"A","sc":"10104","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"1010401","nombre":"SEGUROS PAGADOS POR ANTICIPADO","nat":"D","tipo":"A","sc":"1010401","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010402","nombre":"ARRIENDOS PAGADOS POR ANTICIPADO","nat":"D","tipo":"A","sc":"1010402","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010403","nombre":"ANTICIPOS A PROVEEDORES","nat":"D","tipo":"A","sc":"1010403","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"1010404","nombre":"OTROS ANTICIPOS ENTREGADOS","nat":"D","tipo":"A","sc":"1010404","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"10105","nombre":"ACTIVOS POR IMPUESTOS CORRIENTES","nat":"D","tipo":"A","sc":"10105","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"1010501","nombre":"CRÉDITO TRIBUTARIO A FAVOR DE LA EMPRESA (IVA)","nat":"D","tipo":"A","sc":"1010501","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"101050101","nombre":"IVA PAGADO EN COMPRAS","nat":"D","tipo":"A","sc":"1010501","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"101050102","nombre":"RETENCIONES DE IVA QUE LE EFECTUARON","nat":"D","tipo":"A","sc":"1010501","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"1010502","nombre":"CRÉDITO TRIBUTARIO A FAVOR DE LA EMPRESA ( I. R.)","nat":"D","tipo":"A","sc":"1010502","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"101050201","nombre":"RETENCIONES EN LA FUENTE DE IMPUESTO A LA RENTA QUE LE EFECTUARON","nat":"D","tipo":"A","sc":"1010502","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"1010503","nombre":"ANTICIPO DE IMPUESTO A LA RENTA","nat":"D","tipo":"A","sc":"1010503","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"10108","nombre":"OTROS ACTIVOS CORRIENTES","nat":"D","tipo":"A","sc":"10108","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"102","nombre":"ACTIVOS NO CORRIENTES","nat":"D","tipo":"A","sc":"102","flujo":"I","nivel":2,"hoja":false,"propia":false},{"n":"10201","nombre":"PROPIEDAD, PLANTA Y EQUIPO","nat":"D","tipo":"A","sc":"10201","flujo":"I","nivel":3,"hoja":false,"propia":false},{"n":"1020101","nombre":"TERRENOS","nat":"D","tipo":"A","sc":"1020101","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020102","nombre":"EDIFICIOS","nat":"D","tipo":"A","sc":"1020102","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020104","nombre":"INSTALACIONES","nat":"D","tipo":"A","sc":"1020104","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020105","nombre":"MUEBLES Y ENSERES","nat":"D","tipo":"A","sc":"1020105","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020106","nombre":"MAQUINARIA Y EQUIPO","nat":"D","tipo":"A","sc":"1020106","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020108","nombre":"EQUIPO DE COMPUTACIÓN","nat":"D","tipo":"A","sc":"1020108","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020109","nombre":"VEHÍCULOS, EQUIPOS DE TRASPORTE Y EQUIPO CAMINERO MÓVIL","nat":"D","tipo":"A","sc":"1020109","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020110","nombre":"OTROS PROPIEDADES, PLANTA Y EQUIPO","nat":"D","tipo":"A","sc":"1020110","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020112","nombre":"(-) DEPRECIACIÓN ACUMULADA PROPIEDADES, PLANTA Y EQUIPO","nat":"A","tipo":"A","sc":"1020112","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"10204","nombre":"ACTIVO INTANGIBLE","nat":"D","tipo":"A","sc":"10204","flujo":"I","nivel":3,"hoja":false,"propia":false},{"n":"1020402","nombre":"MARCAS, PATENTES, DERECHOS DE LLAVE , CUOTAS PATRIMONIALES Y OTROS SIMILARES","nat":"D","tipo":"A","sc":"1020402","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020403","nombre":"CONCESIONES Y LICENCIAS","nat":"D","tipo":"A","sc":"1020403","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020405","nombre":"(-) AMORTIZACIÓN ACUMULADA DE ACTIVOS INTANGIBLE","nat":"A","tipo":"A","sc":"1020405","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020407","nombre":"OTROS INTANGIBLES","nat":"D","tipo":"A","sc":"1020407","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"10205","nombre":"ACTIVOS POR IMPUESTOS DIFERIDOS","nat":"D","tipo":"A","sc":"10205","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"10208","nombre":"OTROS ACTIVOS NO CORRIENTES","nat":"D","tipo":"A","sc":"10208","flujo":"I","nivel":3,"hoja":false,"propia":false},{"n":"1020802","nombre":"DEPÓSITOS EN GARANTÍA","nat":"D","tipo":"A","sc":"1020802","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"1020811","nombre":"OTROS ACTIVOS NO CORRIENTES","nat":"D","tipo":"A","sc":"1020811","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"2","nombre":"PASIVO","nat":"A","tipo":"P","sc":"2","flujo":"O","nivel":1,"hoja":false,"propia":false},{"n":"201","nombre":"PASIVO CORRIENTE","nat":"A","tipo":"P","sc":"201","flujo":"O","nivel":2,"hoja":false,"propia":false},{"n":"20103","nombre":"CUENTAS Y DOCUMENTOS POR PAGAR","nat":"A","tipo":"P","sc":"20103","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2010301","nombre":"LOCALES","nat":"A","tipo":"P","sc":"2010301","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"201030101","nombre":"PRÉSTAMOS","nat":"A","tipo":"P","sc":"201030101","flujo":"F","nivel":5,"hoja":true,"propia":false},{"n":"201030102","nombre":"PROVEEDORES","nat":"A","tipo":"P","sc":"201030102","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"201030103","nombre":"OTRAS","nat":"A","tipo":"P","sc":"201030103","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"2010302","nombre":"DEL EXTERIOR","nat":"A","tipo":"P","sc":"2010302","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"201030201","nombre":"PRÉSTAMOS","nat":"A","tipo":"P","sc":"201030201","flujo":"F","nivel":5,"hoja":true,"propia":false},{"n":"201030202","nombre":"PROVEEDORES","nat":"A","tipo":"P","sc":"201030202","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"201030203","nombre":"OTRAS","nat":"A","tipo":"P","sc":"201030203","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"20104","nombre":"OBLIGACIONES CON INSTITUCIONES FINANCIERAS","nat":"A","tipo":"P","sc":"20104","flujo":"F","nivel":3,"hoja":false,"propia":false},{"n":"2010401","nombre":"LOCALES","nat":"A","tipo":"P","sc":"2010401","flujo":"F","nivel":4,"hoja":true,"propia":false},{"n":"2010402","nombre":"DEL EXTERIOR","nat":"A","tipo":"P","sc":"2010402","flujo":"F","nivel":4,"hoja":true,"propia":false},{"n":"20105","nombre":"PROVISIONES","nat":"A","tipo":"P","sc":"20105","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2010501","nombre":"LOCALES","nat":"A","tipo":"P","sc":"2010501","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"20107","nombre":"OTRAS OBLIGACIONES CORRIENTES","nat":"A","tipo":"P","sc":"20107","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2010701","nombre":"CON LA ADMINISTRACIÓN TRIBUTARIA","nat":"A","tipo":"P","sc":"2010701","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"201070101","nombre":"IVA COBRADO EN VENTAS","nat":"A","tipo":"P","sc":"2010701","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"201070102","nombre":"RETENCIONES EN LA FUENTE DE IMPUESTO A LA RENTA POR PAGAR","nat":"A","tipo":"P","sc":"2010701","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"201070103","nombre":"RETENCIONES DE IVA POR PAGAR","nat":"A","tipo":"P","sc":"2010701","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"201070104","nombre":"IVA POR PAGAR","nat":"A","tipo":"P","sc":"2010701","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"2010702","nombre":"IMPUESTO A LA RENTA POR PAGAR DEL EJERCICIO","nat":"A","tipo":"P","sc":"2010702","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"2010703","nombre":"CON EL IESS","nat":"A","tipo":"P","sc":"2010703","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"2010704","nombre":"POR BENEFICIOS DE LEY A EMPLEADOS","nat":"A","tipo":"P","sc":"2010704","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"2010705","nombre":"PARTICIPACIÓN TRABAJADORES POR PAGAR DEL EJERCICIO","nat":"A","tipo":"P","sc":"2010705","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"2010706","nombre":"DIVIDENDOS POR PAGAR","nat":"A","tipo":"P","sc":"2010706","flujo":"F","nivel":4,"hoja":true,"propia":false},{"n":"2010707","nombre":"OTROS","nat":"A","tipo":"P","sc":"2010707","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"201070701","nombre":"PROPINAS POR PAGAR","nat":"A","tipo":"P","sc":"2010707","flujo":"O","nivel":5,"hoja":true,"propia":true},{"n":"20108","nombre":"CUENTAS POR PAGAR A RELACIONADAS","nat":"A","tipo":"P","sc":"20108","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2010801","nombre":"LOCALES","nat":"A","tipo":"P","sc":"2010801","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"201080101","nombre":"PRÉSTAMOS DE ACCIONISTAS","nat":"A","tipo":"P","sc":"201080101","flujo":"F","nivel":5,"hoja":true,"propia":false},{"n":"201080102","nombre":"PRÉSTAMOS DE COMPAÑÍAS RELACIONADAS","nat":"A","tipo":"P","sc":"201080102","flujo":"F","nivel":5,"hoja":true,"propia":false},{"n":"201080103","nombre":"PROVEEDORES","nat":"A","tipo":"P","sc":"201080103","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"201080104","nombre":"OTROS","nat":"A","tipo":"P","sc":"201080104","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"20110","nombre":"ANTICIPOS","nat":"A","tipo":"P","sc":"20110","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2011001","nombre":"ANTICIPOS DE CLIENTES","nat":"A","tipo":"P","sc":"2011001","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"2011002","nombre":"OTROS ANTICIPOS RECIBIDOS","nat":"A","tipo":"P","sc":"2011002","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"20113","nombre":"OTROS PASIVOS CORRIENTES","nat":"A","tipo":"P","sc":"20113","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2011312","nombre":"OTROS","nat":"A","tipo":"P","sc":"2011312","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"202","nombre":"PASIVO NO CORRIENTE","nat":"A","tipo":"P","sc":"202","flujo":"O","nivel":2,"hoja":false,"propia":false},{"n":"20202","nombre":"CUENTAS Y DOCUMENTOS POR PAGAR","nat":"A","tipo":"P","sc":"20202","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2020201","nombre":"LOCALES","nat":"A","tipo":"P","sc":"2020201","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"202020101","nombre":"PRÉSTAMOS","nat":"A","tipo":"P","sc":"202020101","flujo":"F","nivel":5,"hoja":true,"propia":false},{"n":"202020102","nombre":"PROVEEDORES","nat":"A","tipo":"P","sc":"202020102","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"202020103","nombre":"OTRAS","nat":"A","tipo":"P","sc":"202020103","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"20203","nombre":"OBLIGACIONES CON INSTITUCIONES FINANCIERAS","nat":"A","tipo":"P","sc":"20203","flujo":"F","nivel":3,"hoja":false,"propia":false},{"n":"2020301","nombre":"LOCALES","nat":"A","tipo":"P","sc":"2020301","flujo":"F","nivel":4,"hoja":true,"propia":false},{"n":"20204","nombre":"CUENTAS POR PAGAR A RELACIONADAS","nat":"A","tipo":"P","sc":"20204","flujo":"F","nivel":3,"hoja":false,"propia":false},{"n":"2020401","nombre":"LOCALES","nat":"A","tipo":"P","sc":"2020401","flujo":"F","nivel":4,"hoja":false,"propia":false},{"n":"202040101","nombre":"PRÉSTAMOS DE ACCIONISTAS","nat":"A","tipo":"P","sc":"202040101","flujo":"F","nivel":5,"hoja":true,"propia":false},{"n":"202040102","nombre":"PRÉSTAMOS DE COMPAÑÍAS RELACIONADAS","nat":"A","tipo":"P","sc":"202040102","flujo":"F","nivel":5,"hoja":true,"propia":false},{"n":"20207","nombre":"PROVISIONES POR BENEFICIOS A EMPLEADOS","nat":"A","tipo":"P","sc":"20207","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2020701","nombre":"JUBILACION PATRONAL","nat":"A","tipo":"P","sc":"2020701","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"2020702","nombre":"OTROS BENEFICIOS NO CORRIENTES PARA LOS EMPLEADOS","nat":"A","tipo":"P","sc":"2020702","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"20208","nombre":"OTRAS PROVISIONES","nat":"A","tipo":"P","sc":"20208","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"20209","nombre":"PASIVO DIFERIDO","nat":"A","tipo":"P","sc":"20209","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"2020901","nombre":"INGRESOS DIFERIDOS","nat":"A","tipo":"P","sc":"2020901","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"2020902","nombre":"PASIVOS POR IMPUESTOS DIFERIDOS","nat":"A","tipo":"P","sc":"2020902","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"20210","nombre":"OTROS PASIVOS NO CORRIENTES","nat":"A","tipo":"P","sc":"20210","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"3","nombre":"PATRIMONIO NETO","nat":"A","tipo":"T","sc":"3","flujo":"F","nivel":1,"hoja":false,"propia":false},{"n":"301","nombre":"CAPITAL","nat":"A","tipo":"T","sc":"301","flujo":"F","nivel":2,"hoja":false,"propia":false},{"n":"30101","nombre":"CAPITAL SUSCRITO O ASIGNADO","nat":"A","tipo":"T","sc":"30101","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"30102","nombre":"(-) CAPITAL SUSCRITO NO PAGADO, ACCIONES EN TESORERÍA","nat":"D","tipo":"T","sc":"30102","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"302","nombre":"APORTES DE SOCIOS O ACCIONISTAS PARA FUTURA CAPITALIZACIÓN","nat":"A","tipo":"T","sc":"302","flujo":"F","nivel":2,"hoja":true,"propia":false},{"n":"304","nombre":"RESERVAS","nat":"A","tipo":"T","sc":"304","flujo":"F","nivel":2,"hoja":false,"propia":false},{"n":"30401","nombre":"RESERVA LEGAL","nat":"A","tipo":"T","sc":"30401","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"30402","nombre":"RESERVAS FACULTATIVA Y ESTATUTARIA","nat":"A","tipo":"T","sc":"30402","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"306","nombre":"RESULTADOS ACUMULADOS","nat":"A","tipo":"T","sc":"306","flujo":"F","nivel":2,"hoja":false,"propia":false},{"n":"30601","nombre":"GANANCIAS ACUMULADAS","nat":"A","tipo":"T","sc":"30601","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"30602","nombre":"(-) PÉRDIDAS ACUMULADAS","nat":"D","tipo":"T","sc":"30602","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"30603","nombre":"RESULTADOS ACUMULADOS PROVENIENTES DE LA ADOPCION POR PRIMERA VEZ DE LAS NIIF","nat":"A","tipo":"T","sc":"30603","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"307","nombre":"RESULTADOS DEL EJERCICIO","nat":"A","tipo":"T","sc":"307","flujo":"F","nivel":2,"hoja":false,"propia":false},{"n":"30701","nombre":"GANANCIA NETA DEL PERIODO","nat":"A","tipo":"T","sc":"30701","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"30702","nombre":"(-) PÉRDIDA NETA DEL PERIODO","nat":"D","tipo":"T","sc":"30702","flujo":"F","nivel":3,"hoja":true,"propia":false},{"n":"4","nombre":"INGRESOS","nat":"A","tipo":"I","sc":"","flujo":"O","nivel":1,"hoja":false,"propia":true},{"n":"401","nombre":"INGRESOS DE ACTIVIDADES ORDINARIAS","nat":"A","tipo":"I","sc":"401","flujo":"O","nivel":2,"hoja":false,"propia":false},{"n":"40101","nombre":"VENTA DE BIENES","nat":"A","tipo":"I","sc":"40101","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"40102","nombre":"PRESTACION DE SERVICIOS","nat":"A","tipo":"I","sc":"40102","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"40106","nombre":"INTERESES","nat":"A","tipo":"I","sc":"40106","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"4010601","nombre":"INTERESES GENERADOS POR VENTAS A CREDITO","nat":"A","tipo":"I","sc":"4010601","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"4010602","nombre":"INTERESES Y RENDIMIENTOS FINANCIEROS","nat":"A","tipo":"I","sc":"4010602","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"40110","nombre":"INGRESOS FINANCIEROS","nat":"A","tipo":"I","sc":"40110","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"4011002","nombre":"INTERESES FINANCIEROS","nat":"A","tipo":"I","sc":"4011002","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"4011006","nombre":"OTROS INGRESOS FINANCIEROS","nat":"A","tipo":"I","sc":"4011006","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"40112","nombre":"(-) DESCUENTO EN VENTAS","nat":"D","tipo":"I","sc":"40112","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"40113","nombre":"(-) DEVOLUCIONES EN VENTAS","nat":"D","tipo":"I","sc":"40113","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"40114","nombre":"(-) BONIFICACIÓN EN PRODUCTO","nat":"D","tipo":"I","sc":"40114","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"40115","nombre":"(-) OTRAS REBAJAS COMERCIALES","nat":"D","tipo":"I","sc":"40115","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"403","nombre":"OTROS INGRESOS","nat":"A","tipo":"I","sc":"403","flujo":"O","nivel":2,"hoja":false,"propia":false},{"n":"40301","nombre":"GANANCIA EN VENTA DE PROPIEDAD, PLANTA Y EQUIPO","nat":"A","tipo":"I","sc":"40301","flujo":"I","nivel":3,"hoja":true,"propia":false},{"n":"40303","nombre":"OTROS","nat":"A","tipo":"I","sc":"40303","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"5","nombre":"COSTOS Y GASTOS","nat":"D","tipo":"G","sc":"","flujo":"O","nivel":1,"hoja":false,"propia":true},{"n":"501","nombre":"COSTO DE VENTAS Y PRODUCCIÓN","nat":"D","tipo":"C","sc":"501","flujo":"O","nivel":2,"hoja":false,"propia":false},{"n":"50101","nombre":"MATERIALES UTILIZADOS O PRODUCTOS VENDIDOS","nat":"D","tipo":"C","sc":"50101","flujo":"O","nivel":3,"hoja":true,"propia":false},{"n":"502","nombre":"GASTOS","nat":"D","tipo":"G","sc":"502","flujo":"O","nivel":2,"hoja":false,"propia":false},{"n":"50201","nombre":"GASTOS DE VENTA","nat":"D","tipo":"G","sc":"50201","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"5020101","nombre":"SUELDOS, SALARIOS Y DEMÁS REMUNERACIONES","nat":"D","tipo":"G","sc":"5020101","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020102","nombre":"APORTES A LA SEGURIDAD SOCIAL (INCLUIDO FONDO DE RESERVA)","nat":"D","tipo":"G","sc":"5020102","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020103","nombre":"BENEFICIOS SOCIALES E INDEMNIZACIONES","nat":"D","tipo":"G","sc":"5020103","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020104","nombre":"GASTO PLANES DE BENEFICIOS A EMPLEADOS","nat":"D","tipo":"G","sc":"5020104","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020105","nombre":"HONORARIOS, COMISIONES Y DIETAS A PERSONAS NATURALES","nat":"D","tipo":"G","sc":"5020105","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020106","nombre":"REMUNERACIONES A OTROS TRABAJADORES AUTÓNOMOS","nat":"D","tipo":"G","sc":"5020106","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020108","nombre":"MANTENIMIENTO Y REPARACIONES","nat":"D","tipo":"G","sc":"5020108","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020109","nombre":"ARRENDAMIENTO","nat":"D","tipo":"G","sc":"5020109","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020110","nombre":"COMISIONES","nat":"D","tipo":"G","sc":"5020110","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020111","nombre":"PROMOCIÓN Y PUBLICIDAD","nat":"D","tipo":"G","sc":"5020111","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020112","nombre":"COMBUSTIBLES","nat":"D","tipo":"G","sc":"5020112","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020114","nombre":"SEGUROS Y REASEGUROS (PRIMAS Y CESIONES)","nat":"D","tipo":"G","sc":"5020114","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020115","nombre":"TRANSPORTE","nat":"D","tipo":"G","sc":"5020115","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020116","nombre":"GASTOS DE GESTIÓN (AGASAJOS A ACCIONISTAS, TRABAJADORES Y CLIENTES)","nat":"D","tipo":"G","sc":"5020116","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020117","nombre":"GASTOS DE VIAJE","nat":"D","tipo":"G","sc":"5020117","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020118","nombre":"AGUA, ENERGÍA, LUZ, Y TELECOMUNICACIONES","nat":"D","tipo":"G","sc":"5020118","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020119","nombre":"NOTARIOS Y REGISTRADORES DE LA PROPIEDAD O MERCANTILES","nat":"D","tipo":"G","sc":"5020119","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020120","nombre":"DEPRECIACIONES:","nat":"D","tipo":"G","sc":"5020120","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"502012001","nombre":"PROPIEDADES, PLANTA Y EQUIPO","nat":"D","tipo":"G","sc":"502012001","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"5020121","nombre":"AMORTIZACIONES","nat":"D","tipo":"G","sc":"5020121","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"502012101","nombre":"INTANGIBLES","nat":"D","tipo":"G","sc":"502012101","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"5020122","nombre":"GASTO DETERIORO","nat":"D","tipo":"G","sc":"5020122","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"502012202","nombre":"INVENTARIOS","nat":"D","tipo":"G","sc":"502012202","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"502012205","nombre":"CUENTAS POR COBRAR","nat":"D","tipo":"G","sc":"502012205","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"5020127","nombre":"SUMINISTROS Y MATERIALES","nat":"D","tipo":"G","sc":"5020127","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020128","nombre":"OTROS GASTOS","nat":"D","tipo":"G","sc":"5020128","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"50202","nombre":"GASTOS ADMINISTRATIVOS","nat":"D","tipo":"G","sc":"50202","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"5020201","nombre":"SUELDOS, SALARIOS Y DEMÁS REMUNERACIONES","nat":"D","tipo":"G","sc":"5020201","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020202","nombre":"APORTES A LA SEGURIDAD SOCIAL (INCLUIDO FONDO DE RESERVA)","nat":"D","tipo":"G","sc":"5020202","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020203","nombre":"BENEFICIOS SOCIALES E INDEMNIZACIONES","nat":"D","tipo":"G","sc":"5020203","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020204","nombre":"GASTO PLANES DE BENEFICIOS A EMPLEADOS","nat":"D","tipo":"G","sc":"5020204","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020205","nombre":"HONORARIOS, COMISIONES Y DIETAS A PERSONAS NATURALES","nat":"D","tipo":"G","sc":"5020205","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020206","nombre":"REMUNERACIONES A OTROS TRABAJADORES AUTÓNOMOS","nat":"D","tipo":"G","sc":"5020206","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020208","nombre":"MANTENIMIENTO Y REPARACIONES","nat":"D","tipo":"G","sc":"5020208","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020209","nombre":"ARRENDAMIENTO","nat":"D","tipo":"G","sc":"5020209","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020210","nombre":"COMISIONES","nat":"D","tipo":"G","sc":"5020210","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020211","nombre":"PROMOCIÓN Y PUBLICIDAD","nat":"D","tipo":"G","sc":"5020211","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020212","nombre":"COMBUSTIBLES","nat":"D","tipo":"G","sc":"5020212","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020214","nombre":"SEGUROS Y REASEGUROS (PRIMAS Y CESIONES)","nat":"D","tipo":"G","sc":"5020214","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020215","nombre":"TRANSPORTE","nat":"D","tipo":"G","sc":"5020215","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020216","nombre":"GASTOS DE GESTIÓN (AGASAJOS A ACCIONISTAS, TRABAJADORES Y CLIENTES)","nat":"D","tipo":"G","sc":"5020216","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020217","nombre":"GASTOS DE VIAJE","nat":"D","tipo":"G","sc":"5020217","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020218","nombre":"AGUA, ENERGÍA, LUZ, Y TELECOMUNICACIONES","nat":"D","tipo":"G","sc":"5020218","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020219","nombre":"NOTARIOS Y REGISTRADORES DE LA PROPIEDAD O MERCANTILES","nat":"D","tipo":"G","sc":"5020219","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020220","nombre":"IMPUESTOS, CONTRIBUCIONES Y OTROS","nat":"D","tipo":"G","sc":"5020220","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020221","nombre":"DEPRECIACIONES","nat":"D","tipo":"G","sc":"5020221","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"502022101","nombre":"PROPIEDADES, PLANTA Y EQUIPO","nat":"D","tipo":"G","sc":"502022101","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"5020222","nombre":"AMORTIZACIONES","nat":"D","tipo":"G","sc":"5020222","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"502022201","nombre":"INTANGIBLES","nat":"D","tipo":"G","sc":"502022201","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"5020223","nombre":"GASTO DETERIORO:","nat":"D","tipo":"G","sc":"5020223","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"502022302","nombre":"INVENTARIOS","nat":"D","tipo":"G","sc":"502022302","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"502022305","nombre":"CUENTAS POR COBRAR","nat":"D","tipo":"G","sc":"502022305","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"5020228","nombre":"SUMINISTROS Y MATERIALES","nat":"D","tipo":"G","sc":"5020228","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020229","nombre":"OTROS GASTOS","nat":"D","tipo":"G","sc":"5020229","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"50203","nombre":"GASTOS FINANCIEROS","nat":"D","tipo":"G","sc":"50203","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"5020301","nombre":"INTERESES","nat":"D","tipo":"G","sc":"5020301","flujo":"O","nivel":4,"hoja":false,"propia":false},{"n":"502030101","nombre":"INTERESES POR PRESTAMOS","nat":"D","tipo":"G","sc":"502030101","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"502030104","nombre":"OTROS INTERESES","nat":"D","tipo":"G","sc":"502030104","flujo":"O","nivel":5,"hoja":true,"propia":false},{"n":"5020302","nombre":"COMISIONES","nat":"D","tipo":"G","sc":"5020302","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"5020310","nombre":"PERDIDA EN VENTA DE PROPIEDAD, PLANTA Y EQUIPO","nat":"D","tipo":"G","sc":"5020310","flujo":"I","nivel":4,"hoja":true,"propia":false},{"n":"5020312","nombre":"OTROS GASTOS FINANCIEROS","nat":"D","tipo":"G","sc":"5020312","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"50204","nombre":"OTROS GASTOS","nat":"D","tipo":"G","sc":"50204","flujo":"O","nivel":3,"hoja":false,"propia":false},{"n":"5020402","nombre":"OTROS","nat":"D","tipo":"G","sc":"5020402","flujo":"O","nivel":4,"hoja":true,"propia":false},{"n":"6","nombre":"PARTICIPACIÓN TRABAJADORES E IMPUESTOS","nat":"D","tipo":"G","sc":"","flujo":"O","nivel":1,"hoja":false,"propia":true},{"n":"601","nombre":"15% PARTICIPACIÓN TRABAJADORES","nat":"D","tipo":"G","sc":"601","flujo":"O","nivel":2,"hoja":true,"propia":false},{"n":"603","nombre":"IMPUESTO A LA RENTA CAUSADO","nat":"D","tipo":"G","sc":"603","flujo":"O","nivel":2,"hoja":true,"propia":false},{"n":"605","nombre":"(-) GASTO POR IMPUESTO DIFERIDO","nat":"D","tipo":"G","sc":"605","flujo":"O","nivel":2,"hoja":true,"propia":false},{"n":"606","nombre":"(+) INGRESO POR IMPUESTO DIFERIDO","nat":"A","tipo":"I","sc":"606","flujo":"O","nivel":2,"hoja":true,"propia":false}],"usos":[{"codigo":"CXC_CLIENTES","nombre":"Cuentas por cobrar a clientes","desc":"Lo que deben los clientes por las facturas y las notas de débito emitidas.","grupo":"Ventas","tipos":"A","cat":0,"cuenta":"10102050201","cuentaNombre":"CUENTAS Y DOCUMENTOS A COBRAR A CLIENTES"},{"codigo":"VENTAS","nombre":"Ventas de bienes","desc":"El ingreso de las líneas de producto de una factura, sin IVA. Cada categoría de producto puede tener la suya.","grupo":"Ventas","tipos":"I","cat":1,"cuenta":"40101","cuentaNombre":"VENTA DE BIENES"},{"codigo":"VENTAS_SERVICIOS","nombre":"Ventas de servicios","desc":"El ingreso de las líneas de los productos de tipo Servicio. Cada categoría de producto puede tener la suya.","grupo":"Ventas","tipos":"I","cat":1,"cuenta":"40102","cuentaNombre":"PRESTACION DE SERVICIOS"},{"codigo":"DEVOLUCIONES_VENTAS","nombre":"Devoluciones en ventas","desc":"La base de las notas de crédito emitidas, que resta de las ventas.","grupo":"Ventas","tipos":"I","cat":0,"cuenta":"40113","cuentaNombre":"(-) DEVOLUCIONES EN VENTAS"},{"codigo":"INGRESO_NOTA_DEBITO","nombre":"Ingreso de las notas de débito","desc":"Lo que se cobra con una nota de débito emitida: intereses, recargos, gastos de cobranza.","grupo":"Ventas","tipos":"I","cat":0,"cuenta":"40303","cuentaNombre":"OTROS"},{"codigo":"IVA_VENTAS","nombre":"IVA cobrado en ventas","desc":"El IVA de las facturas y las notas de débito emitidas, menos el de las notas de crédito.","grupo":"Ventas","tipos":"P","cat":0,"cuenta":"201070101","cuentaNombre":"IVA COBRADO EN VENTAS"},{"codigo":"PROPINAS","nombre":"Propinas por pagar","desc":"La propina cobrada en la factura, que se le debe al personal.","grupo":"Ventas","tipos":"P","cat":0,"cuenta":"201070701","cuentaNombre":"PROPINAS POR PAGAR"},{"codigo":"CXP_PROVEEDORES","nombre":"Cuentas por pagar a proveedores","desc":"Lo que se les debe a los proveedores por las facturas y las notas de débito recibidas.","grupo":"Compras","tipos":"P","cat":0,"cuenta":"201030102","cuentaNombre":"PROVEEDORES"},{"codigo":"IVA_COMPRAS","nombre":"IVA pagado en compras","desc":"El IVA de las compras, que es crédito tributario.","grupo":"Compras","tipos":"A","cat":0,"cuenta":"101050101","cuentaNombre":"IVA PAGADO EN COMPRAS"},{"codigo":"GASTO_GENERAL","nombre":"Gastos sin categoría","desc":"Las líneas de gasto de una compra cuya categoría de gasto no tiene cuenta propia, las notas de débito recibidas, y el ICE, otros impuestos y la propina de una factura recibida.","grupo":"Compras","tipos":"ACG","cat":0,"cuenta":"5020229","cuentaNombre":"OTROS GASTOS"},{"codigo":"DEVOLUCIONES_COMPRAS","nombre":"Notas de crédito recibidas","desc":"La base de una nota de crédito de un proveedor. Por omisión va a la cuenta de los faltantes de inventario: la mercadería devuelta sale del kardex con un ajuste de salida, que carga esa cuenta, y la nota de crédito la descarga.","grupo":"Compras","tipos":"ACGI","cat":0,"cuenta":"5020402","cuentaNombre":"OTROS"},{"codigo":"INVENTARIO","nombre":"Inventario","desc":"El costo de la mercadería que entra y sale del kardex. Cada categoría de producto puede tener la suya.","grupo":"Inventario","tipos":"A","cat":1,"cuenta":"1010306","cuentaNombre":"INVENTARIOS DE PROD. TERM. Y MERCAD. EN ALMACÉN - COMPRADO A TERCEROS"},{"codigo":"COSTO_VENTAS","nombre":"Costo de ventas","desc":"El costo de lo vendido, que sale del kardex. Cada categoría de producto puede tener la suya.","grupo":"Inventario","tipos":"CG","cat":1,"cuenta":"50101","cuentaNombre":"MATERIALES UTILIZADOS O PRODUCTOS VENDIDOS"},{"codigo":"AJUSTE_INV_INGRESO","nombre":"Sobrantes de inventario","desc":"La contrapartida de un ajuste de inventario que aumenta las existencias.","grupo":"Inventario","tipos":"I","cat":0,"cuenta":"40303","cuentaNombre":"OTROS"},{"codigo":"AJUSTE_INV_GASTO","nombre":"Faltantes de inventario","desc":"La contrapartida de un ajuste de inventario que disminuye las existencias.","grupo":"Inventario","tipos":"CG","cat":0,"cuenta":"5020402","cuentaNombre":"OTROS"},{"codigo":"RET_IR_POR_PAGAR","nombre":"Retenciones de renta por pagar","desc":"Lo retenido a los proveedores por impuesto a la renta, que se le paga al SRI. Se puede separar por código en la pestaña Retenciones.","grupo":"Retenciones","tipos":"P","cat":0,"cuenta":"201070102","cuentaNombre":"RETENCIONES EN LA FUENTE DE IMPUESTO A LA RENTA POR PAGAR"},{"codigo":"RET_IVA_POR_PAGAR","nombre":"Retenciones de IVA por pagar","desc":"Lo retenido a los proveedores por IVA, que se le paga al SRI. Se puede separar por código en la pestaña Retenciones.","grupo":"Retenciones","tipos":"P","cat":0,"cuenta":"201070103","cuentaNombre":"RETENCIONES DE IVA POR PAGAR"},{"codigo":"RET_IR_RECIBIDA","nombre":"Retenciones de renta que le efectuaron","desc":"Lo que le retuvieron los clientes por impuesto a la renta: es crédito tributario.","grupo":"Retenciones","tipos":"A","cat":0,"cuenta":"101050201","cuentaNombre":"RETENCIONES EN LA FUENTE DE IMPUESTO A LA RENTA QUE LE EFECTUARON"},{"codigo":"RET_IVA_RECIBIDA","nombre":"Retenciones de IVA que le efectuaron","desc":"Lo que le retuvieron los clientes por IVA: es crédito tributario.","grupo":"Retenciones","tipos":"A","cat":0,"cuenta":"101050102","cuentaNombre":"RETENCIONES DE IVA QUE LE EFECTUARON"},{"codigo":"CAJA","nombre":"Caja","desc":"La cuenta de las formas de pago que no tienen una propia en la pestaña Formas de pago.","grupo":"Cobros y pagos","tipos":"A","cat":0,"cuenta":"1010101","cuentaNombre":"CAJA"},{"codigo":"GANANCIA_EJERCICIO","nombre":"Ganancia del ejercicio","desc":"Recibe la utilidad del año en el asiento de cierre.","grupo":"Cierre del ejercicio","tipos":"T","cat":0,"cuenta":"30701","cuentaNombre":"GANANCIA NETA DEL PERIODO"},{"codigo":"PERDIDA_EJERCICIO","nombre":"Pérdida del ejercicio","desc":"Recibe la pérdida del año en el asiento de cierre.","grupo":"Cierre del ejercicio","tipos":"T","cat":0,"cuenta":"30702","cuentaNombre":"(-) PÉRDIDA NETA DEL PERIODO"}],"sustentos":[{"codigo":"01","nombre":"Crédito tributario para declaración de IVA (servicios y bienes distintos de inventarios y activos fijos)","comp":"01,03,04,05,11,12,17,21,41,43,47,48,294,344,374","estado":1},{"codigo":"02","nombre":"Costo o gasto para declaración de impuesto a la renta (servicios y bienes distintos de inventarios y activos fijos)","comp":"01,02,03,04,05,09,11,12,15,17,19,20,21,41,43,47,48,294,344,364,374","estado":1},{"codigo":"03","nombre":"Activo fijo - Crédito tributario para declaración de IVA","comp":"01,03,04,05,17,41,47,48,294,344,374","estado":1},{"codigo":"04","nombre":"Activo fijo - Costo o gasto para declaración de impuesto a la renta","comp":"01,02,03,04,05,15,17,41,47,48,294,344,374","estado":1},{"codigo":"05","nombre":"Liquidación de gastos de viaje, hospedaje y alimentación (a nombre de empleados y no de la empresa)","comp":"01,02,03,04,05,11,15,17,41,294,344,374","estado":1},{"codigo":"06","nombre":"Inventario - Crédito tributario para declaración de IVA","comp":"01,03,04,05,17,41,43,47,48,294,344,374","estado":1},{"codigo":"07","nombre":"Inventario - Costo o gasto para declaración de impuesto a la renta","comp":"01,02,03,04,05,15,17,41,43,47,48,294,344,364,374","estado":1},{"codigo":"08","nombre":"Valor pagado para solicitar reembolso de gastos (intermediario)","comp":"01,02,03,04,05,17,21,294,344","estado":1},{"codigo":"09","nombre":"Reembolso por siniestros","comp":"01,04,05,45","estado":1},{"codigo":"10","nombre":"Distribución de dividendos, beneficios o utilidades","comp":"19","estado":1},{"codigo":"11","nombre":"Convenios de débito o recaudación para instituciones financieras","comp":"12","estado":1},{"codigo":"12","nombre":"Impuestos y retenciones presuntivos","comp":"42","estado":1},{"codigo":"13","nombre":"Valores reconocidos por entidades del sector público a favor de sujetos pasivos","comp":"19","estado":1},{"codigo":"14","nombre":"Valores facturados por socios a operadoras de transporte (que no constituyen gasto de dicha operadora)","comp":"01,02,03,04,05","estado":1},{"codigo":"15","nombre":"Pagos efectuados por consumos propios y de terceros de servicios digitales","comp":"01,02,03,04,05,12,15","estado":1}]}</script>
+<script>
+(function () {
+  var SAL = '9a2ff912dde84c9d140428da4967d5ab';
+  var HUELLA = 'f0aad3b3a7e6e24528dec3763355c56d675d7bd574fcca6de135e51e40c4d857';
+  var ITERACIONES = 150000;
+  var PREFIJO = 'guiaContadorSysdevup.';
+  var DATOS = JSON.parse(document.getElementById('datos').textContent);
+  var TIPOS = { A: 'Activo', P: 'Pasivo', T: 'Patrimonio', I: 'Ingreso', C: 'Costo', G: 'Gasto', O: 'Orden' };
+  var NAT = { D: 'Deudora', A: 'Acreedora' };
+  var FLUJO = { E: 'Efectivo', O: 'Operación', I: 'Inversión', F: 'Financiamiento' };
+  var OPCIONES = ['De acuerdo', 'Hay que cambiarlo', 'Tengo una duda'];
+  var CLASES = ['ok', 'cambiar', 'duda'];
+
+  function leer(k) { try { return localStorage.getItem(PREFIJO + k); } catch (e) { return null; } }
+  function escribir(k, v) { try { localStorage.setItem(PREFIJO + k, v); return true; } catch (e) { return false; } }
+
+  var puerta = document.getElementById('puerta');
+  var contenido = document.getElementById('contenido');
+  function abrir() {
+    puerta.hidden = true;
+    contenido.removeAttribute('inert');
+  }
+  function hex(buf) { return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join(''); }
+  function deHex(h) { var a = new Uint8Array(h.length / 2); for (var i = 0; i < a.length; i++) a[i] = parseInt(h.substr(i * 2, 2), 16); return a; }
+  function derivar(clave) {
+    var enc = new TextEncoder();
+    return crypto.subtle.importKey('raw', enc.encode(clave), 'PBKDF2', false, ['deriveBits']).then(function (k) {
+      return crypto.subtle.deriveBits({ name: 'PBKDF2', salt: deHex(SAL), iterations: ITERACIONES, hash: 'SHA-256' }, k, 256);
+    }).then(hex);
+  }
+  if (leer('acceso') === HUELLA) {
+    abrir();
+  } else {
+    var campoClave = document.getElementById('clave');
+    campoClave.focus();
+    document.getElementById('form-clave').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var err = document.getElementById('clave-error');
+      err.textContent = 'Comprobando…';
+      if (!window.crypto || !crypto.subtle) { err.textContent = 'Este navegador no puede comprobar la clave. Ábrala en Chrome, Edge o Firefox actualizados.'; return; }
+      derivar(campoClave.value).then(function (h) {
+        if (h === HUELLA) { escribir('acceso', HUELLA); err.textContent = ''; abrir(); document.getElementById('nombre').focus(); }
+        else { err.textContent = 'La clave no es correcta.'; campoClave.select(); }
+      }, function () { err.textContent = 'No se pudo comprobar la clave.'; });
+    });
+  }
+
+  function sinTildes(t) { return String(t).normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function normalizarNombre(t) { return sinTildes(t).replace(/\s+/g, ' ').trim().toUpperCase(); }
+  function el(tag, props, hijos) {
+    var n = document.createElement(tag);
+    if (props) Object.keys(props).forEach(function (k) {
+      if (k === 'texto') n.textContent = props[k];
+      else if (k === 'clase') n.className = props[k];
+      else n.setAttribute(k, props[k]);
+    });
+    (hijos || []).forEach(function (h) { if (h) n.appendChild(typeof h === 'string' ? document.createTextNode(h) : h); });
+    return n;
+  }
+
+  var nombreActual = '';
+  var est = nuevo();
+  function nuevo() { return { estado: {}, comentario: {}, nota: {} }; }
+  function cargar(nombre) {
+    var e = nuevo();
+    try {
+      var g = JSON.parse(leer('r.' + nombre) || 'null');
+      if (g && typeof g === 'object') ['estado', 'comentario', 'nota'].forEach(function (k) { if (g[k] && typeof g[k] === 'object') e[k] = g[k]; });
+    } catch (x) {}
+    return e;
+  }
+
+  var guardadoEl = document.getElementById('guardado');
+  var temporizador = null;
+  function guardar() {
+    if (!nombreActual) return;
+    var ok = escribir('r.' + nombreActual, JSON.stringify(est));
+    guardadoEl.className = 'guardado' + (ok ? '' : ' mal');
+    guardadoEl.textContent = ok ? '· guardado' : '· no se pudo guardar en este navegador: descargue sus respuestas antes de cerrar';
+    clearTimeout(temporizador);
+    if (ok) temporizador = setTimeout(function () { guardadoEl.textContent = ''; }, 2000);
+    progreso();
+  }
+
+  var secciones = Array.prototype.slice.call(document.querySelectorAll('section.parte'));
+  var puntos = [];
+  secciones.forEach(function (sec, i) {
+    Array.prototype.forEach.call(sec.querySelectorAll('.punto[data-id]'), function (p) {
+      var id = p.getAttribute('data-id');
+      var abierta = p.getAttribute('data-tipo') === 'abierta';
+      var h3 = p.querySelector('h3');
+      var titulo = h3.textContent.trim();
+      h3.insertBefore(el('span', { clase: 'id', texto: id }), h3.firstChild);
+      var ref = { id: id, p: p, abierta: abierta, titulo: titulo, seccion: i, botones: [] };
+      var hijos = [];
+      if (!abierta) {
+        var opciones = p.getAttribute('data-opciones') ? p.getAttribute('data-opciones').split('|') : OPCIONES;
+        var grupo = el('div', { clase: 'opciones', role: 'radiogroup', 'aria-label': 'Respuesta al punto ' + id });
+        ref.botones = opciones.map(function (texto, j) {
+          var b = el('button', { type: 'button', clase: CLASES[j], role: 'radio', 'aria-checked': 'false', texto: texto });
+          b.addEventListener('click', function () {
+            if (est.estado[id] === texto) delete est.estado[id]; else est.estado[id] = texto;
+            pintarPunto(ref); guardar();
+          });
+          grupo.appendChild(b);
+          return b;
+        });
+        hijos.push(grupo);
+      }
+      ref.area = el('textarea', { placeholder: abierta ? 'Su respuesta' : 'Comentario (opcional)', 'aria-label': (abierta ? 'Respuesta' : 'Comentario') + ' al punto ' + id });
+      ref.area.addEventListener('input', function () {
+        if (ref.area.value.trim()) est.comentario[id] = ref.area.value; else delete est.comentario[id];
+        pintarPunto(ref); guardar();
+      });
+      hijos.push(ref.area);
+      p.appendChild(el('div', { clase: 'resp' }, hijos));
+      puntos.push(ref);
+    });
+  });
+  function respondido(ref) { return ref.abierta ? !!(est.comentario[ref.id] || '').trim() : !!est.estado[ref.id]; }
+  function pintarPunto(ref) {
+    ref.p.classList.remove('est-ok', 'est-cambiar', 'est-duda', 'est-escrito');
+    ref.botones.forEach(function (b, j) {
+      var sel = est.estado[ref.id] === b.textContent;
+      b.classList.toggle('sel', sel);
+      b.setAttribute('aria-checked', sel ? 'true' : 'false');
+      if (sel) ref.p.classList.add('est-' + CLASES[j]);
+    });
+    if (ref.abierta && respondido(ref)) ref.p.classList.add('est-escrito');
+  }
+
+  var lista = document.getElementById('indice-lista');
+  var minutosTotal = 0;
+  var marcasIndice = secciones.map(function (sec, i) {
+    var min = Number(sec.getAttribute('data-min')) || 0;
+    minutosTotal += min;
+    var h2 = sec.querySelector('h2');
+    h2.appendChild(el('span', { clase: 'min', texto: '· unos ' + min + ' min' }));
+    var hecho = el('span', { clase: 'hecho' });
+    lista.appendChild(el('li', null, [el('a', { href: '#' + sec.id }, [
+      el('span', { clase: 'n', texto: String(i + 1) }), el('span', { clase: 't', texto: sec.getAttribute('data-titulo') }),
+      el('span', { clase: 'min', texto: min + ' min' }), hecho
+    ])]));
+    return hecho;
+  });
+  document.getElementById('indice-total').textContent = 'Tiempo estimado: unos ' + minutosTotal + ' minutos en total. Puede hacerlo en varias sesiones.';
+
+  function progreso() {
+    var hechos = puntos.filter(respondido).length;
+    document.getElementById('progreso-texto').textContent = (nombreActual ? nombreActual + ': ' : '') + hechos + ' de ' + puntos.length + ' respondidas';
+    document.getElementById('progreso-barra').style.width = (puntos.length ? Math.round(hechos * 100 / puntos.length) : 0) + '%';
+    secciones.forEach(function (sec, i) {
+      var ps = puntos.filter(function (r) { return r.seccion === i; });
+      var h = ps.filter(respondido).length;
+      marcasIndice[i].textContent = ps.length ? h + '/' + ps.length : '';
+      marcasIndice[i].classList.toggle('completo', ps.length > 0 && h === ps.length);
+    });
+  }
+
+  var plan = DATOS.plan;
+  var porNumero = {};
+  plan.forEach(function (c) { porNumero[c.n] = c; });
+  function padreDe(n) {
+    for (var i = n.length - 1; i > 0; i--) { if (porNumero[n.slice(0, i)]) return porNumero[n.slice(0, i)]; }
+    return null;
+  }
+
+  var tp = document.getElementById('tabla-propias');
+  plan.filter(function (c) { return c.propia; }).forEach(function (c) {
+    tp.appendChild(el('tr', null, [
+      el('td', { clase: 'num', texto: c.n }), el('td', { texto: c.nombre }), el('td', { texto: NAT[c.nat] || c.nat }),
+      el('td', { texto: TIPOS[c.tipo] || c.tipo }), el('td', { clase: 'num', texto: c.sc || '(raíz)' })
+    ]));
+  });
+
+  var fTipo = document.getElementById('f-tipo');
+  Object.keys(TIPOS).forEach(function (k) {
+    if (plan.some(function (c) { return c.tipo === k; })) fTipo.appendChild(new Option(TIPOS[k], k));
+  });
+  var fFlujo = document.getElementById('f-flujo');
+  Object.keys(FLUJO).forEach(function (k) { fFlujo.appendChild(new Option(FLUJO[k], k)); });
+
+  var notas = [];
+  function campoNota(clave, etiqueta, fila) {
+    var input = el('input', { type: 'text', placeholder: 'Nota', 'aria-label': etiqueta });
+    var ref = { clave: clave, input: input, fila: fila };
+    input.addEventListener('input', function () {
+      if (input.value.trim()) est.nota[clave] = input.value; else delete est.nota[clave];
+      fila.classList.toggle('con-nota', !!est.nota[clave]);
+      guardar();
+    });
+    notas.push(ref);
+    return input;
+  }
+
+  var cuerpoPlan = document.querySelector('#tabla-plan tbody');
+  var filasPlan = plan.map(function (c) {
+    var clave = 'cta:' + c.n;
+    var nombre = el('td', { clase: 'nombre' }, [c.nombre]);
+    nombre.style.paddingLeft = (10 + (c.nivel - 1) * 16) + 'px';
+    if (c.propia) nombre.appendChild(el('span', { clase: 'etiqueta', texto: 'propia' }));
+    if (!c.hoja) nombre.appendChild(el('span', { clase: 'etiqueta', texto: 'grupo' }));
+    var celdaNota = el('td', { clase: 'nota-celda' });
+    var fila = el('tr', { clase: (c.hoja ? '' : 'grupo') + (c.propia ? ' propia' : '') }, [
+      el('td', { clase: 'num', texto: c.n }), nombre, el('td', { texto: NAT[c.nat] || c.nat }),
+      el('td', { texto: TIPOS[c.tipo] || c.tipo }), el('td', { texto: FLUJO[c.flujo] || c.flujo }), celdaNota
+    ]);
+    celdaNota.appendChild(campoNota(clave, 'Nota a la cuenta ' + c.n, fila));
+    cuerpoPlan.appendChild(fila);
+    return { c: c, fila: fila, texto: sinTildes(c.n + ' ' + c.nombre).toLowerCase(), clave: clave };
+  });
+
+  var fBuscar = document.getElementById('f-buscar');
+  var fHoja = document.getElementById('f-hoja');
+  var fPropia = document.getElementById('f-propia');
+  var fNota = document.getElementById('f-nota');
+  function filtrar() {
+    var q = sinTildes(fBuscar.value.trim()).toLowerCase();
+    var palabras = q ? q.split(/\s+/) : [];
+    var visibles = 0;
+    filasPlan.forEach(function (f) {
+      var c = f.c;
+      var ver = palabras.every(function (w) { return /^\d+$/.test(w) ? c.n.indexOf(w) === 0 : f.texto.indexOf(w) >= 0; });
+      if (ver && fTipo.value) ver = c.tipo === fTipo.value;
+      if (ver && fFlujo.value) ver = fFlujo.value === 'X' ? c.flujo !== 'O' : c.flujo === fFlujo.value;
+      if (ver && fHoja.checked) ver = c.hoja;
+      if (ver && fPropia.checked) ver = c.propia;
+      if (ver && fNota.checked) ver = !!est.nota[f.clave];
+      f.fila.style.display = ver ? '' : 'none';
+      if (ver) visibles++;
+    });
+    document.getElementById('plan-contador').textContent = 'Se ven ' + visibles + ' de ' + plan.length + ' cuentas.';
+  }
+  [fBuscar, fTipo, fFlujo, fHoja, fPropia, fNota].forEach(function (x) { x.addEventListener('input', filtrar); x.addEventListener('change', filtrar); });
+
+  document.getElementById('btn-ver-flujo').addEventListener('click', function () {
+    fBuscar.value = ''; fTipo.value = ''; fFlujo.value = 'X'; fHoja.checked = false; fPropia.checked = false; fNota.checked = false;
+    filtrar();
+    document.getElementById('plan-completo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  var veces = {};
+  DATOS.usos.forEach(function (u) { if (u.cuenta) veces[u.cuenta] = (veces[u.cuenta] || 0) + 1; });
+  var cuerpoUsos = document.querySelector('#tabla-usos tbody');
+  var grupoActual = null;
+  DATOS.usos.forEach(function (u) {
+    if (u.grupo !== grupoActual) {
+      grupoActual = u.grupo;
+      cuerpoUsos.appendChild(el('tr', { clase: 'titulo-grupo' }, [el('td', { colspan: '3', texto: u.grupo })]));
+    }
+    var para = el('td', null, [el('strong', { texto: u.nombre }), el('br'), el('span', { clase: 'nota-al-pie', texto: u.desc })]);
+    if (Number(u.cat) === 1) { para.appendChild(el('br')); para.appendChild(el('span', { clase: 'etiqueta', texto: 'también por categoría' })); }
+    var padre = u.cuenta ? padreDe(u.cuenta) : null;
+    var cuenta = el('td', null, [el('span', { clase: 'mono', texto: u.cuenta || '—' }), ' ', u.cuentaNombre || 'Sin cuenta propuesta']);
+    if (padre) { cuenta.appendChild(el('br')); cuenta.appendChild(el('span', { clase: 'nota-al-pie', texto: 'dentro de ' + padre.n + ' ' + padre.nombre })); }
+    if (u.cuenta && veces[u.cuenta] > 1) { cuenta.appendChild(el('br')); cuenta.appendChild(el('span', { clase: 'etiqueta alerta', texto: 'compartida con otro uso' })); }
+    var celdaNota = el('td', { clase: 'nota-celda' });
+    var fila = el('tr', null, [para, cuenta, celdaNota]);
+    celdaNota.appendChild(campoNota('uso:' + u.codigo, 'Nota al uso ' + u.nombre, fila));
+    cuerpoUsos.appendChild(fila);
+  });
+
+  var ts = document.getElementById('tabla-sustentos');
+  DATOS.sustentos.forEach(function (s) {
+    ts.appendChild(el('tr', null, [el('td', { clase: 'num', texto: s.codigo }), el('td', { texto: s.nombre })]));
+  });
+
+  var campoNombre = document.getElementById('nombre');
+  var btnComenzar = document.getElementById('btn-comenzar');
+  var btnDescargar = document.getElementById('btn-descargar');
+  function controles() {
+    var c = [];
+    puntos.forEach(function (r) { c = c.concat(r.botones); c.push(r.area); });
+    notas.forEach(function (n) { c.push(n.input); });
+    return c;
+  }
+  function habilitar(si) {
+    controles().forEach(function (c) { c.disabled = !si; });
+    btnDescargar.disabled = !si;
+    document.getElementById('aviso-nombre').hidden = si;
+    document.getElementById('como').hidden = !si;
+    campoNombre.disabled = si;
+    btnComenzar.hidden = si;
+  }
+  function refrescar() {
+    puntos.forEach(function (r) { r.area.value = est.comentario[r.id] || ''; pintarPunto(r); });
+    notas.forEach(function (n) { n.input.value = est.nota[n.clave] || ''; n.fila.classList.toggle('con-nota', !!est.nota[n.clave]); });
+    filtrar();
+    progreso();
+  }
+  function comenzar(nombre) {
+    nombreActual = nombre;
+    est = cargar(nombre);
+    escribir('ultimo', nombre);
+    campoNombre.value = nombre;
+    document.getElementById('como-nombre').textContent = nombre;
+    habilitar(true);
+    refrescar();
+  }
+  btnComenzar.addEventListener('click', function () {
+    var n = normalizarNombre(campoNombre.value);
+    var aviso = document.getElementById('aviso-nombre');
+    if (n.replace(/[^A-Z]/g, '').length < 3) { aviso.hidden = false; aviso.textContent = 'Escriba su nombre (al menos tres letras) y pulse Comenzar.'; campoNombre.focus(); return; }
+    comenzar(n);
+  });
+  campoNombre.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); btnComenzar.click(); } });
+  document.getElementById('btn-cambiar').addEventListener('click', function () {
+    nombreActual = '';
+    est = nuevo();
+    refrescar();
+    habilitar(false);
+    campoNombre.value = '';
+    campoNombre.focus();
+  });
+
+  function texto() {
+    var L = [];
+    var hoy = new Date();
+    L.push('REVISIÓN CONTABLE DEL MÓDULO DE CONTABILIDAD DE SYSDEVUP');
+    L.push('Respondido por: ' + nombreActual);
+    L.push('Descargado el: ' + hoy.toLocaleString('es-EC'));
+    L.push('Respondidas: ' + puntos.filter(respondido).length + ' de ' + puntos.length);
+    secciones.forEach(function (sec, i) {
+      var ps = puntos.filter(function (r) { return r.seccion === i; });
+      if (!ps.length) return;
+      L.push('');
+      L.push('== ' + (i + 1) + '. ' + sec.getAttribute('data-titulo'));
+      ps.forEach(function (r) {
+        L.push('');
+        L.push('[' + r.id + '] ' + r.titulo);
+        if (!r.abierta) L.push('  Respuesta: ' + (est.estado[r.id] || 'sin responder'));
+        var com = (est.comentario[r.id] || '').trim();
+        if (com || r.abierta) L.push('  ' + (r.abierta ? 'Respuesta' : 'Comentario') + ': ' + (com ? com.replace(/\r?\n/g, '\r\n    ') : 'sin responder'));
+      });
+    });
+    var notasCta = filasPlan.filter(function (f) { return est.nota[f.clave]; });
+    L.push('');
+    L.push('== Notas en el plan de cuentas (' + notasCta.length + ')');
+    notasCta.forEach(function (f) { L.push('  ' + f.c.n + ' ' + f.c.nombre + ': ' + est.nota[f.clave]); });
+    var notasUso = DATOS.usos.filter(function (u) { return est.nota['uso:' + u.codigo]; });
+    L.push('');
+    L.push('== Notas en las cuentas de los asientos automáticos (' + notasUso.length + ')');
+    notasUso.forEach(function (u) { L.push('  ' + u.nombre + ' (' + (u.cuenta || 'sin cuenta') + '): ' + est.nota['uso:' + u.codigo]); });
+    return L.join('\r\n');
+  }
+  btnDescargar.addEventListener('click', function () {
+    if (!nombreActual) return;
+    var blob = new Blob(['﻿' + texto()], { type: 'text/plain;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    var hoy = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    a.download = 'revision-contable-' + nombreActual.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '-' + hoy + '.txt';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  });
+
+  function prepararImpresion() {
+    Array.prototype.forEach.call(document.querySelectorAll('details'), function (d) { d.open = true; });
+    Array.prototype.forEach.call(document.querySelectorAll('textarea'), function (t) { t.style.height = 'auto'; t.style.height = (t.scrollHeight + 4) + 'px'; });
+  }
+  window.addEventListener('beforeprint', prepararImpresion);
+  document.getElementById('btn-imprimir').addEventListener('click', function () { prepararImpresion(); window.print(); });
+
+  habilitar(false);
+  filtrar();
+  progreso();
+  var ultimo = leer('ultimo');
+  if (ultimo) comenzar(ultimo);
+
+  window.__guia = { texto: texto, puntos: puntos.length, minutos: minutosTotal };
+})();
+</script>
+</body>
+</html>
