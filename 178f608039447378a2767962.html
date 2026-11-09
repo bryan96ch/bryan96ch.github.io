@@ -27,6 +27,7 @@
   --cambiar-suave: #fbeedb;
   --duda: #2d56a1;
   --duda-suave: #e4ebf7;
+  --falta: #c2412d;
   --marca: #fff4c2;
   --sombra: 0 1px 2px rgba(20, 24, 30, .06), 0 4px 14px rgba(20, 24, 30, .05);
   color-scheme: light;
@@ -48,6 +49,7 @@
     --cambiar-suave: #3a2c17;
     --duda: #8fb0ee;
     --duda-suave: #1e2a40;
+  --falta: #f07a68;
     --marca: #3d3615;
     --sombra: none;
     color-scheme: dark;
@@ -69,6 +71,7 @@
   --cambiar-suave: #3a2c17;
   --duda: #8fb0ee;
   --duda-suave: #1e2a40;
+  --falta: #f07a68;
   --marca: #3d3615;
   --sombra: none;
   color-scheme: dark;
@@ -132,18 +135,52 @@ ol.pasos li { margin: 6px 0; }
 .progreso-texto { font-size: 14px; color: var(--suave); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .progreso-barra { height: 6px; background: var(--linea); border-radius: 99px; overflow: hidden; margin-top: 4px; }
 .progreso-barra span { display: block; height: 100%; width: 0; background: var(--acento); transition: width .25s; }
-.barra .indice-enlace { font-size: 14px; color: var(--acento); white-space: nowrap; }
+.envoltura.ancha { max-width: 1280px; }
+.boton .corto { display: none; }
 .aviso-nombre { background: var(--cambiar-suave); color: var(--cambiar); border-radius: 10px; padding: 10px 14px; margin: 14px 0 0; font-size: 15px; }
 .aviso-nombre[hidden] { display: none; }
-nav.indice { margin: 24px 0 8px; }
-nav.indice ol { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
-nav.indice li a { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; color: var(--tinta); text-decoration: none; border-bottom: 1px dashed var(--linea); }
-nav.indice li a:hover .t { color: var(--acento); text-decoration: underline; }
-nav.indice .n { color: var(--acento); font-weight: 700; min-width: 18px; }
-nav.indice .t { flex: 1; }
-nav.indice .min, nav.indice .hecho { font-size: 13px; color: var(--suave); white-space: nowrap; }
-nav.indice .hecho.completo { color: var(--ok); font-weight: 600; }
-.pie-indice { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; font-size: 14px; color: var(--suave); }
+#cuestionario[hidden] { display: none; }
+.marco { max-width: 1280px; margin: 0 auto; padding: 0 16px; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; align-items: start; }
+.principal { min-width: 0; max-width: 900px; }
+.lateral {
+  position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow: auto; margin-top: 24px;
+  background: var(--papel); border: 1px solid var(--linea); border-radius: 12px; padding: 14px 10px; box-shadow: var(--sombra); font-size: 14px;
+}
+.lat-titulo { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; font-size: 16px; margin: 0 6px 4px; }
+.lat-leyenda { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--suave); margin: 0 6px 10px; }
+.lat-leyenda .marca + span { margin-right: 8px; }
+.lateral ol { list-style: none; margin: 0; padding: 0; }
+.lat-seccion { margin-bottom: 4px; }
+.lat-seccion > a { display: flex; gap: 8px; align-items: baseline; padding: 6px 6px; font-weight: 600; color: var(--tinta); text-decoration: none; border-radius: 6px; }
+.lat-seccion > a:hover { background: var(--acento-suave); }
+.lat-seccion .n { color: var(--acento); min-width: 14px; }
+.lat-seccion .t { flex: 1; }
+.lat-seccion .cuenta-min { font-size: 12px; color: var(--suave); font-weight: 400; white-space: nowrap; }
+.lat-seccion .cuenta { font-size: 12px; color: var(--falta); font-weight: 700; white-space: nowrap; }
+.lat-seccion .cuenta.completo { color: var(--ok); }
+.lat-puntos a { display: flex; gap: 8px; align-items: flex-start; padding: 3px 6px 3px 20px; color: var(--suave); text-decoration: none; line-height: 1.35; border-radius: 6px; }
+.lat-puntos a:hover { background: var(--acento-suave); color: var(--tinta); }
+.marca {
+  flex: 0 0 18px; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; line-height: 1; color: var(--sobre-acento); background: var(--falta); margin-top: 1px;
+}
+.marca.si { background: var(--ok); }
+.pie-indice { display: flex; flex-direction: column; gap: 6px; margin: 12px 6px 2px; padding-top: 10px; border-top: 1px solid var(--linea); font-size: 13px; color: var(--suave); }
+.pie-indice .enlace { text-align: left; }
+.velo { display: none; }
+.lat-cerrar { display: none; }
+#btn-indice { display: none; }
+@media (max-width: 1180px) {
+  .marco { display: block; max-width: 940px; }
+  .lateral {
+    position: fixed; top: 0; bottom: 0; left: 0; width: min(340px, 88vw); max-height: none; margin: 0;
+    border-radius: 0 12px 12px 0; z-index: 60; transform: translateX(-105%); transition: transform .2s; visibility: hidden;
+  }
+  body.indice-abierto .lateral { transform: none; visibility: visible; }
+  .velo { position: fixed; inset: 0; background: rgba(0, 0, 0, .35); z-index: 55; }
+  body.indice-abierto .velo { display: block; }
+  .lat-cerrar, #btn-indice { display: inline-block; }
+}
 section.parte { margin: 40px 0; }
 section.parte > h2 { font-size: 24px; line-height: 1.25; margin: 0 0 4px; }
 section.parte > h2 .num { color: var(--acento); font-variant-numeric: tabular-nums; margin-right: 8px; }
@@ -209,7 +246,8 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
 .guardado { font-size: 13px; color: var(--suave); }
 .guardado.mal { color: var(--cambiar); }
 @media (max-width: 700px) {
-  nav.indice ol { grid-template-columns: 1fr; }
+  .boton .largo { display: none; }
+  .boton .corto { display: inline; }
   .datos-clave { grid-template-columns: 1fr; }
   .tarjeta { padding: 18px 16px; }
   .punto { padding: 14px 14px; }
@@ -218,11 +256,12 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
   html { scroll-padding-top: 16px; }
   body { padding-bottom: 84px; }
   .barra { position: fixed; top: auto; bottom: 0; left: 0; right: 0; border-bottom: 0; border-top: 1px solid var(--linea); background: var(--fondo); }
-  .barra .indice-enlace { display: none; }
+  .barra .envoltura { gap: 10px; }
 }
 @media print {
   body { background: #fff; color: #000; font-size: 12pt; padding: 0; }
-  .barra, .filtros, .no-imprimir, .puerta, nav.indice, .aviso-nombre { display: none !important; }
+  .barra, .filtros, .no-imprimir, .puerta, .lateral, .velo, .aviso-nombre { display: none !important; }
+  .marco { display: block; }
   .tarjeta, .punto, details, .ejemplo { box-shadow: none; break-inside: avoid; }
   .tabla-scroll, .tabla-scroll.alta { max-height: none; overflow: visible; }
   thead th { position: static; }
@@ -262,7 +301,8 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
     </div>
     <strong>Cómo se responde</strong>
     <ol class="pasos">
-      <li>Escriba su nombre y pulse <strong>Comenzar</strong>: las preguntas se habilitan con su nombre, y sus respuestas quedan guardadas con él. Si vuelve otro día en este mismo equipo y navegador, encontrará todo como lo dejó.</li>
+      <li>Escriba su nombre y pulse <strong>Comenzar</strong>: aparecen las preguntas, y sus respuestas quedan guardadas con su nombre. Si vuelve otro día en este mismo equipo y navegador, encontrará todo como lo dejó.</li>
+      <li>El <strong>índice de la izquierda</strong> tiene todas las preguntas: en verde las que ya respondió y en rojo las que faltan. Pulse una para ir a ella.</li>
       <li>En cada punto de revisión marque <em>De acuerdo</em>, <em>Hay que cambiarlo</em> o <em>Tengo una duda</em>, y escriba su comentario si quiere; cuanto más concreto, más fácil será corregirlo. En la sección 8 las preguntas son abiertas.</li>
       <li>En la tabla del plan de cuentas y en la de las cuentas de los asientos puede dejar una nota en cualquier fila.</li>
       <li>Al terminar, o cuando quiera, pulse <strong>Descargar mis respuestas</strong> (está siempre a la vista) y envíe ese archivo a quien le compartió esta guía.</li>
@@ -274,31 +314,37 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
       <button type="button" class="boton" id="btn-comenzar">Comenzar</button>
     </div>
     <p class="como" id="como" hidden>Respondiendo como <strong id="como-nombre"></strong>. <button type="button" class="enlace" id="btn-cambiar">Cambiar de nombre</button></p>
-    <p class="aviso-nombre" id="aviso-nombre">Escriba su nombre y pulse Comenzar para habilitar las preguntas.</p>
+    <p class="aviso-nombre" id="aviso-nombre">Escriba su nombre y pulse Comenzar para ver las preguntas.</p>
   </div>
 </header>
 
+<div id="cuestionario" hidden>
+
 <div class="barra">
-  <div class="envoltura">
+  <div class="envoltura ancha">
     <div class="progreso">
       <div class="progreso-texto"><span id="progreso-texto">0 de 0 respondidas</span> <span class="guardado" id="guardado"></span></div>
       <div class="progreso-barra"><span id="progreso-barra"></span></div>
     </div>
-    <a href="#indice" class="indice-enlace">Índice</a>
-    <button type="button" class="boton" id="btn-descargar" disabled>Descargar mis respuestas</button>
+    <button type="button" class="boton secundario" id="btn-indice" aria-controls="lateral" aria-expanded="false">Índice</button>
+    <button type="button" class="boton" id="btn-descargar" disabled><span class="largo">Descargar mis respuestas</span><span class="corto">Descargar</span></button>
   </div>
 </div>
 
-<main class="envoltura">
+<div class="velo" id="velo"></div>
+<div class="marco">
 
-<nav class="indice tarjeta" id="indice" aria-label="Índice">
-  <strong>Índice</strong>
+<aside class="lateral" id="lateral" aria-label="Índice">
+  <div class="lat-titulo"><span>Índice</span><button type="button" class="enlace lat-cerrar" id="btn-cerrar-indice">Cerrar</button></div>
+  <p class="lat-leyenda"><span class="marca si" aria-hidden="true">✓</span><span>respondida</span><span class="marca" aria-hidden="true">✕</span><span>falta</span></p>
   <ol id="indice-lista"></ol>
   <div class="pie-indice">
     <span id="indice-total"></span>
     <button type="button" class="enlace no-imprimir" id="btn-imprimir">Imprimir la guía con mis respuestas</button>
   </div>
-</nav>
+</aside>
+
+<main class="principal">
 
 <section class="parte" id="s1" data-titulo="Qué hace el módulo y cómo se trabaja" data-min="10">
   <h2><span class="num">1</span> Qué hace el módulo y cómo se trabaja</h2>
@@ -800,10 +846,13 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
 </section>
 
 </main>
+</div>
 
 <footer>
-  <div class="envoltura">Guía preparada por SYSDEVUP el 8 de noviembre de 2026. Describe el módulo de Contabilidad a esa fecha.</div>
+  <div class="envoltura ancha">Guía preparada por SYSDEVUP el 8 de noviembre de 2026. Describe el módulo de Contabilidad a esa fecha.</div>
 </footer>
+
+</div>
 
 </div>
 
@@ -897,6 +946,7 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
   secciones.forEach(function (sec, i) {
     Array.prototype.forEach.call(sec.querySelectorAll('.punto[data-id]'), function (p) {
       var id = p.getAttribute('data-id');
+      p.id = 'p-' + id.replace(/\./g, '-');
       var abierta = p.getAttribute('data-tipo') === 'abierta';
       var h3 = p.querySelector('h3');
       var titulo = h3.textContent.trim();
@@ -944,16 +994,21 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
   var marcasIndice = secciones.map(function (sec, i) {
     var min = Number(sec.getAttribute('data-min')) || 0;
     minutosTotal += min;
-    var h2 = sec.querySelector('h2');
-    h2.appendChild(el('span', { clase: 'min', texto: '· unos ' + min + ' min' }));
-    var hecho = el('span', { clase: 'hecho' });
-    lista.appendChild(el('li', null, [el('a', { href: '#' + sec.id }, [
+    sec.querySelector('h2').appendChild(el('span', { clase: 'min', texto: '· unos ' + min + ' min' }));
+    var cuenta = el('span', { clase: 'cuenta' });
+    var sub = el('ol', { clase: 'lat-puntos' });
+    puntos.filter(function (r) { return r.seccion === i; }).forEach(function (r) {
+      r.marca = el('span', { clase: 'marca', 'aria-hidden': 'true', texto: '✕' });
+      r.enlace = el('a', { href: '#' + r.p.id }, [r.marca, el('span', { texto: r.id + ' ' + r.titulo })]);
+      sub.appendChild(el('li', null, [r.enlace]));
+    });
+    lista.appendChild(el('li', { clase: 'lat-seccion' }, [el('a', { href: '#' + sec.id }, [
       el('span', { clase: 'n', texto: String(i + 1) }), el('span', { clase: 't', texto: sec.getAttribute('data-titulo') }),
-      el('span', { clase: 'min', texto: min + ' min' }), hecho
-    ])]));
-    return hecho;
+      el('span', { clase: 'cuenta-min', texto: min + ' min' }), cuenta
+    ]), sub]));
+    return cuenta;
   });
-  document.getElementById('indice-total').textContent = 'Tiempo estimado: unos ' + minutosTotal + ' minutos en total. Puede hacerlo en varias sesiones.';
+  document.getElementById('indice-total').textContent = 'Unos ' + minutosTotal + ' minutos en total; puede hacerlo en varias sesiones.';
 
   function progreso() {
     var hechos = puntos.filter(respondido).length;
@@ -964,6 +1019,12 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
       var h = ps.filter(respondido).length;
       marcasIndice[i].textContent = ps.length ? h + '/' + ps.length : '';
       marcasIndice[i].classList.toggle('completo', ps.length > 0 && h === ps.length);
+    });
+    puntos.forEach(function (r) {
+      var si = respondido(r);
+      r.marca.classList.toggle('si', si);
+      r.marca.textContent = si ? '✓' : '✕';
+      r.enlace.setAttribute('title', si ? 'Respondida' : 'Falta responder');
     });
   }
 
@@ -1087,6 +1148,8 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
   function habilitar(si) {
     controles().forEach(function (c) { c.disabled = !si; });
     btnDescargar.disabled = !si;
+    document.getElementById('cuestionario').hidden = !si;
+    if (!si) indice(false);
     document.getElementById('aviso-nombre').hidden = si;
     document.getElementById('como').hidden = !si;
     campoNombre.disabled = si;
@@ -1098,7 +1161,7 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
     filtrar();
     progreso();
   }
-  function comenzar(nombre) {
+  function comenzar(nombre, desplazar) {
     nombreActual = nombre;
     est = cargar(nombre);
     escribir('ultimo', nombre);
@@ -1106,12 +1169,16 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
     document.getElementById('como-nombre').textContent = nombre;
     habilitar(true);
     refrescar();
+    if (desplazar) {
+      var cuestionario = document.getElementById('cuestionario');
+      window.scrollTo({ top: window.scrollY + cuestionario.getBoundingClientRect().top, behavior: 'smooth' });
+    }
   }
   btnComenzar.addEventListener('click', function () {
     var n = normalizarNombre(campoNombre.value);
     var aviso = document.getElementById('aviso-nombre');
     if (n.replace(/[^A-Z]/g, '').length < 3) { aviso.hidden = false; aviso.textContent = 'Escriba su nombre (al menos tres letras) y pulse Comenzar.'; campoNombre.focus(); return; }
-    comenzar(n);
+    comenzar(n, true);
   });
   campoNombre.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); btnComenzar.click(); } });
   document.getElementById('btn-cambiar').addEventListener('click', function () {
@@ -1164,6 +1231,17 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
     a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   });
+
+  var btnIndice = document.getElementById('btn-indice');
+  function indice(abrir) {
+    document.body.classList.toggle('indice-abierto', abrir);
+    btnIndice.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+  }
+  btnIndice.addEventListener('click', function () { indice(!document.body.classList.contains('indice-abierto')); });
+  document.getElementById('btn-cerrar-indice').addEventListener('click', function () { indice(false); });
+  document.getElementById('velo').addEventListener('click', function () { indice(false); });
+  lista.addEventListener('click', function (ev) { if (ev.target.closest('a')) indice(false); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') indice(false); });
 
   function prepararImpresion() {
     Array.prototype.forEach.call(document.querySelectorAll('details'), function (d) { d.open = true; });
