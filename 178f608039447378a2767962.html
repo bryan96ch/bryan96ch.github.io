@@ -150,16 +150,21 @@ ol.pasos li { margin: 6px 0; }
 .lat-leyenda { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--suave); margin: 0 6px 10px; }
 .lat-leyenda .marca + span { margin-right: 8px; }
 .lateral ol { list-style: none; margin: 0; padding: 0; }
-.lat-seccion { margin-bottom: 4px; }
-.lat-seccion > a { display: flex; gap: 8px; align-items: baseline; padding: 6px 6px; font-weight: 600; color: var(--tinta); text-decoration: none; border-radius: 6px; }
+.lat-seccion { padding: 8px 0; border-top: 1px solid var(--linea-fuerte); }
+.lat-seccion:first-child { border-top: 0; padding-top: 0; }
+.lat-seccion > a { display: flex; gap: 8px; align-items: baseline; padding: 7px 8px; margin-bottom: 4px; font-weight: 600; color: var(--tinta); text-decoration: none; border-radius: 6px; background: var(--fondo); }
 .lat-seccion > a:hover { background: var(--acento-suave); }
+.lat-seccion.actual > a { background: var(--acento-suave); box-shadow: inset 3px 0 0 var(--acento); }
 .lat-seccion .n { color: var(--acento); min-width: 14px; }
 .lat-seccion .t { flex: 1; }
 .lat-seccion .cuenta-min { font-size: 12px; color: var(--suave); font-weight: 400; white-space: nowrap; }
 .lat-seccion .cuenta { font-size: 12px; color: var(--falta); font-weight: 700; white-space: nowrap; }
 .lat-seccion .cuenta.completo { color: var(--ok); }
-.lat-puntos a { display: flex; gap: 8px; align-items: flex-start; padding: 3px 6px 3px 20px; color: var(--suave); text-decoration: none; line-height: 1.35; border-radius: 6px; }
+.lat-puntos li { margin-left: 14px; }
+.lat-puntos li + li { border-top: 1px solid var(--linea); }
+.lat-puntos a { display: flex; gap: 8px; align-items: flex-start; padding: 5px 6px; color: var(--suave); text-decoration: none; line-height: 1.35; border-radius: 6px; }
 .lat-puntos a:hover { background: var(--acento-suave); color: var(--tinta); }
+.lat-puntos a.actual { background: var(--acento-suave); color: var(--tinta); font-weight: 600; box-shadow: inset 3px 0 0 var(--acento); }
 .marca {
   flex: 0 0 18px; width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
   font-size: 11px; font-weight: 700; line-height: 1; color: var(--sobre-acento); background: var(--falta); margin-top: 1px;
@@ -1236,12 +1241,58 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
   function indice(abrir) {
     document.body.classList.toggle('indice-abierto', abrir);
     btnIndice.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+    if (abrir && destinoActual()) verEnIndice(destinoActual(), false);
   }
   btnIndice.addEventListener('click', function () { indice(!document.body.classList.contains('indice-abierto')); });
   document.getElementById('btn-cerrar-indice').addEventListener('click', function () { indice(false); });
   document.getElementById('velo').addEventListener('click', function () { indice(false); });
   lista.addEventListener('click', function (ev) { if (ev.target.closest('a')) indice(false); });
   document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') indice(false); });
+
+  var lateral = document.getElementById('lateral');
+  var barra = document.querySelector('.barra');
+  var puntoActual = null;
+  var seccionActual = null;
+  function destinoActual() {
+    if (puntoActual) return puntoActual.enlace;
+    return seccionActual ? seccionActual.firstChild : null;
+  }
+  function verEnIndice(a, suave) {
+    var arriba = a.offsetTop;
+    var abajo = arriba + a.offsetHeight;
+    if (arriba < lateral.scrollTop + 40 || abajo > lateral.scrollTop + lateral.clientHeight - 40) {
+      lateral.scrollTo({ top: Math.max(0, arriba - lateral.clientHeight / 3), behavior: suave ? 'smooth' : 'auto' });
+    }
+  }
+  function marcarActual() {
+    if (document.getElementById('cuestionario').hidden) return;
+    var rb = barra.getBoundingClientRect();
+    var tope = rb.top < 10 ? rb.bottom : 0;
+    var linea = tope + Math.min(160, (innerHeight - tope) * 0.3);
+    var sec = -1;
+    secciones.forEach(function (s, i) { if (s.getBoundingClientRect().top <= linea) sec = i; });
+    var nuevo = null;
+    puntos.forEach(function (r) {
+      var b = r.p.getBoundingClientRect();
+      if (r.seccion === sec && b.top <= linea && b.bottom > tope + 60) nuevo = r;
+    });
+    var liSec = sec >= 0 ? lista.children[sec] : null;
+    if (liSec === seccionActual && nuevo === puntoActual) return;
+    if (seccionActual) seccionActual.classList.remove('actual');
+    if (liSec) liSec.classList.add('actual');
+    if (puntoActual) { puntoActual.enlace.classList.remove('actual'); puntoActual.enlace.removeAttribute('aria-current'); }
+    if (nuevo) { nuevo.enlace.classList.add('actual'); nuevo.enlace.setAttribute('aria-current', 'location'); }
+    seccionActual = liSec;
+    puntoActual = nuevo;
+    if (destinoActual() && getComputedStyle(lateral).visibility === 'visible') verEnIndice(destinoActual(), true);
+  }
+  var marcando = false;
+  window.addEventListener('scroll', function () {
+    if (marcando) return;
+    marcando = true;
+    requestAnimationFrame(function () { marcando = false; marcarActual(); });
+  }, { passive: true });
+  window.addEventListener('resize', marcarActual);
 
   function prepararImpresion() {
     Array.prototype.forEach.call(document.querySelectorAll('details'), function (d) { d.open = true; });
@@ -1255,6 +1306,7 @@ footer { color: var(--suave); font-size: 14px; padding: 30px 0 60px; border-top:
   progreso();
   var ultimo = leer('ultimo');
   if (ultimo) comenzar(ultimo);
+  marcarActual();
 
   window.__guia = { texto: texto, puntos: puntos.length, minutos: minutosTotal };
 })();
