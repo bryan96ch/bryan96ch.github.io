@@ -123,7 +123,10 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="css/style.min.css?1.2.9">
+    <meta name="theme-color" content="#071a33">
+    <link rel="preload" href="fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/sitio.css?1.0.0">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -205,249 +208,263 @@
     }
     </script>
 </head>
-<body class="color-dark-blue">
-    <header>
-        <div class="header">
-            <a href="./" class="logo hide-on-small"><img src="media/img/logo.png" alt="SysDevUp" height="70"></a>
-            <nav class="nav hide-on-medium" id="nav">
-                <ul>
-                    <li><a href="./">Inicio</a></li>
-                    <li><a href="facturacion-electronica">Facturación electrónica</a></li>
-                    <li><a href="control-de-inventarios">Inventarios</a></li>
-                    <li><a href="sistema-contable">Contabilidad</a></li>
-                    <li><a href="software-para-consultorios-medicos">Consultorios</a></li>
-                    <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                    <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer" class="btn-sistema">Acceder al sistema</a></li>
-                </ul>
+
+<body class="c-fac">
+    <a class="saltar" href="#contenido">Ir al contenido</a>
+    <header class="cabecera oscuro">
+        <div class="envoltura cabecera-in">
+            <a href="./" class="marca"><img src="media/img/logo-blanco.png" alt="SysDevUp, ir al inicio" width="284" height="186"></a>
+            <nav class="nav" aria-label="Principal">
+                <details class="productos">
+                    <summary>Productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                    <div class="panel-productos">
+                        <ul class="lista-productos">
+                            <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Facturas, retenciones y guías del SRI, con inventario</span></span><em>desde $19/año</em></a></li>
+                            <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Existencias por bodega, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                            <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos que salen solos de tus facturas</span></span><em>$199/año</em></a></li>
+                            <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia clínica, recetas y factura</span></span><em>desde $39,99/mes</em></a></li>
+                            <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes, técnicos en el celular y la factura</span></span><em>desde $35/mes</em></a></li>
+                        </ul>
+                    </div>
+                </details>
+                <a class="nav-enlace" href="./#como-empezar">Cómo empezar</a>
+                <a class="nav-enlace nav-acceder" href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                <a class="boton boton-claro boton-chico" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </nav>
-            <a href="#!" class="menu-btn" id="btn_menu_mobile" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+            <details class="menu-movil">
+                <summary aria-label="Menú"><svg class="icono-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icono-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+                <div class="panel-movil">
+                    <ul class="lista-productos">
+                        <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Con inventario incluido</span></span><em>desde $19/año</em></a></li>
+                        <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Bodegas, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                        <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos desde tus facturas</span></span><em>$199/año</em></a></li>
+                        <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia y recetas</span></span><em>desde $39,99/mes</em></a></li>
+                        <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes y técnicos en el celular</span></span><em>desde $35/mes</em></a></li>
+                    </ul>
+                    <div class="otros">
+                        <a href="./#como-empezar">Cómo empezar</a>
+                        <a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                        <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>
+                    </div>
+                </div>
+            </details>
         </div>
     </header>
-    <main>
-        <section class="inicio">
-            <div class="row middle-lg">
-                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-7">
-                    <h1 data-aos="fade-right">Facturación Electrónica en Ecuador</h1>
-                    <p data-aos="zoom-in">Emite comprobantes electrónicos fácilmente desde tu celular o computadora.</p>
-                    <nav class="breadcrumb" data-aos="fade-in" data-aos-delay="600">
-                        <a href="./">Inicio</a>&nbsp;/&nbsp;
-                        <span>Facturación Electrónica</span>
-                    </nav>
+
+    <main id="contenido">
+        <section class="portada portada-producto oscuro">
+            <div class="envoltura">
+                <div class="portada-grilla">
+                    <div>
+                        <nav class="migas" aria-label="Migas de pan"><a href="./">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Facturación electrónica</span></nav>
+                        <h1>Facturación electrónica <span class="precio"><small>desde</small> $19 <small>al año</small></span></h1>
+                        <p class="bajada">Emite facturas, notas de crédito y débito, retenciones y guías de remisión desde el celular o la computadora, con el <strong>control de inventario incluido</strong> en todos los planes.</p>
+                        <div class="acciones">
+                            <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, quiero información sobre facturación electrónica. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
+                            <a class="enlace-flecha" href="#planes">Ver los planes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <p class="nota-humana">Te responde una persona, y te acompaña también después de empezar.</p>
+                    </div>
+                    <img class="dibujo-producto" src="media/img/hero-facturacion.svg" alt="Dibujo de una factura electrónica autorizada y enviada por correo" width="360" height="350">
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-5">
-                    <img src="media/img/hero-facturacion.svg" alt="Sistema de facturación electrónica SysDevUp" width="100%" data-aos="zoom-in">
+                <ul class="garantias">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><div><strong>Los 5 comprobantes del SRI</strong><span>Facturas, notas de crédito y débito, retenciones y guías de remisión.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><div><strong>PDF y XML al correo</strong><span>Con su clave de acceso, directo al correo de tu cliente.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.3 2.3 4.2-4.6"/></svg><div><strong>Compras verificadas</strong><span>Las facturas de tus proveedores, comprobadas con el SRI.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg><div><strong>Inventario incluido</strong><span>De 25 a 4.500 productos, según el plan.</span></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-ad">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-ad">Tu facturación, hoy y con SysDevUp</h2>
+                    <p>Lo mismo que ya haces, con menos pasos y sin volver a escribir nada.</p>
+                </div>
+                <div class="ad-cabeza" aria-hidden="true"><span>Hoy</span><span></span><span>Con SysDevUp</span></div>
+                <ol class="antes-despues">
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Escribes cada factura desde cero y vuelves a cargar los datos del cliente.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>El cliente queda guardado: lo eliges, agregas los productos y la factura sale al SRI desde el celular.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Las facturas de tus proveedores llegan al correo y las pasas a mano.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Subes sus XML o el reporte del SRI, el sistema comprueba cada una y la registras como compra o gasto. <small>Incluido en todos los planes; registrar cuenta hasta el mismo número de documentos del plan.</small></p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>El inventario va en un cuaderno o en una hoja, aparte de lo que vendes.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Cada compra sube el stock con su costo y, si lo activas, cada factura autorizada lo descuenta sola. <small>Según el plan: 25, 250, 1.500 o 4.500 productos activos. <a href="control-de-inventarios">Ver el control de inventarios</a>.</small></p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Si cobras lo mismo todos los meses, haces esas facturas una por una.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Esas facturas salen solas el día que elijas y le llegan al cliente por correo; si a una le falta un dato, queda en espera y las demás salen igual. <small>Se agrega a tu plan a pedido: las facturas descuentan de tu mismo cupo.</small></p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>A fin de mes juntas papeles para saber cuánto IVA cobraste y cuánto pagaste.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Tienes el IVA del mes, el cobrado en ventas junto al pagado en compras, listo para revisarlo con tu contador. <small>Y si llevas contabilidad, el <a href="sistema-contable">sistema contable</a> arma los asientos con esas mismas facturas.</small></p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion claro" aria-labelledby="titulo-incluye">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-incluye">Todo lo que incluye</h2>
+                </div>
+                <ul class="incluye-todo">
+                    <li>Emisión de comprobantes electrónicos</li>
+                    <li>Consulta y descarga de documentos</li>
+                    <li>Envío automático de comprobantes por correo</li>
+                    <li>Acceso desde computadora, tablet o celular</li>
+                    <li>Historial organizado de comprobantes</li>
+                    <li>Generación de PDF, XML y clave de acceso</li>
+                    <li>Control de inventario incluido: existencias, kárdex y compras</li>
+                    <li>Reportes y herramientas de gestión en planes superiores</li>
+                    <li>Facturación automática de cobros mensuales (se agrega a pedido)</li>
+                    <li>Las facturas de tus proveedores, verificadas con el SRI y registradas como compra o gasto</li>
+                    <li>El IVA del mes: lo cobrado en ventas junto a lo pagado en compras</li>
+                    <li>Soporte y acompañamiento según el plan</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" id="planes" aria-labelledby="titulo-planes">
+            <div class="envoltura">
+                <div class="planes-intro">
+                    <h2 id="titulo-planes" class="titulo-seccion">Planes de facturación electrónica</h2>
+                    <p class="texto-seccion">Elige según cuántos documentos emites al año. Todos incluyen el control de inventario y duran 12 meses.</p>
+                    <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></svg><span><strong>Necesitas una firma electrónica vigente.</strong> No está incluida en los planes: si ya tienes una, la usas; si necesitas sacarla o renovarla, te orientamos durante el proceso.</span></p>
+                </div>
+                <div class="planes-grilla">
+                    <article class="plan">
+                        <h3>Inicio</h3>
+                        <p class="lema">Facturación electrónica sin complicaciones</p>
+                        <p class="plan-precio"><strong>$19</strong><span>al año</span></p>
+                        <ul class="plan-cupos"><li>Documentos al año <strong>100</strong></li><li>Productos en inventario <strong>25</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Facturas, notas de crédito y débito</li>
+                            <li>Retenciones y guías de remisión</li>
+                            <li>Registro de tus compras desde el SRI</li>
+                            <li>Envío automático al cliente</li>
+                            <li>Consulta de documentos</li>
+                            <li>Soporte por chat</li>
+                            <li>Acceso desde computadora y celular</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan INICIO de facturación electrónica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                    <article class="plan plan-recomendado">
+                        <span class="plan-etiqueta">Recomendado</span>
+                        <h3>Negocio</h3>
+                        <p class="lema">Más herramientas para administrar tu negocio</p>
+                        <p class="plan-precio"><strong>$59</strong><span>al año</span></p>
+                        <ul class="plan-cupos"><li>Documentos al año <strong>500</strong></li><li>Productos en inventario <strong>250</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Todo lo del plan Inicio</li>
+                            <li>Clientes ilimitados</li>
+                            <li>Catálogo de productos</li>
+                            <li>Plantillas personalizables</li>
+                            <li>Reportes y descarga masiva</li>
+                            <li>Historial y búsqueda avanzada</li>
+                            <li>Multiusuario + soporte prioritario</li>
+                            <li>Copias de seguridad</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan NEGOCIO de facturación electrónica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                    <article class="plan">
+                        <h3>Profesional</h3>
+                        <p class="lema">Más control y automatización</p>
+                        <p class="plan-precio"><strong>$149</strong><span>al año</span></p>
+                        <ul class="plan-cupos"><li>Documentos al año <strong>1.500</strong></li><li>Productos en inventario <strong>1.500</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Todo lo del plan Negocio</li>
+                            <li>Usuarios y permisos</li>
+                            <li>Reportes avanzados</li>
+                            <li>Te ayudamos a cargar tus productos y clientes</li>
+                            <li>Automatizaciones</li>
+                            <li>Gestión avanzada de clientes y productos</li>
+                            <li>Exportación de información</li>
+                            <li>Configuración y acompañamiento inicial</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan PROFESIONAL de facturación electrónica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                    <article class="plan">
+                        <h3>Empresa</h3>
+                        <p class="lema">Para negocios con mayor volumen de facturación</p>
+                        <p class="plan-precio"><strong>$399</strong><span>al año</span></p>
+                        <ul class="plan-cupos"><li>Documentos al año <strong>4.000</strong></li><li>Productos en inventario <strong>4.500</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Todo lo del plan Profesional</li>
+                            <li>Usuarios y permisos avanzados</li>
+                            <li>Reportes empresariales</li>
+                            <li>Automatizaciones avanzadas</li>
+                            <li>Soporte preferencial y acompañamiento personalizado</li>
+                            <li>Configuración inicial</li>
+                            <li>Importación de datos</li>
+                            <li>Atención prioritaria</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan EMPRESA de facturación electrónica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                </div>
+                <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></svg><span><strong>¿Necesitas ayuda para elegir?</strong> <a href="https://wa.me/+593999823447?text=Hola, necesito ayuda para elegir un plan de facturación electrónica. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a> y te orientamos según el volumen de documentos y las necesidades de tu negocio.</span></p>
+            </div>
+        </section>
+
+        <section class="seccion claro" id="preguntas-frecuentes" aria-labelledby="titulo-preguntas">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-preguntas">Preguntas frecuentes sobre facturación electrónica</h2>
+                </div>
+                <div class="preguntas">
+                    <details><summary>¿Qué necesito para emitir comprobantes electrónicos en Ecuador? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Necesitas una firma electrónica vigente. La firma no está incluida en los planes de SysDevUp: si ya tienes una, puedes utilizarla; si necesitas obtenerla o renovarla, te orientamos durante el proceso.</p></details>
+                    <details><summary>¿Qué tipos de comprobantes puedo emitir? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Puedes emitir facturas, notas de crédito, notas de débito, retenciones y guías de remisión.</p></details>
+                    <details><summary>¿Cuánto cuesta la facturación electrónica? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Hay cuatro planes anuales, y todos traen el control de inventario incluido: Inicio a $19 por año hasta 100 documentos y 25 productos, Negocio a $59 hasta 500 documentos y 250 productos, Profesional a $149 hasta 1.500 documentos y 1.500 productos, y Empresa a $399 hasta 4.000 documentos y 4.500 productos. Todos los planes tienen una vigencia de 12 meses.</p></details>
+                    <details><summary>¿El control de inventario está incluido? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Cada plan trae el control de inventarios con su cupo de productos activos: 25, 250, 1.500 o 4.500. Llevas existencias por bodega, kardex, compras con costo promedio e informes, y si lo activas, cada factura autorizada por el SRI descuenta el stock sola. Si necesitas más de 4.500 productos, lo conversamos.</p></details>
+                    <details><summary>¿La firma electrónica está incluida en el precio del plan? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. La firma electrónica es un requisito aparte que debes tramitar por tu cuenta, y no está incluida en ninguno de los planes.</p></details>
+                    <details><summary>¿Puedo facturar desde el celular? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. El sistema funciona desde computadora, tablet o celular, sin necesidad de instalar programas.</p></details>
+                    <details><summary>¿Pueden emitirse solas mis facturas mensuales? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Si les cobras lo mismo a los mismos clientes cada mes, el sistema puede emitir esas facturas automáticamente el día que elijas. Se agrega sobre tu plan actual —no es un servicio aparte— y las facturas descuentan de tu mismo cupo. Escríbenos y lo coordinamos según cuántos clientes fijos tengas.</p></details>
+                    <details><summary>¿En qué formatos obtengo los comprobantes? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Cada comprobante se genera en PDF y XML, con su clave de acceso, y puede enviarse automáticamente al correo de tu cliente.</p></details>
+                    <details><summary>¿Puedo registrar las facturas de mis proveedores? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Subes sus XML o el reporte del SRI en línea, el sistema comprueba cada factura con el SRI y la conviertes en compra de inventario o en gasto. Viene incluido en todos los planes: registrar cuenta hasta el mismo número de documentos del plan.</p></details>
                 </div>
             </div>
         </section>
-        <section style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>Facturación electrónica sencilla y confiable</h2>
-            <p>SysDevUp te permite generar y administrar tus comprobantes electrónicos desde cualquier lugar. Emite facturas, notas de crédito, notas de débito, retenciones y guías de remisión sin procesos complicados.</p>
-            <div class="aviso-arena">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M12 8v5M12 16.2v.1"></path></svg><span><strong>Importante:</strong> para emitir comprobantes electrónicos necesitas una firma electrónica vigente. La firma no está incluida en nuestros planes. Si ya tienes una, puedes utilizarla; si necesitas obtenerla o renovarla, te orientamos durante el proceso.</span></p>
+
+        <section class="cierre oscuro" aria-labelledby="titulo-cierre">
+            <div class="envoltura">
+                <h2 id="titulo-cierre">¿Empezamos con tu facturación?</h2>
+                <p>Cuéntanos cómo facturas hoy y te ayudamos a elegir el plan y a dejarlo listo.</p>
+                <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, quiero información sobre facturación electrónica. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
             </div>
-            <h2>Todo lo que necesitas para facturar</h2>
-            <ul class="lista-check">
-                <li>Emisión de comprobantes electrónicos</li>
-                <li>Consulta y descarga de documentos</li>
-                <li>Envío automático de comprobantes por correo</li>
-                <li>Acceso desde computadora, tablet o celular</li>
-                <li>Historial organizado de comprobantes</li>
-                <li>Generación de PDF, XML y clave de acceso</li>
-                <li>Control de inventario incluido: existencias, kardex y compras</li>
-                <li>Reportes y herramientas de gestión en planes superiores</li>
-                <li>Facturación automática de cobros mensuales (se agrega a pedido)</li>
-                <li>Las facturas de tus proveedores, verificadas con el SRI y registradas como compra o gasto</li>
-                <li>El IVA del mes: lo cobrado en ventas junto a lo pagado en compras</li>
-                <li>Soporte y acompañamiento según el plan</li>
-            </ul>
-        </section>
-        <section style="max-width:1100px;margin:3rem auto;padding:1rem;">
-            <h2 style="text-align:center;">¿Por qué elegir SysDevUp?</h2>
-            <div class="row" style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-top:1.5rem;">
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon calido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z"></path></svg></div>
-                    <h3>Fácil de usar</h3>
-                    <p>Diseñado para que puedas emitir un comprobante rápidamente, sin procesos innecesarios.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M3 12h3M18 12h3M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"></path><circle cx="12" cy="12" r="3.4"></circle></svg></div>
-                    <h3>Automático</h3>
-                    <p>Reduce tareas repetitivas con envío automático, clientes frecuentes y herramientas de gestión.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"></rect><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2.5"></path></svg></div>
-                    <h3>Confiable</h3>
-                    <p>Mantén tus comprobantes organizados, disponibles y bajo control desde un solo lugar.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.6A8.5 8.5 0 1 1 20.5 12z"></path><path d="M8.5 11h7M8.5 14.5h4"></path></svg></div>
-                    <h3>Acompañamiento</h3>
-                    <p>Cuenta con soporte para resolver dudas y ayudarte a utilizar correctamente el sistema.</p>
-                </div>
-            </div>
-        </section>
-        <section style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>¿Cobras lo mismo todos los meses?</h2>
-            <p>Si facturas mensualidades, planes de internet, alícuotas o mantenimientos, el sistema puede emitir esas facturas <strong>solo</strong>, el día que tú digas y sin que nadie las cargue una por una. Cada una sale al SRI y le llega al cliente por correo, igual que si la hubieras hecho a mano.</p>
-            <p>Se arma una vez: defines qué se cobra y cada cuánto, y le cuelgas los clientes. Un cliente con un precio distinto lleva el suyo. Si algún mes falta un dato, esa factura queda en espera con el motivo y <strong>las demás salen igual</strong>; lo pendiente se reintenta solo al día siguiente.</p>
-            <div class="aviso-tarjeta">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.6A8.5 8.5 0 1 1 20.5 12z"></path><path d="M8.5 11h7M8.5 14.5h4"></path></svg><span><strong>Se agrega a tu plan, no es un servicio aparte.</strong> Las facturas que emites son las de tu mismo plan y descuentan de tu cupo; lo que se suma es la automatización. Escríbenos y te decimos qué te conviene según cuántos clientes fijos tengas.</span></p>
-            </div>
-        </section>
-        <section style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>Tus compras, sin cargarlas a mano</h2>
-            <p>Las facturas que te emiten tus proveedores también son electrónicas. Sube sus XML o el reporte que descargas del SRI en línea, y el sistema <strong>comprueba cada una con el SRI</strong> antes de mostrártela: lo que se guarda es la copia oficial, así que una factura alterada o emitida a otro RUC no pasa.</p>
-            <p>Con unos clics conviertes cada factura en <strong>compra de inventario o en gasto</strong> —luz, combustible, mantenimiento—, y el proveedor se da de alta solo. El sistema recuerda lo que decidiste, así que la próxima factura de ese proveedor ya te llega con todo propuesto. Y a fin de mes tienes el <strong>IVA que cobraste en tus ventas junto al que pagaste en tus compras</strong>, listo para revisarlo con tu contador. Y si estás obligado a llevar contabilidad, el <a href="sistema-contable">sistema contable</a> arma los asientos con esas mismas facturas.</p>
-            <div class="aviso-tarjeta">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.8 2.8L16.5 9.5"></path></svg><span><strong>Viene incluido en tu plan, sin costo adicional.</strong> Recibir y verificar tus facturas no tiene límite; registrarlas como compra o gasto cuenta hasta el mismo número de documentos de tu plan: 100, 500, 1.500 o 4.000 al año.</span></p>
-            </div>
-        </section>
-        <section style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>Con el inventario incluido</h2>
-            <p>Cada plan trae el <a href="control-de-inventarios">control de inventarios</a>: sabes qué tienes, en qué bodega y cuánto te costó. Las compras de tus proveedores suben el stock con su costo, y si lo activas, <strong>cada factura autorizada por el SRI lo descuenta sola</strong>. Todo en el mismo sistema, sin pasar datos de un lado a otro.</p>
-            <div class="aviso-tarjeta">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.8 2.8L16.5 9.5"></path></svg><span><strong>Viene incluido en tu plan, sin costo adicional.</strong> Lo que cambia de un plan a otro es cuántos productos activos puedes tener: 25, 250, 1.500 o 4.500. Si tu catálogo es más grande, lo conversamos.</span></p>
-            </div>
-        </section>
-        <section class="sec-planes" id="planes">
-            <h2 style="text-align:center;">Planes de facturación electrónica</h2>
-            <p style="text-align:center;max-width:700px;margin:0 auto 1rem;">Elige el plan que mejor se adapte al volumen y las necesidades de tu negocio. Todos incluyen el control de inventario y tienen una vigencia de 12 meses.</p>
-            <p style="text-align:center;max-width:700px;margin:0 auto 2rem;">Para emitir comprobantes electrónicos necesitas una firma electrónica vigente. La firma no está incluida en los planes.</p>
-            <div class="planes">
-                <div class="plan basico" data-aos="fade-up">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 8.5v7L12 20l-8.5-4.5v-7L12 4z"></path><path d="M3.5 8.5L12 13l8.5-4.5M12 13v7"></path></svg></div>
-                    <h3>Inicio</h3>
-                    <p class="tagline">Facturación electrónica sin complicaciones</p>
-                    <p><span class="precio">$19</span> /año</p>
-                    <p>Hasta <strong>100 documentos/año</strong></p>
-                    <p>Inventario de hasta <strong>25 productos</strong></p>
-                    <ul class="lista-check">
-                        <li>Facturas, notas de crédito y débito</li>
-                        <li>Retenciones y guías de remisión</li>
-                        <li>Registro de tus compras desde el SRI</li>
-                        <li>Envío automático al cliente</li>
-                        <li>Consulta de documentos</li>
-                        <li>Soporte por chat</li>
-                        <li>Acceso desde computadora y celular</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan INICIO de facturación electrónica." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
-                <div class="plan negocio destacado" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.9l6.1-.8z"></path></svg></div>
-                    <h3>Negocio</h3>
-                    <p class="tagline">Más herramientas para administrar tu negocio</p>
-                    <p><span class="precio">$59</span> /año</p>
-                    <p>Hasta <strong>500 documentos/año</strong></p>
-                    <p>Inventario de hasta <strong>250 productos</strong></p>
-                    <ul class="lista-check">
-                        <li>Todo lo del plan Inicio</li>
-                        <li>Clientes ilimitados</li>
-                        <li>Catálogo de productos</li>
-                        <li>Plantillas personalizables</li>
-                        <li>Reportes y descarga masiva</li>
-                        <li>Historial y búsqueda avanzada</li>
-                        <li>Multiusuario + soporte prioritario</li>
-                        <li>Copias de seguridad</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan NEGOCIO de facturación electrónica." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
-                <div class="plan profesional" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.5"></rect><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"></path></svg></div>
-                    <h3>Profesional</h3>
-                    <p class="tagline">Más control y automatización</p>
-                    <p><span class="precio">$149</span> /año</p>
-                    <p>Hasta <strong>1.500 documentos/año</strong></p>
-                    <p>Inventario de hasta <strong>1.500 productos</strong></p>
-                    <ul class="lista-check">
-                        <li>Todo lo del plan Negocio</li>
-                        <li>Usuarios y permisos</li>
-                        <li>Reportes avanzados</li>
-                        <li>Te ayudamos a cargar tus productos y clientes</li>
-                        <li>Automatizaciones</li>
-                        <li>Gestión avanzada de clientes y productos</li>
-                        <li>Exportación de información</li>
-                        <li>Configuración y acompañamiento inicial</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan PROFESIONAL de facturación electrónica." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
-                <div class="plan premium" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4zM8 5.5H5.5A2.5 2.5 0 0 0 8 10M16 5.5h2.5A2.5 2.5 0 0 1 16 10M10 13.5h4M12 13.5V17M9 20h6"></path></svg></div>
-                    <h3>Empresa</h3>
-                    <p class="tagline">Para negocios con mayor volumen de facturación</p>
-                    <p><span class="precio">$399</span> /año</p>
-                    <p>Hasta <strong>4.000 documentos/año</strong></p>
-                    <p>Inventario de hasta <strong>4.500 productos</strong></p>
-                    <ul class="lista-check">
-                        <li>Todo lo del plan Profesional</li>
-                        <li>Usuarios y permisos avanzados</li>
-                        <li>Reportes empresariales</li>
-                        <li>Automatizaciones avanzadas</li>
-                        <li>Soporte preferencial y acompañamiento personalizado</li>
-                        <li>Configuración inicial</li>
-                        <li>Importación de datos</li>
-                        <li>Atención prioritaria</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan EMPRESA de facturación electrónica." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
-            </div>
-            <div class="aviso-tarjeta">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 17v.1"></path></svg><span><strong>¿Necesitas ayuda para elegir?</strong> Escríbenos por WhatsApp y te orientamos según el volumen de documentos y las necesidades de tu negocio.</span></p>
-            </div>
-        </section>
-        <section id="preguntas-frecuentes" style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>Preguntas frecuentes sobre facturación electrónica</h2>
-            <h3 style="margin-bottom:.35rem;">¿Qué necesito para emitir comprobantes electrónicos en Ecuador?</h3>
-            <p style="margin-top:0;">Necesitas una firma electrónica vigente. La firma no está incluida en los planes de SysDevUp: si ya tienes una, puedes utilizarla; si necesitas obtenerla o renovarla, te orientamos durante el proceso.</p>
-            <h3 style="margin-bottom:.35rem;">¿Qué tipos de comprobantes puedo emitir?</h3>
-            <p style="margin-top:0;">Puedes emitir facturas, notas de crédito, notas de débito, retenciones y guías de remisión.</p>
-            <h3 style="margin-bottom:.35rem;">¿Cuánto cuesta la facturación electrónica?</h3>
-            <p style="margin-top:0;">Hay cuatro planes anuales, y todos traen el control de inventario incluido: Inicio a $19 por año hasta 100 documentos y 25 productos, Negocio a $59 hasta 500 documentos y 250 productos, Profesional a $149 hasta 1.500 documentos y 1.500 productos, y Empresa a $399 hasta 4.000 documentos y 4.500 productos. Todos los planes tienen una vigencia de 12 meses.</p>
-            <h3 style="margin-bottom:.35rem;">¿El control de inventario está incluido?</h3>
-            <p style="margin-top:0;">Sí. Cada plan trae el control de inventarios con su cupo de productos activos: 25, 250, 1.500 o 4.500. Llevas existencias por bodega, kardex, compras con costo promedio e informes, y si lo activas, cada factura autorizada por el SRI descuenta el stock sola. Si necesitas más de 4.500 productos, lo conversamos.</p>
-            <h3 style="margin-bottom:.35rem;">¿La firma electrónica está incluida en el precio del plan?</h3>
-            <p style="margin-top:0;">No. La firma electrónica es un requisito aparte que debes tramitar por tu cuenta, y no está incluida en ninguno de los planes.</p>
-            <h3 style="margin-bottom:.35rem;">¿Puedo facturar desde el celular?</h3>
-            <p style="margin-top:0;">Sí. El sistema funciona desde computadora, tablet o celular, sin necesidad de instalar programas.</p>
-            <h3 style="margin-bottom:.35rem;">¿Pueden emitirse solas mis facturas mensuales?</h3>
-            <p style="margin-top:0;">Sí. Si les cobras lo mismo a los mismos clientes cada mes, el sistema puede emitir esas facturas automáticamente el día que elijas. Se agrega sobre tu plan actual —no es un servicio aparte— y las facturas descuentan de tu mismo cupo. Escríbenos y lo coordinamos según cuántos clientes fijos tengas.</p>
-            <h3 style="margin-bottom:.35rem;">¿En qué formatos obtengo los comprobantes?</h3>
-            <p style="margin-top:0;">Cada comprobante se genera en PDF y XML, con su clave de acceso, y puede enviarse automáticamente al correo de tu cliente.</p>
-            <h3 style="margin-bottom:.35rem;">¿Puedo registrar las facturas de mis proveedores?</h3>
-            <p style="margin-top:0;">Sí. Subes sus XML o el reporte del SRI en línea, el sistema comprueba cada factura con el SRI y la conviertes en compra de inventario o en gasto. Viene incluido en todos los planes: registrar cuenta hasta el mismo número de documentos del plan.</p>
         </section>
     </main>
-    <footer>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 center">
-                <img src="media/img/logo_blanco.png" alt="SysDevUp" height="150">
-                <address class="contacto">
-                    <span>Quito, Ecuador</span>
-                    <a href="tel:+593999823447">+593 99 982 3447</a>
-                </address>
-                <p>&copy; 2026 <strong><a href="https://sysdevup.com" target="_blank" rel="noopener noreferrer">SysDevUp.</a></strong> Todos los derechos reservados.</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                <div class="site-map">
-                    <h3>Mapa del sitio</h3>
+
+    <footer class="pie">
+        <div class="envoltura">
+            <div class="pie-grilla">
+                <div>
+                    <img src="media/img/logo-blanco.png" alt="SysDevUp" width="284" height="186" loading="lazy">
+                    <address>
+                        <span>Quito, Ecuador</span>
+                        <a href="tel:+593999823447">+593 99 982 3447</a>
+                    </address>
+                </div>
+                <div>
+                    <h2>Productos</h2>
                     <ul>
-                        <li><a href="./">Inicio</a></li>
                         <li><a href="facturacion-electronica">Facturación electrónica</a></li>
                         <li><a href="control-de-inventarios">Control de inventarios</a></li>
                         <li><a href="sistema-contable">Sistema contable</a></li>
                         <li><a href="software-para-consultorios-medicos">Consultorios médicos</a></li>
                         <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                        <li><a href="politica-de-privacidad">Política de Privacidad</a></li>
-                        <li><a href="terminos-y-condiciones">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>SysDevUp</h2>
+                    <ul>
+                        <li><a href="./#como-empezar">Cómo empezar</a></li>
+                        <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a></li>
+                        <li><a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="politica-de-privacidad">Política de privacidad</a></li>
+                        <li><a href="terminos-y-condiciones">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
+            <p class="pie-legal">&copy; 2026 SysDevUp. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="Consultar por WhatsApp"><img src="media/img/whatsapp.png" alt="WhatsApp" width="64"></a>
-    <script src="js/index.min.js?1.1.1"></script>
+    <a class="whatsapp-flotante" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg></a>
+    <script src="js/sitio.js?1.0.0" defer></script>
 </body>
+
 </html>
