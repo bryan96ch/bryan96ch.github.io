@@ -9,3 +9,6 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# Estado local de la herramienta de diseño (brief, capturas, revisiones)
+.impeccable/

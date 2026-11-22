@@ -27,7 +27,10 @@
     <meta name="twitter:title" content="Facturación Electrónica e Inventarios en Ecuador | SysDevUp">
     <meta name="twitter:description" content="Facturación electrónica, inventarios, contabilidad, software para consultorios y para servicio técnico, y automatización de procesos en Ecuador.">
     <meta name="twitter:image" content="https://sysdevup.com/media/img/compartir-inicio.jpg">
-    <link rel="stylesheet" href="css/style.min.css?1.2.9">
+    <meta name="theme-color" content="#071a33">
+    <link rel="preload" href="fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/sitio.css?1.0.0">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -123,191 +126,267 @@
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <a href="./" class="logo hide-on-small"><img src="media/img/logo.png" alt="Inicio de la página" height="70"></a>
-            <nav class="nav hide-on-medium" id="nav">
-                <ul>
-                    <li><a href="./">Inicio</a></li>
-                    <li><a href="facturacion-electronica">Facturación electrónica</a></li>
-                    <li><a href="control-de-inventarios">Inventarios</a></li>
-                    <li><a href="sistema-contable">Contabilidad</a></li>
-                    <li><a href="software-para-consultorios-medicos">Consultorios</a></li>
-                    <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                    <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer" class="btn-sistema">Acceder al sistema</a></li>
-                </ul>
+    <a class="saltar" href="#contenido">Ir al contenido</a>
+    <header class="cabecera oscuro">
+        <div class="envoltura cabecera-in">
+            <a href="./" class="marca"><img src="media/img/logo-blanco.png" alt="SysDevUp, ir al inicio" width="284" height="186"></a>
+            <nav class="nav" aria-label="Principal">
+                <details class="productos">
+                    <summary>Productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                    <div class="panel-productos">
+                        <ul class="lista-productos">
+                            <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Facturas, retenciones y guías del SRI, con inventario</span></span><em>desde $19/año</em></a></li>
+                            <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Existencias por bodega, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                            <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos que salen solos de tus facturas</span></span><em>$199/año</em></a></li>
+                            <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia clínica, recetas y factura</span></span><em>desde $39,99/mes</em></a></li>
+                            <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes, técnicos en el celular y la factura</span></span><em>desde $35/mes</em></a></li>
+                        </ul>
+                    </div>
+                </details>
+                <a class="nav-enlace" href="#como-empezar">Cómo empezar</a>
+                <a class="nav-enlace nav-acceder" href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                <a class="boton boton-claro boton-chico" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </nav>
-            <a href="#¡" class="menu-btn" id="btn_menu_mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+            <details class="menu-movil">
+                <summary aria-label="Menú"><svg class="icono-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icono-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+                <div class="panel-movil">
+                    <ul class="lista-productos">
+                        <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Con inventario incluido</span></span><em>desde $19/año</em></a></li>
+                        <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Bodegas, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                        <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos desde tus facturas</span></span><em>$199/año</em></a></li>
+                        <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia y recetas</span></span><em>desde $39,99/mes</em></a></li>
+                        <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes y técnicos en el celular</span></span><em>desde $35/mes</em></a></li>
+                    </ul>
+                    <div class="otros">
+                        <a href="#como-empezar">Cómo empezar</a>
+                        <a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                        <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>
+                    </div>
+                </div>
+            </details>
         </div>
     </header>
-    <main>
-        <section class="inicio">
-            <div class="row middle-lg">
-                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-7">
-                    <span class="etiqueta-local" data-aos="zoom-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 3v5M12 16v5M3 12h5M16 12h5"></path></svg> Te acompañamos en cada paso, no solo te entregamos el sistema</span>
-                    <h1 data-aos="fade-right">Tu negocio ordenado,<br>sin pelearte con la tecnología</h1>
-                    <p data-aos="zoom-in">
-                        Te ayudamos a facturar, llevar tu inventario y automatizar lo repetitivo.
-                        Empezamos por entender cómo trabajas hoy y te acompañamos en todo el proceso.
-                    </p>
-                    <div class="acciones-hero" data-aos="fade-up">
-                        <a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"></path></svg> Escríbenos por WhatsApp</a>
-                        <a href="facturacion-electronica" class="btn-secundario">Ver planes</a>
+
+    <main id="contenido">
+        <section class="portada oscuro">
+            <div class="envoltura">
+                <div class="portada-grilla">
+                    <div>
+                        <h1>Empieza a facturar <span class="precio"><small>desde</small> $19 <small>al año</small></span></h1>
+                        <p class="bajada">Con el <strong>inventario incluido</strong>. Y cuando lo necesites, suma contabilidad, tu consultorio o tu servicio técnico: todo en el mismo sistema, ya conectado.</p>
+                        <div class="acciones">
+                            <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
+                            <a class="enlace-flecha" href="facturacion-electronica#planes">Ver planes de facturación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <p class="nota-humana">Te responde una persona, y te acompaña también después de empezar.</p>
                     </div>
+                    <figure class="mapa">
+                        <svg viewBox="0 0 560 470" role="group" aria-label="Mapa de los módulos de SysDevUp: facturación al centro, conectada con inventario, contabilidad, consultorios y servicio técnico">
+                            <path class="linea linea-inv" d="M280 235 H190 L120 165 V100"/>
+                            <path class="linea linea-con" d="M280 235 V160 L345 95 H440"/>
+                            <path class="linea linea-cli" d="M280 235 V310 L215 375 H120"/>
+                            <path class="linea linea-st" d="M280 235 H370 L440 305 V375"/>
+                            <circle class="parada" cx="190" cy="235" r="7" stroke="var(--inv)"/>
+                            <text class="rotulo-chico" x="178" y="254" text-anchor="end">Kárdex y bodegas</text>
+                            <circle class="parada" cx="280" cy="182" r="7" stroke="var(--con)"/>
+                            <text class="rotulo-chico" x="266" y="187" text-anchor="end">Libros y ATS</text>
+                            <circle class="parada" cx="280" cy="292" r="7" stroke="var(--cli)"/>
+                            <text class="rotulo-chico" x="294" y="297">Historia clínica</text>
+                            <circle class="parada" cx="370" cy="235" r="7" stroke="var(--st)"/>
+                            <text class="rotulo-chico" x="370" y="214" text-anchor="middle">Órdenes y firma</text>
+                            <a class="estacion e-inv" href="control-de-inventarios" aria-label="Control de inventarios, desde 0 dólares al año: cada factura descuenta el stock" data-nombre="Control de inventarios:" data-texto="cada factura autorizada descuenta el stock, si lo activas. Gratis hasta 25 productos.">
+                                <circle class="terminal" cx="120" cy="100" r="12" stroke="var(--inv)"/>
+                                <text class="rotulo" x="141" y="106">Inventario</text>
+                                <text class="rotulo-precio" x="141" y="125">desde $0 al año</text>
+                            </a>
+                            <a class="estacion e-con" href="sistema-contable" aria-label="Sistema contable, 199 dólares al año: los asientos salen de tus facturas" data-nombre="Sistema contable:" data-texto="los asientos salen solos de tus facturas y compras. $199 al año.">
+                                <circle class="terminal" cx="440" cy="95" r="12" stroke="var(--con)"/>
+                                <text class="rotulo" x="440" y="66" text-anchor="middle">Contabilidad</text>
+                                <text class="rotulo-precio" x="440" y="128" text-anchor="middle">$199 al año</text>
+                            </a>
+                            <a class="estacion e-cli" href="software-para-consultorios-medicos" aria-label="Consultorios médicos, desde 39,99 dólares al mes: la factura sale de la consulta" data-nombre="Consultorios médicos:" data-texto="la factura sale de la consulta, con el paciente ya elegido. Desde $39,99 al mes.">
+                                <circle class="terminal" cx="120" cy="375" r="12" stroke="var(--cli)"/>
+                                <text class="rotulo" x="120" y="411" text-anchor="middle">Consultorios</text>
+                                <text class="rotulo-precio" x="120" y="430" text-anchor="middle">desde $39,99 al mes</text>
+                            </a>
+                            <a class="estacion e-st" href="software-para-servicio-tecnico" aria-label="Servicio técnico, desde 35 dólares al mes: la factura sale de la orden" data-nombre="Servicio técnico:" data-texto="la factura sale de la orden y los repuestos, del inventario. Desde $35 al mes.">
+                                <circle class="terminal" cx="440" cy="375" r="12" stroke="var(--st)"/>
+                                <text class="rotulo" x="440" y="411" text-anchor="middle">Servicio técnico</text>
+                                <text class="rotulo-precio" x="440" y="430" text-anchor="middle">desde $35 al mes</text>
+                            </a>
+                            <a class="estacion e-fac" href="facturacion-electronica" aria-label="Facturación electrónica, desde 19 dólares al año con el inventario incluido: el centro del sistema" data-nombre="Facturación electrónica:" data-texto="el transbordo. Desde $19 al año con el inventario incluido, y de ella salen todas las demás líneas.">
+                                <circle class="transbordo" cx="280" cy="235" r="26"/>
+                                <text class="rotulo" x="262" y="282" text-anchor="end">Facturación</text>
+                                <text class="rotulo-precio" x="262" y="301" text-anchor="end">desde $19 al año</text>
+                            </a>
+                        </svg>
+                        <figcaption class="leyenda"><strong>Facturación es el transbordo:</strong> todo lo demás se conecta a ella. Toca o señala una estación para ver cómo.</figcaption>
+                    </figure>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-5">
-                    <img src="media/img/isotipo.svg" class="logotipo" alt="Logotipo SysDevUp" width="100%" data-aos="zoom-in">
+                <ul class="garantias">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><div><strong>Los 5 comprobantes del SRI</strong><span>Facturas, notas de crédito y débito, retenciones y guías de remisión.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></svg><div><strong>Personas por WhatsApp</strong><span>Te ayudamos a empezar y a usarlo, también después.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><div><strong>En el celular o la computadora</strong><span>Funciona en el navegador, sin instalar nada.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><div><strong>Más de 10 años</strong><span>haciendo software para empresas, desde Quito.</span></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" id="productos" aria-labelledby="titulo-productos">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-productos">Arma tu recorrido</h2>
+                    <p>Empieza con un módulo y suma los demás cuando los necesites. Ya están conectados entre sí, así que nada se vuelve a escribir.</p>
+                </div>
+                <div class="estaciones">
+                    <article class="modulo modulo-principal c-fac">
+                        <div class="modulo-texto">
+                            <div class="modulo-ruta" aria-hidden="true"><span class="punto"></span></div>
+                            <h3><a href="facturacion-electronica">Facturación electrónica</a></h3>
+                            <ul class="incluye">
+                                <li>Facturas, notas de crédito y débito, retenciones y guías de remisión</li>
+                                <li>Las facturas de tus proveedores, verificadas con el SRI</li>
+                                <li>El PDF y el XML le llegan a tu cliente por correo</li>
+                                <li>Control de inventario incluido en todos los planes</li>
+                            </ul>
+                            <p class="precio-modulo">Desde <strong>$19</strong> al año</p>
+                            <span class="ver">Ver los cuatro planes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                        </div>
+                        <img class="modulo-dibujo" src="media/img/hero-facturacion.svg" alt="" width="360" height="350" loading="lazy">
+                    </article>
+                    <div class="ramales">
+                    <article class="modulo c-inv">
+                        <div class="modulo-ruta" aria-hidden="true"><span class="punto"></span></div>
+                        <h3><a href="control-de-inventarios">Control de inventarios</a></h3>
+                        <p>Qué tienes, en qué bodega y cuánto te costó, con el kárdex de cada movimiento.</p>
+                        <div>
+                            <p class="conexiones-titulo">Se conecta con</p>
+                            <ul class="conexiones"><li class="c-fac"><span class="punto" aria-hidden="true"></span>Facturación: descuenta el stock al facturar</li></ul>
+                        </div>
+                        <p class="precio-modulo">Desde <strong>$0</strong> al año</p>
+                        <img class="modulo-dibujo" src="media/img/hero-inventarios.svg" alt="" width="360" height="350" loading="lazy">
+                    </article>
+                    <article class="modulo c-con">
+                        <div class="modulo-ruta" aria-hidden="true"><span class="punto"></span></div>
+                        <h3><a href="sistema-contable">Sistema contable</a></h3>
+                        <p>Libros, estados financieros, cartera, conciliación bancaria y el ATS de cada mes.</p>
+                        <div>
+                            <p class="conexiones-titulo">Se conecta con</p>
+                            <ul class="conexiones"><li class="c-fac"><span class="punto" aria-hidden="true"></span>Facturación: los asientos salen solos</li></ul>
+                        </div>
+                        <p class="precio-modulo"><strong>$199</strong> al año</p>
+                        <img class="modulo-dibujo" src="media/img/hero-contabilidad.svg" alt="" width="360" height="350" loading="lazy">
+                    </article>
+                    <article class="modulo c-cli">
+                        <div class="modulo-ruta" aria-hidden="true"><span class="punto"></span></div>
+                        <h3><a href="software-para-consultorios-medicos">Consultorios médicos</a></h3>
+                        <p>Agenda por profesional, historia clínica, recetas y certificados, con la facturación incluida.</p>
+                        <div>
+                            <p class="conexiones-titulo">Se conecta con</p>
+                            <ul class="conexiones"><li class="c-fac"><span class="punto" aria-hidden="true"></span>Facturación: la factura sale de la consulta</li></ul>
+                        </div>
+                        <p class="precio-modulo">Desde <strong>$39,99</strong> al mes</p>
+                        <img class="modulo-dibujo" src="media/img/hero-clinica.svg" alt="" width="360" height="350" loading="lazy">
+                    </article>
+                    <article class="modulo c-st">
+                        <div class="modulo-ruta" aria-hidden="true"><span class="punto"></span></div>
+                        <h3><a href="software-para-servicio-tecnico">Servicio técnico</a></h3>
+                        <p>Órdenes de trabajo, agenda de técnicos y el técnico en el celular, con fotos y la firma del cliente.</p>
+                        <div>
+                            <p class="conexiones-titulo">Se conecta con</p>
+                            <ul class="conexiones"><li class="c-fac"><span class="punto" aria-hidden="true"></span>Facturación: la factura sale de la orden</li><li class="c-inv"><span class="punto" aria-hidden="true"></span>Inventario: los repuestos salen solos</li></ul>
+                        </div>
+                        <p class="precio-modulo">Desde <strong>$35</strong> al mes</p>
+                        <img class="modulo-dibujo" src="media/img/hero-servicio-tecnico.svg" alt="" width="360" height="350" loading="lazy">
+                    </article>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="servicios">
-            <div class="center">
-                <span class="subtitle">Lo que hacemos</span>
-                <h2>Cómo te podemos ayudar</h2>
-                <p class="subtitulo-seccion">Seis formas de trabajar juntos, según lo que tu negocio necesite ahora.</p>
-            </div>
-            <div class="panel-servicios">
-
-                <div class="servicio">
-                    <h3>Facturación electrónica</h3>
-                    <img src="media/img/servicio-facturacion.svg" alt="Facturación electrónica en Ecuador" width="84" height="84" data-aos="fade-in">
-                    <div class="servicio-content" data-aos="zoom-in">
-                        • Facturas, notas de crédito y débito <br>
-                        • Retenciones y guías de remisión <br>
-                        • Desde el celular o la computadora <br>
-                        • El PDF y el XML al correo del cliente <br>
-                        • Compras verificadas con el SRI <br>
-                        • Control de inventario incluido
-                    </div>
-                    <a href="facturacion-electronica" aria-label="Ver más sobre facturación electrónica">
-                        Ver más
-                    </a>
+        <section class="seccion empezar" id="como-empezar" aria-labelledby="titulo-empezar">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-empezar">Cómo empiezas</h2>
+                    <p>Tres paradas, y en todas tienes a alguien al otro lado.</p>
                 </div>
-
-                <div class="servicio">
-                    <h3>Control de inventarios</h3>
-                    <img src="media/img/servicio-inventarios.svg" alt="Control de inventarios y existencias" width="84" height="84" data-aos="fade-in">
-                    <div class="servicio-content" data-aos="zoom-in">
-                        • Existencias por producto y bodega <br>
-                        • Kardex de entradas y salidas <br>
-                        • Compras con proveedor <br>
-                        • Costo promedio y valorización <br>
-                        • Aviso de stock mínimo <br>
-                        • Descuento al facturar
-                    </div>
-                    <a href="control-de-inventarios" aria-label="Ver más sobre control de inventarios">
-                        Ver más
-                    </a>
-                </div>
-
-                <div class="servicio">
-                    <h3>Contabilidad</h3>
-                    <img src="media/img/servicio-contabilidad.svg" alt="Sistema contable para empresas" width="84" height="84" data-aos="fade-in">
-                    <div class="servicio-content" data-aos="zoom-in">
-                        • Asientos que salen de tus facturas <br>
-                        • Libros y estados financieros <br>
-                        • Cuentas por cobrar y por pagar <br>
-                        • Conciliación bancaria <br>
-                        • Cierre de meses y del ejercicio <br>
-                        • El ATS de cada mes
-                    </div>
-                    <a href="sistema-contable" aria-label="Ver más sobre el sistema contable">
-                        Ver más
-                    </a>
-                </div>
-
-                <div class="servicio">
-                    <h3>Consultorios médicos</h3>
-                    <img src="media/img/servicio-clinica.svg" alt="Software para consultorios médicos" width="84" height="84" data-aos="fade-in">
-                    <div class="servicio-content" data-aos="zoom-in">
-                        • Agenda de citas por profesional <br>
-                        • Ficha y antecedentes del paciente <br>
-                        • Historia clínica en formato SOAP <br>
-                        • Diagnósticos con CIE-10 <br>
-                        • Recetas en PDF <br>
-                        • Recordatorio de la cita por correo
-                    </div>
-                    <a href="software-para-consultorios-medicos" aria-label="Ver más sobre software para consultorios médicos">
-                        Ver más
-                    </a>
-                </div>
-
-                <div class="servicio">
-                    <h3>Servicio técnico</h3>
-                    <img src="media/img/servicio-servicio-tecnico.svg" alt="Software para servicio técnico y talleres" width="84" height="84" data-aos="fade-in">
-                    <div class="servicio-content" data-aos="zoom-in">
-                        • Órdenes de trabajo y agenda <br>
-                        • El técnico en el celular <br>
-                        • Fotos y firma del cliente <br>
-                        • Recepción de equipos en el taller <br>
-                        • Repuestos que salen del inventario <br>
-                        • La factura desde la orden
-                    </div>
-                    <a href="software-para-servicio-tecnico" aria-label="Ver más sobre software para servicio técnico">
-                        Ver más
-                    </a>
-                </div>
-
-                <div class="servicio">
-                    <h3>Automatización de procesos</h3>
-                    <img src="media/img/servicio-automatizacion.svg" alt="Automatización de procesos empresariales" width="84" height="84" data-aos="fade-in">
-                    <div class="servicio-content" data-aos="zoom-in">
-                        • Flujos automáticos de tareas repetitivas <br>
-                        • Integración con herramientas como WhatsApp <br>
-                        • Reducción de errores manuales <br>
-                        • Notificaciones automáticas y recordatorios <br>
-                        • Ahorro de tiempo y recursos <br>
-                        • Soluciones a medida con Make, n8n u otros
-                    </div>
-                    <a href="https://wa.me/+593999823447?text=Hola, quiero información sobre automatización de procesos. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" aria-label="Consultar sobre automatización por WhatsApp">
-                        Ver más
-                    </a>
-                </div>
-
+                <ol class="ruta">
+                    <li><h3>Nos escribes por WhatsApp</h3><p>Cuéntanos qué vendes y cómo facturas hoy. Te decimos qué plan te conviene, sin compromiso.</p></li>
+                    <li><h3>Lo configuramos contigo</h3><p>Tu firma electrónica, los datos de tu negocio y tu primera factura. ¿Aún no tienes firma? Te orientamos para sacarla; se tramita aparte.</p></li>
+                    <li><h3>Facturas desde donde estés</h3><p>En el celular o la computadora. El comprobante le llega a tu cliente por correo, y tú sigues sumando módulos cuando quieras.</p></li>
+                </ol>
             </div>
         </section>
-        <section class="banda-cta">
-            <div>
-                <h2>¿Conversamos sobre tu negocio?</h2>
+
+        <section class="seccion" aria-labelledby="titulo-nosotros">
+            <div class="envoltura">
+                <div class="automatizar">
+                    <div>
+                        <h2>¿Tareas que repites todos los días?</h2>
+                        <p>También automatizamos procesos: recordatorios, avisos y flujos entre las herramientas que ya usas, con Make, n8n u otras.</p>
+                    </div>
+                    <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Hola, quiero información sobre automatización de procesos. Vengo de la página web." target="_blank" rel="noopener noreferrer">Cuéntanos qué repites</a>
+                </div>
+                <div class="nosotros">
+                    <h2 id="titulo-nosotros">Quiénes somos</h2>
+                    <div>
+                        <p>Un equipo en Quito con más de 10 años haciendo software para empresas.</p>
+                        <p>Hicimos SysDevUp para que un negocio tenga su facturación, su inventario y sus cuentas en un mismo lugar, y alguien a quien escribirle cuando lo necesita.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cierre oscuro" aria-labelledby="titulo-cierre">
+            <div class="envoltura">
+                <h2 id="titulo-cierre">¿Conversamos sobre tu negocio?</h2>
                 <p>Cuéntanos qué necesitas y te orientamos sin compromiso, aunque todavía no tengas claro por dónde empezar.</p>
+                <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
             </div>
-            <a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"></path></svg> Escribir por WhatsApp</a>
         </section>
     </main>
-    <footer>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 center">
-                <img src="media/img/logo_blanco.png" alt="SysDevUp" height="150">
-                <address class="contacto">
-                    <span>Quito, Ecuador</span>
-                    <a href="tel:+593999823447">+593 99 982 3447</a>
-                </address>
-                <p>&copy; 2026 <strong><a href="https://sysdevup.com" target="_blank">SysDevUp.</a></strong> Todos los derechos reservados.</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                <div class="site-map">
-                    <h3>Mapa del sitio</h3>
+
+    <footer class="pie">
+        <div class="envoltura">
+            <div class="pie-grilla">
+                <div>
+                    <img src="media/img/logo-blanco.png" alt="SysDevUp" width="284" height="186" loading="lazy">
+                    <address>
+                        <span>Quito, Ecuador</span>
+                        <a href="tel:+593999823447">+593 99 982 3447</a>
+                    </address>
+                </div>
+                <div>
+                    <h2>Productos</h2>
                     <ul>
-                        <li><a href="./">Inicio</a></li>
                         <li><a href="facturacion-electronica">Facturación electrónica</a></li>
                         <li><a href="control-de-inventarios">Control de inventarios</a></li>
                         <li><a href="sistema-contable">Sistema contable</a></li>
                         <li><a href="software-para-consultorios-medicos">Consultorios médicos</a></li>
                         <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                        <li><a href="politica-de-privacidad">Política de Privacidad</a></li>
-                        <li><a href="terminos-y-condiciones">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>SysDevUp</h2>
+                    <ul>
+                        <li><a href="#como-empezar">Cómo empezar</a></li>
+                        <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a></li>
+                        <li><a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="politica-de-privacidad">Política de privacidad</a></li>
+                        <li><a href="terminos-y-condiciones">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
+            <p class="pie-legal">&copy; 2026 SysDevUp. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la pagina web." target="_blank" class="whatsapp" aria-label="Cotizar ahora por WhatsApp"><img src="media/img/whatsapp.png" alt="WhatsApp" width="64"></a>
-    <script src="js/index.min.js?1.1.1"></script>
+    <a class="whatsapp-flotante" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg></a>
+    <script src="js/sitio.js?1.0.0" defer></script>
 </body>
 
 </html>
