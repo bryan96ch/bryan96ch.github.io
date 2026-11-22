@@ -8,233 +8,237 @@
     <meta name="description" content="Política de privacidad de SysDevUp: qué datos personales recolectamos, con qué finalidad los tratamos y qué derechos tienes sobre ellos.">
     <title>Política de Privacidad - SysDevUp</title>
     <link rel="canonical" href="https://sysdevup.com/politica-de-privacidad">
-    <link rel="stylesheet" href="css/style.min.css?1.2.9">
-    <style>
-        main{
-            padding-top: 80px;
-        }
-
-        h1,
-        h2 {
-            color: #0056b3;
-        }
-
-        ul {
-            margin-left: 1.5rem;
-        }
-
-        a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin: 1rem;
-            padding: 1rem;
-        }
-    </style>
+    <meta name="theme-color" content="#071a33">
+    <link rel="preload" href="fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/sitio.css?1.0.0">
 </head>
 
-<body>
-    <header>
-        <div class="header">
-            <a href="./" class="logo hide-on-small"><img src="media/img/logo.png" alt="Inicio de la página" height="70"></a>
-            <nav class="nav hide-on-medium" id="nav">
-                <ul>
-                    <li><a href="./">Inicio</a></li>
-                    <li><a href="facturacion-electronica">Facturación electrónica</a></li>
-                    <li><a href="control-de-inventarios">Inventarios</a></li>
-                    <li><a href="sistema-contable">Contabilidad</a></li>
-                    <li><a href="software-para-consultorios-medicos">Consultorios</a></li>
-                    <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                    <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer" class="btn-sistema">Acceder al sistema</a></li>
-                </ul>
+<body class="c-fac">
+    <a class="saltar" href="#contenido">Ir al contenido</a>
+    <header class="cabecera oscuro">
+        <div class="envoltura cabecera-in">
+            <a href="./" class="marca"><img src="media/img/logo-blanco.png" alt="SysDevUp, ir al inicio" width="284" height="186"></a>
+            <nav class="nav" aria-label="Principal">
+                <details class="productos">
+                    <summary>Productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                    <div class="panel-productos">
+                        <ul class="lista-productos">
+                            <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Facturas, retenciones y guías del SRI, con inventario</span></span><em>desde $19/año</em></a></li>
+                            <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Existencias por bodega, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                            <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos que salen solos de tus facturas</span></span><em>$199/año</em></a></li>
+                            <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia clínica, recetas y factura</span></span><em>desde $39,99/mes</em></a></li>
+                            <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes, técnicos en el celular y la factura</span></span><em>desde $35/mes</em></a></li>
+                        </ul>
+                    </div>
+                </details>
+                <a class="nav-enlace" href="./#como-empezar">Cómo empezar</a>
+                <a class="nav-enlace nav-acceder" href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                <a class="boton boton-claro boton-chico" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </nav>
-            <a href="#¡" class="menu-btn" id="btn_menu_mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+            <details class="menu-movil">
+                <summary aria-label="Menú"><svg class="icono-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icono-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+                <div class="panel-movil">
+                    <ul class="lista-productos">
+                        <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Con inventario incluido</span></span><em>desde $19/año</em></a></li>
+                        <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Bodegas, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                        <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos desde tus facturas</span></span><em>$199/año</em></a></li>
+                        <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia y recetas</span></span><em>desde $39,99/mes</em></a></li>
+                        <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes y técnicos en el celular</span></span><em>desde $35/mes</em></a></li>
+                    </ul>
+                    <div class="otros">
+                        <a href="./#como-empezar">Cómo empezar</a>
+                        <a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                        <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>
+                    </div>
+                </div>
+            </details>
         </div>
     </header>
-    <main>
-        <section>
-            <h1>Política de Privacidad</h1>
-            <p>SysDevUp</p>
-        </section>
 
-        <section>
-            <h2>Responsable del tratamiento</h2>
-            <p>El responsable del tratamiento es <strong>Bryan Alejandro Chamba Freire</strong>, RUC 0703887497001, con domicilio en Quito, Ecuador. <em>SysDevUp</em> es el nombre comercial bajo el que opera.</p>
-            <p>Para cualquier asunto relacionado con tus datos personales puedes escribirnos por WhatsApp al <a href="https://wa.me/+593999823447" target="_blank" rel="noopener noreferrer">+593 99 982 3447</a> o llamar al mismo número.</p>
-        </section>
-
-        <section>
-            <h2>Datos Recolectados</h2>
-            <p>Queremos que sepas que no tienes la obligación de proporcionarnos la información personal que se muestra a continuación, sin embargo, este es un requisito esencial para poder contratar y/o tener cualquier tipo de relación con SysDevUp y, si no proporcionas esta información, no podremos brindarte nuestros servicios o nuestra capacidad para hacerlo puede verse significativamente obstaculizada.</p>
-            <p>La inexactitud o falsedad de los datos personales que proporciones podría causar la suspensión de los Servicios. Asimismo, SysDevUp podrá suspender o inhabilitar definitivamente a aquellos usuarios que violen esta Declaración de Privacidad.</p>
-            <p><strong>De quien contrata el servicio y de las personas que usan su cuenta:</strong></p>
-            <ul>
-                <li>Nombre, correo electrónico, número de teléfono, logo de tu empresa si aplica.</li>
-                <li>Datos de facturación: RUC o cédula, razón social y dirección.</li>
-                <li>Dirección IP, tipo de navegador y sistema operativo.</li>
-                <li>Historial de actividad dentro del sistema.</li>
-            </ul>
-            <p>Si emites comprobantes electrónicos a través de la plataforma, también tratamos los datos de tus clientes que tú cargas para poder emitirlos, en los términos que exige el Servicio de Rentas Internas.</p>
-            <p>Si llevas tu inventario con nosotros, tratamos también los datos de identificación y contacto de los proveedores que tú cargas para registrar tus compras.</p>
-            <p>Si usas Gestión Clínica, tratamos además los datos de tus pacientes que tú cargas: su identificación y contacto, y <strong>datos relativos a su salud</strong> —antecedentes, alergias, signos vitales, diagnósticos, recetas y los archivos que adjuntes a cada consulta—.</p>
-        </section>
-
-        <section>
-            <h2>Datos de salud y quién responde por ellos</h2>
-            <p>Los datos de salud son una <strong>categoría especial</strong> de datos personales y reciben un trato aparte. Esto aplica solo si contratas Gestión Clínica.</p>
-            <p><strong>El responsable de la historia clínica de tus pacientes eres tú</strong>, como profesional o establecimiento de salud. SysDevUp actúa por cuenta tuya y siguiendo tus instrucciones: te damos la herramienta para registrarla y custodiarla, pero la relación con el paciente, el consentimiento que le pidas y el uso que hagas de su información son tuyos.</p>
-            <p>Lo que hacemos de nuestro lado:</p>
-            <ul>
-                <li><strong>Nadie fuera de tu cuenta ve esa información.</strong> Cada empresa solo accede a sus propios pacientes, y nosotros no usamos esos datos para ninguna finalidad propia: ni estadísticas, ni publicidad, ni entrenamiento de modelos.</li>
-                <li><strong>Los archivos que adjuntas a una consulta no son públicos.</strong> No se publican en una dirección web: se entregan solo a quien ha iniciado sesión en tu cuenta.</li>
-                <li><strong>Una historia clínica no se elimina.</strong> Una consulta se corrige mientras está abierta y, una vez cerrada, queda firme y se enmienda registrando otra. Es a propósito: un registro médico es prueba, y su integridad protege tanto al paciente como al profesional.</li>
-                <li><strong>Queda registro de quién hace qué.</strong> Las modificaciones sobre la información clínica se anotan con el usuario y la fecha.</li>
-            </ul>
-            <p>Si un paciente tuyo quiere ejercer sus derechos sobre su información, el canal es contigo: nosotros te damos las herramientas para atenderlo y te asistimos si nos lo pides.</p>
-        </section>
-
-        <section>
-            <h2>Finalidad Del Tratamiento</h2>
-            <p>Brindar los productos, servicios y/o beneficios que ofrece las plataformas de SysDevUp (Catálogos en línea, Planificación financiera, Registro de asistencias, Facturación electrónica, etc).</p>
-            <p>Los datos serán usados exclusivamente para:</p>
-            <ul>
-                <li>Acceso y uso del sistema.</li>
-                <li>Generación de estadísticas.</li>
-                <li>Mejora del servicio y soporte.</li>
-                <li>Identificarte y contactarte.</li>
-                <li>Brindarte los productos, servicios y/o beneficios que solicitas o contratas con nosotros.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Plazo de conservación</h2>
-            <p>Los datos de tu cuenta se conservan mientras el servicio esté activo, y se eliminan cuando lo solicitas o cuando cierras tu cuenta.</p>
-            <p>Los comprobantes electrónicos que emites a través de la plataforma se conservan mientras tu suscripción esté vigente y durante el período posterior indicado en los Términos y Condiciones. <strong>La obligación legal de conservarlos por el plazo que exige la normativa tributaria es tuya, como contribuyente</strong>, por lo que te recomendamos descargarlos y guardarlos por tu cuenta.</p>
-            <p>La historia clínica de tus pacientes se conserva mientras tu suscripción esté vigente. <strong>La obligación legal de conservarla por el plazo que exige la normativa de salud es tuya</strong>, como profesional o establecimiento, así que te recomendamos descargar lo que necesites antes de dar de baja el servicio.</p>
-            <p>Los registros de auditoría —quién hizo qué y cuándo dentro del sistema— se conservan como medida de seguridad y para poder investigar un incidente.</p>
-        </section>
-
-        <section>
-            <h2>Derechos Del Titular</h2>
-            <p>El usuario tiene derecho a:</p>
-            <ul>
-                <li>Acceder, rectificar, eliminar, oponerse y limitar el uso de sus datos.</li>
-                <li>Retirar su consentimiento en cualquier momento.</li>
-                <li>Solicitar que sus datos se le entreguen en un formato que pueda reutilizar.</li>
-                <li>Presentar un reclamo ante la autoridad de protección de datos del Ecuador.</li>
-            </ul>
-            <p><strong>Cómo ejercerlos:</strong> escribiendo por WhatsApp o llamando al <a href="tel:+593999823447">+593 99 982 3447</a>. Podemos pedirte que acredites tu identidad antes de responder, para no entregarle tus datos a otra persona.</p>
-        </section>
-
-        <section>
-            <h2>Transferencia de datos</h2>
-            <p>No vendemos datos personales ni los cedemos a terceros para que los usen con fines propios.</p>
-            <p>Sí nos apoyamos en proveedores que tratan datos <strong>por cuenta nuestra y siguiendo nuestras instrucciones</strong>, que es lo que hace posible prestar el servicio. Son estos:</p>
-            <ul>
-                <li><strong>OVH</strong> — el servidor donde se aloja la plataforma y su base de datos.</li>
-                <li><strong>Cloudflare</strong> — protección del sitio y almacenamiento cifrado de las copias de seguridad.</li>
-                <li><strong>Brevo</strong> — envío de los correos del sistema, como los comprobantes electrónicos y los avisos de la cuenta.</li>
-            </ul>
-            <p>Algunos de ellos están fuera del Ecuador, así que tus datos pueden tratarse en otros países. Elegimos proveedores que ofrecen garantías adecuadas y les exigimos usar los datos solo para prestarnos su servicio.</p>
-            <p>También entregamos información cuando una autoridad competente nos lo requiere por escrito y con fundamento legal, entregando únicamente lo solicitado.</p>
-        </section>
-
-        <section>
-            <h2>Medidas De Seguridad</h2>
-            <p>Implementamos medidas técnicas y organizativas para proteger tus datos.</p>
-            <p>SysDevUp no es responsable del uso que cualquier usuario u otra persona pudieran hacer de la información publicada en los Sitios Web. Los usuarios aceptan que SysDevUp no será responsable de las pérdidas ni daños que se puedan generar como resultado de las negociaciones entre usuarios.</p>
-            <p>En consecuencia, liberas a SysDevUp de todo tipo de responsabilidad en caso de que tengas un conflicto con uno o más usuarios.</p>
-            <p>SysDevUP no se hace responsable por interceptaciones ilegales o violación de sus sistemas o bases de datos, o por su utilización por parte de personas no autorizadas. SysDevUP tampoco se hace responsable por la indebida utilización de la información obtenida por esos medios.</p>
-        </section>
-
-        <section>
-            <h2>Enlaces a otros Sitios Web</h2>
-            <p>A través de los Sitios Web, SysDevUp podría incluir enlaces a sitios web de terceros, lo cual no indica que sean propiedad de, o sean operados por, SysDevUp. Se aclara que el procesamiento de la Información Personal que hagan los terceros responsables de los sitios web no está alcanzado por esta Declaración de Privacidad.</p>
-            <p>Asimismo, reconoces y aceptas que SysDevUp no tiene control sobre tales sitios web y no es ni será responsable por el contenido ni por los servicios prestados por tales sitios, ni por el modo en que éstos procesen tu Información Personal, por lo que ingresas a dichos sitios web bajo tu propia responsabilidad.</p>
-        </section>
-
-        <section>
-            <h2>Publicidad, Cookies y Otras Tecnologías</h2>
-            <p>El usuario reconoce y aceptas expresamente que SysDevUp podrá utilizar un sistema de seguimiento de conducta mediante la utilización de "cookies", "web beacons" y/u otras tecnologías similares de seguimiento.</p>
-            <p>Estas tecnologías se utilizan con el fin de conocer los intereses y el comportamiento de quienes visitan o son usuarios de nuestro sitio web y, de esa forma, darles un mejor servicio o proveerles información relacionada. También usamos la información obtenida a través de cookies para analizar las páginas navegadas por el visitante o usuario, las búsquedas realizadas, mejorar nuestras iniciativas comerciales y promocionales, mostrar publicidad o promociones, banners de interés, noticias sobre SysDevUp, perfeccionar nuestra oferta de contenidos y artículos, personalizar dichos contenidos, presentación y servicios, así como promover y hacer cumplir las reglas y seguridad del sitio; también las utilizamos para para que el usuario no tenga que introducir su clave tan frecuentemente durante una sesión de navegación, también para contabilizar y corroborar las inscripciones, la actividad del usuario y otros conceptos para acuerdos comerciales, siempre teniendo como objetivo de la instalación de las cookies, el beneficio del usuario que la recibe, y las cuales no serán usadas con fines ajenos a SysDevUp.</p>
-            <p>Asimismo, almacenamos cookies para poder ofrecer una experiencia más interactiva en el sitio, basada en las acciones del usuario.</p>
-            <p>Sus datos personales obtenidos a través de estas tecnologías no serán transferidos a terceros de una manera diferente a las descritas en esta Declaración de Privacidad.</p>
-            <p>Adicionalmente, se pueden encontrar "cookies" u otros sistemas similares instalados por terceros en ciertas páginas de nuestros Sitios Web o utilizados por anunciantes ajenos a SysDevUp. Estas Políticas de Privacidad cubren la utilización de "cookies" por SysDevUp y no incluyen el uso de "cookies" instaladas por terceros.</p>
-            <p>Debes saber que la instalación, permanencia y existencia de las cookies en tu computadora o dispositivo depende de tu exclusiva voluntad y pueden ser eliminadas cuando tú así lo desees.</p>
-            <p>Para saber cómo quitar las Cookies del sistema es necesario revisar la sección Ayuda (Help) del navegador.</p>
-            <p>En este sentido, puedes en cualquier momento eliminar las cookies almacenadas, configurar el navegador para que solicite aprobación antes de almacenar cookies o directamente evitar que se almacenen cookies. Este procedimiento se realiza de forma diferente en los distintos navegadores y es necesario realizarlo en cada navegador que utilices. A continuación ponemos a su disposición los diferentes procedimientos para manejar esta configuración en los navegadores más utilizados:</p>
-            <ul>
-                <li><a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies" target="_blank" rel="noopener">Internet Explorer (Windows)</a></li>
-                <li><a href="https://support.microsoft.com/es-ec/help/4027947/microsoft-edge-delete-cookies" target="_blank" rel="noopener">Microsoft Edge</a></li>
-                <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we" target="_blank" rel="noopener">Firefox</a></li>
-                <li><a href="http://support.google.com/chrome/bin/answer.pa?hl=es&answer=95647" target="_blank" rel="noopener">Google Chrome</a></li>
-                <li><a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html" target="_blank" rel="noopener">Opera</a></li>
-                <li><a href="http://www.apple.com/legal/privacy/es/cookies/" target="_blank" rel="noopener">Safari (Mac)</a></li>
-            </ul>
-            <p>Si desactivas las cookies, debes tener en cuenta que es posible que no puedas hacer uso y goce de todas las funcionalidades que ofrece SysDevUp.</p>
-        </section>
-
-        <section>
-            <h2>Cambios en la Declaración de Privacidad</h2>
-            <p>Si SysDevUP realizara cambios en la forma en que la Información Personal sea administrada, notificaremos a los usuarios por nuestros canales habituales, como el correo electrónico o mensajes a través de las aplicaciones.</p>
-            <p>Para el caso de usuarios que no acepten esos nuevos términos, el vínculo contractual con SysDevUP quedará disuelto y la Información Personal de dicho usuario no será usada de otra forma que la que fue informada al momento de recabarse.</p>
-            <p>Esta política puede actualizarse en cualquier momento.</p>
-            <p><strong>Fecha de última actualización:</strong> 4 de septiembre de 2026.</p>
-        </section>
-
-        <section>
-            <h2>Limitación De Responsabilidad</h2>
-            <p>SysDevUp actúa como proveedor de herramientas tecnológicas y no garantiza la disponibilidad, continuidad ni infalibilidad del sitio web o las aplicaciones, ni se responsabiliza por daños o perjuicios directos o indirectos que puedan derivarse del uso del sistema, fallas técnicas, o interrupciones del servicio.</p>
-            <p>El uso de la plataforma es bajo la entera responsabilidad del usuario. SysDevUp no será responsable por pérdida de datos, ingresos o daños indirectos relacionados con el uso o la imposibilidad de uso de sus servicios.</p>
-        </section>
-
-        <section>
-            <h2>Descargo de Responsabilidad</h2>
-            <p>SysDevUp implementa medidas técnicas y organizativas razonables para proteger los datos personales de los usuarios. Sin embargo, el usuario entiende y acepta que ningún sistema es completamente infalible, y por lo tanto, SysDevUp no garantiza una seguridad absoluta en el manejo de los datos.</p>
-            <p>SysDevUp no se hace responsable por interceptaciones ilegales, hackeos, violaciones de sus sistemas o bases de datos, o por el uso indebido de la información obtenida por estos medios por parte de personas no autorizadas. Al utilizar nuestros servicios, el usuario asume el riesgo inherente al uso de plataformas tecnológicas.</p>
-            <p>Asimismo, SysDevUp no se hace responsable de las decisiones o acciones tomadas por los usuarios basadas en la información disponible dentro del sistema o generada a través de sus funcionalidades.</p>
-            <p>La responsabilidad del uso correcto de la información y de la plataforma recae exclusivamente en el usuario.</p>
-            <p>SysDevUp no asume responsabilidad alguna frente a conflictos entre usuarios ni por los daños y perjuicios que pudieran derivarse de relaciones contractuales, comerciales o personales establecidas entre ellos.</p>
-        </section>
-    </main>
-    <footer>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 center">
-                <img src="media/img/logo_blanco.png" alt="SysDevUp" height="150">
-                <address class="contacto">
-                    <span>Quito, Ecuador</span>
-                    <a href="tel:+593999823447">+593 99 982 3447</a>
-                </address>
-                <p>&copy; 2026 <strong><a href="https://sysdevup.com" target="_blank">SysDevUp.</a></strong> Todos los derechos reservados.</p>
+    <main id="contenido">
+        <section class="portada portada-legal oscuro">
+            <div class="envoltura">
+                <nav class="migas" aria-label="Migas de pan"><a href="./">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Política de privacidad</span></nav>
+                <h1>Política de Privacidad</h1>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                <div class="site-map">
-                    <h3>Mapa del sitio</h3>
+        </section>
+        <div class="seccion">
+            <div class="envoltura">
+                <div class="legal">
+                    <section>
+                        <h2>Responsable del tratamiento</h2>
+                        <p>El responsable del tratamiento es <strong>Bryan Alejandro Chamba Freire</strong>, RUC 0703887497001, con domicilio en Quito, Ecuador. <em>SysDevUp</em> es el nombre comercial bajo el que opera.</p>
+                        <p>Para cualquier asunto relacionado con tus datos personales puedes escribirnos por WhatsApp al <a href="https://wa.me/+593999823447" target="_blank" rel="noopener noreferrer">+593 99 982 3447</a> o llamar al mismo número.</p>
+                    </section>
+                    <section>
+                        <h2>Datos Recolectados</h2>
+                        <p>Queremos que sepas que no tienes la obligación de proporcionarnos la información personal que se muestra a continuación, sin embargo, este es un requisito esencial para poder contratar y/o tener cualquier tipo de relación con SysDevUp y, si no proporcionas esta información, no podremos brindarte nuestros servicios o nuestra capacidad para hacerlo puede verse significativamente obstaculizada.</p>
+                        <p>La inexactitud o falsedad de los datos personales que proporciones podría causar la suspensión de los Servicios. Asimismo, SysDevUp podrá suspender o inhabilitar definitivamente a aquellos usuarios que violen esta Declaración de Privacidad.</p>
+                        <p><strong>De quien contrata el servicio y de las personas que usan su cuenta:</strong></p>
+                        <ul>
+                        <li>Nombre, correo electrónico, número de teléfono, logo de tu empresa si aplica.</li>
+                        <li>Datos de facturación: RUC o cédula, razón social y dirección.</li>
+                        <li>Dirección IP, tipo de navegador y sistema operativo.</li>
+                        <li>Historial de actividad dentro del sistema.</li>
+                        </ul>
+                        <p>Si emites comprobantes electrónicos a través de la plataforma, también tratamos los datos de tus clientes que tú cargas para poder emitirlos, en los términos que exige el Servicio de Rentas Internas.</p>
+                        <p>Si llevas tu inventario con nosotros, tratamos también los datos de identificación y contacto de los proveedores que tú cargas para registrar tus compras.</p>
+                        <p>Si usas Gestión Clínica, tratamos además los datos de tus pacientes que tú cargas: su identificación y contacto, y <strong>datos relativos a su salud</strong> —antecedentes, alergias, signos vitales, diagnósticos, recetas y los archivos que adjuntes a cada consulta—.</p>
+                    </section>
+                    <section>
+                        <h2>Datos de salud y quién responde por ellos</h2>
+                        <p>Los datos de salud son una <strong>categoría especial</strong> de datos personales y reciben un trato aparte. Esto aplica solo si contratas Gestión Clínica.</p>
+                        <p><strong>El responsable de la historia clínica de tus pacientes eres tú</strong>, como profesional o establecimiento de salud. SysDevUp actúa por cuenta tuya y siguiendo tus instrucciones: te damos la herramienta para registrarla y custodiarla, pero la relación con el paciente, el consentimiento que le pidas y el uso que hagas de su información son tuyos.</p>
+                        <p>Lo que hacemos de nuestro lado:</p>
+                        <ul>
+                        <li><strong>Nadie fuera de tu cuenta ve esa información.</strong> Cada empresa solo accede a sus propios pacientes, y nosotros no usamos esos datos para ninguna finalidad propia: ni estadísticas, ni publicidad, ni entrenamiento de modelos.</li>
+                        <li><strong>Los archivos que adjuntas a una consulta no son públicos.</strong> No se publican en una dirección web: se entregan solo a quien ha iniciado sesión en tu cuenta.</li>
+                        <li><strong>Una historia clínica no se elimina.</strong> Una consulta se corrige mientras está abierta y, una vez cerrada, queda firme y se enmienda registrando otra. Es a propósito: un registro médico es prueba, y su integridad protege tanto al paciente como al profesional.</li>
+                        <li><strong>Queda registro de quién hace qué.</strong> Las modificaciones sobre la información clínica se anotan con el usuario y la fecha.</li>
+                        </ul>
+                        <p>Si un paciente tuyo quiere ejercer sus derechos sobre su información, el canal es contigo: nosotros te damos las herramientas para atenderlo y te asistimos si nos lo pides.</p>
+                    </section>
+                    <section>
+                        <h2>Finalidad Del Tratamiento</h2>
+                        <p>Brindar los productos, servicios y/o beneficios que ofrece las plataformas de SysDevUp (Catálogos en línea, Planificación financiera, Registro de asistencias, Facturación electrónica, etc).</p>
+                        <p>Los datos serán usados exclusivamente para:</p>
+                        <ul>
+                        <li>Acceso y uso del sistema.</li>
+                        <li>Generación de estadísticas.</li>
+                        <li>Mejora del servicio y soporte.</li>
+                        <li>Identificarte y contactarte.</li>
+                        <li>Brindarte los productos, servicios y/o beneficios que solicitas o contratas con nosotros.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Plazo de conservación</h2>
+                        <p>Los datos de tu cuenta se conservan mientras el servicio esté activo, y se eliminan cuando lo solicitas o cuando cierras tu cuenta.</p>
+                        <p>Los comprobantes electrónicos que emites a través de la plataforma se conservan mientras tu suscripción esté vigente y durante el período posterior indicado en los Términos y Condiciones. <strong>La obligación legal de conservarlos por el plazo que exige la normativa tributaria es tuya, como contribuyente</strong>, por lo que te recomendamos descargarlos y guardarlos por tu cuenta.</p>
+                        <p>La historia clínica de tus pacientes se conserva mientras tu suscripción esté vigente. <strong>La obligación legal de conservarla por el plazo que exige la normativa de salud es tuya</strong>, como profesional o establecimiento, así que te recomendamos descargar lo que necesites antes de dar de baja el servicio.</p>
+                        <p>Los registros de auditoría —quién hizo qué y cuándo dentro del sistema— se conservan como medida de seguridad y para poder investigar un incidente.</p>
+                    </section>
+                    <section>
+                        <h2>Derechos Del Titular</h2>
+                        <p>El usuario tiene derecho a:</p>
+                        <ul>
+                        <li>Acceder, rectificar, eliminar, oponerse y limitar el uso de sus datos.</li>
+                        <li>Retirar su consentimiento en cualquier momento.</li>
+                        <li>Solicitar que sus datos se le entreguen en un formato que pueda reutilizar.</li>
+                        <li>Presentar un reclamo ante la autoridad de protección de datos del Ecuador.</li>
+                        </ul>
+                        <p><strong>Cómo ejercerlos:</strong> escribiendo por WhatsApp o llamando al <a href="tel:+593999823447">+593 99 982 3447</a>. Podemos pedirte que acredites tu identidad antes de responder, para no entregarle tus datos a otra persona.</p>
+                    </section>
+                    <section>
+                        <h2>Transferencia de datos</h2>
+                        <p>No vendemos datos personales ni los cedemos a terceros para que los usen con fines propios.</p>
+                        <p>Sí nos apoyamos en proveedores que tratan datos <strong>por cuenta nuestra y siguiendo nuestras instrucciones</strong>, que es lo que hace posible prestar el servicio. Son estos:</p>
+                        <ul>
+                        <li><strong>OVH</strong> — el servidor donde se aloja la plataforma y su base de datos.</li>
+                        <li><strong>Cloudflare</strong> — protección del sitio y almacenamiento cifrado de las copias de seguridad.</li>
+                        <li><strong>Brevo</strong> — envío de los correos del sistema, como los comprobantes electrónicos y los avisos de la cuenta.</li>
+                        </ul>
+                        <p>Algunos de ellos están fuera del Ecuador, así que tus datos pueden tratarse en otros países. Elegimos proveedores que ofrecen garantías adecuadas y les exigimos usar los datos solo para prestarnos su servicio.</p>
+                        <p>También entregamos información cuando una autoridad competente nos lo requiere por escrito y con fundamento legal, entregando únicamente lo solicitado.</p>
+                    </section>
+                    <section>
+                        <h2>Medidas De Seguridad</h2>
+                        <p>Implementamos medidas técnicas y organizativas para proteger tus datos.</p>
+                        <p>SysDevUp no es responsable del uso que cualquier usuario u otra persona pudieran hacer de la información publicada en los Sitios Web. Los usuarios aceptan que SysDevUp no será responsable de las pérdidas ni daños que se puedan generar como resultado de las negociaciones entre usuarios.</p>
+                        <p>En consecuencia, liberas a SysDevUp de todo tipo de responsabilidad en caso de que tengas un conflicto con uno o más usuarios.</p>
+                        <p>SysDevUP no se hace responsable por interceptaciones ilegales o violación de sus sistemas o bases de datos, o por su utilización por parte de personas no autorizadas. SysDevUP tampoco se hace responsable por la indebida utilización de la información obtenida por esos medios.</p>
+                    </section>
+                    <section>
+                        <h2>Enlaces a otros Sitios Web</h2>
+                        <p>A través de los Sitios Web, SysDevUp podría incluir enlaces a sitios web de terceros, lo cual no indica que sean propiedad de, o sean operados por, SysDevUp. Se aclara que el procesamiento de la Información Personal que hagan los terceros responsables de los sitios web no está alcanzado por esta Declaración de Privacidad.</p>
+                        <p>Asimismo, reconoces y aceptas que SysDevUp no tiene control sobre tales sitios web y no es ni será responsable por el contenido ni por los servicios prestados por tales sitios, ni por el modo en que éstos procesen tu Información Personal, por lo que ingresas a dichos sitios web bajo tu propia responsabilidad.</p>
+                    </section>
+                    <section>
+                        <h2>Publicidad, Cookies y Otras Tecnologías</h2>
+                        <p>El usuario reconoce y aceptas expresamente que SysDevUp podrá utilizar un sistema de seguimiento de conducta mediante la utilización de "cookies", "web beacons" y/u otras tecnologías similares de seguimiento.</p>
+                        <p>Estas tecnologías se utilizan con el fin de conocer los intereses y el comportamiento de quienes visitan o son usuarios de nuestro sitio web y, de esa forma, darles un mejor servicio o proveerles información relacionada. También usamos la información obtenida a través de cookies para analizar las páginas navegadas por el visitante o usuario, las búsquedas realizadas, mejorar nuestras iniciativas comerciales y promocionales, mostrar publicidad o promociones, banners de interés, noticias sobre SysDevUp, perfeccionar nuestra oferta de contenidos y artículos, personalizar dichos contenidos, presentación y servicios, así como promover y hacer cumplir las reglas y seguridad del sitio; también las utilizamos para para que el usuario no tenga que introducir su clave tan frecuentemente durante una sesión de navegación, también para contabilizar y corroborar las inscripciones, la actividad del usuario y otros conceptos para acuerdos comerciales, siempre teniendo como objetivo de la instalación de las cookies, el beneficio del usuario que la recibe, y las cuales no serán usadas con fines ajenos a SysDevUp.</p>
+                        <p>Asimismo, almacenamos cookies para poder ofrecer una experiencia más interactiva en el sitio, basada en las acciones del usuario.</p>
+                        <p>Sus datos personales obtenidos a través de estas tecnologías no serán transferidos a terceros de una manera diferente a las descritas en esta Declaración de Privacidad.</p>
+                        <p>Adicionalmente, se pueden encontrar "cookies" u otros sistemas similares instalados por terceros en ciertas páginas de nuestros Sitios Web o utilizados por anunciantes ajenos a SysDevUp. Estas Políticas de Privacidad cubren la utilización de "cookies" por SysDevUp y no incluyen el uso de "cookies" instaladas por terceros.</p>
+                        <p>Debes saber que la instalación, permanencia y existencia de las cookies en tu computadora o dispositivo depende de tu exclusiva voluntad y pueden ser eliminadas cuando tú así lo desees.</p>
+                        <p>Para saber cómo quitar las Cookies del sistema es necesario revisar la sección Ayuda (Help) del navegador.</p>
+                        <p>En este sentido, puedes en cualquier momento eliminar las cookies almacenadas, configurar el navegador para que solicite aprobación antes de almacenar cookies o directamente evitar que se almacenen cookies. Este procedimiento se realiza de forma diferente en los distintos navegadores y es necesario realizarlo en cada navegador que utilices. A continuación ponemos a su disposición los diferentes procedimientos para manejar esta configuración en los navegadores más utilizados:</p>
+                        <ul>
+                        <li><a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies" target="_blank" rel="noopener">Internet Explorer (Windows)</a></li>
+                        <li><a href="https://support.microsoft.com/es-ec/help/4027947/microsoft-edge-delete-cookies" target="_blank" rel="noopener">Microsoft Edge</a></li>
+                        <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we" target="_blank" rel="noopener">Firefox</a></li>
+                        <li><a href="http://support.google.com/chrome/bin/answer.pa?hl=es&answer=95647" target="_blank" rel="noopener">Google Chrome</a></li>
+                        <li><a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html" target="_blank" rel="noopener">Opera</a></li>
+                        <li><a href="http://www.apple.com/legal/privacy/es/cookies/" target="_blank" rel="noopener">Safari (Mac)</a></li>
+                        </ul>
+                        <p>Si desactivas las cookies, debes tener en cuenta que es posible que no puedas hacer uso y goce de todas las funcionalidades que ofrece SysDevUp.</p>
+                    </section>
+                    <section>
+                        <h2>Cambios en la Declaración de Privacidad</h2>
+                        <p>Si SysDevUP realizara cambios en la forma en que la Información Personal sea administrada, notificaremos a los usuarios por nuestros canales habituales, como el correo electrónico o mensajes a través de las aplicaciones.</p>
+                        <p>Para el caso de usuarios que no acepten esos nuevos términos, el vínculo contractual con SysDevUP quedará disuelto y la Información Personal de dicho usuario no será usada de otra forma que la que fue informada al momento de recabarse.</p>
+                        <p>Esta política puede actualizarse en cualquier momento.</p>
+                        <p><strong>Fecha de última actualización:</strong> 4 de septiembre de 2026.</p>
+                    </section>
+                    <section>
+                        <h2>Limitación De Responsabilidad</h2>
+                        <p>SysDevUp actúa como proveedor de herramientas tecnológicas y no garantiza la disponibilidad, continuidad ni infalibilidad del sitio web o las aplicaciones, ni se responsabiliza por daños o perjuicios directos o indirectos que puedan derivarse del uso del sistema, fallas técnicas, o interrupciones del servicio.</p>
+                        <p>El uso de la plataforma es bajo la entera responsabilidad del usuario. SysDevUp no será responsable por pérdida de datos, ingresos o daños indirectos relacionados con el uso o la imposibilidad de uso de sus servicios.</p>
+                    </section>
+                    <section>
+                        <h2>Descargo de Responsabilidad</h2>
+                        <p>SysDevUp implementa medidas técnicas y organizativas razonables para proteger los datos personales de los usuarios. Sin embargo, el usuario entiende y acepta que ningún sistema es completamente infalible, y por lo tanto, SysDevUp no garantiza una seguridad absoluta en el manejo de los datos.</p>
+                        <p>SysDevUp no se hace responsable por interceptaciones ilegales, hackeos, violaciones de sus sistemas o bases de datos, o por el uso indebido de la información obtenida por estos medios por parte de personas no autorizadas. Al utilizar nuestros servicios, el usuario asume el riesgo inherente al uso de plataformas tecnológicas.</p>
+                        <p>Asimismo, SysDevUp no se hace responsable de las decisiones o acciones tomadas por los usuarios basadas en la información disponible dentro del sistema o generada a través de sus funcionalidades.</p>
+                        <p>La responsabilidad del uso correcto de la información y de la plataforma recae exclusivamente en el usuario.</p>
+                        <p>SysDevUp no asume responsabilidad alguna frente a conflictos entre usuarios ni por los daños y perjuicios que pudieran derivarse de relaciones contractuales, comerciales o personales establecidas entre ellos.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="envoltura">
+            <div class="pie-grilla">
+                <div>
+                    <img src="media/img/logo-blanco.png" alt="SysDevUp" width="284" height="186" loading="lazy">
+                    <address>
+                        <span>Quito, Ecuador</span>
+                        <a href="tel:+593999823447">+593 99 982 3447</a>
+                    </address>
+                </div>
+                <div>
+                    <h2>Productos</h2>
                     <ul>
-                        <li><a href="./">Inicio</a></li>
                         <li><a href="facturacion-electronica">Facturación electrónica</a></li>
                         <li><a href="control-de-inventarios">Control de inventarios</a></li>
                         <li><a href="sistema-contable">Sistema contable</a></li>
                         <li><a href="software-para-consultorios-medicos">Consultorios médicos</a></li>
                         <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                        <li><a href="politica-de-privacidad">Política de Privacidad</a></li>
-                        <li><a href="terminos-y-condiciones">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>SysDevUp</h2>
+                    <ul>
+                        <li><a href="./#como-empezar">Cómo empezar</a></li>
+                        <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a></li>
+                        <li><a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="politica-de-privacidad">Política de privacidad</a></li>
+                        <li><a href="terminos-y-condiciones">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
+            <p class="pie-legal">&copy; 2026 SysDevUp. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="js/index.min.js?1.1.1"></script>
+    <a class="whatsapp-flotante" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg></a>
+    <script src="js/sitio.js?1.0.0" defer></script>
 </body>
 
 </html>

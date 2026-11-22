@@ -8,208 +8,210 @@
     <meta name="description" content="Términos y condiciones de uso de los servicios de SysDevUp: uso permitido, cuentas de acceso, propiedad intelectual y responsabilidades.">
     <title>Términos y Condiciones - SysDevUp</title>
     <link rel="canonical" href="https://sysdevup.com/terminos-y-condiciones">
-    <link rel="stylesheet" href="css/style.min.css?1.2.9">
-    <style>
-        main{
-            padding-top: 80px;
-        }
-
-        h1,
-        h2 {
-            color: #0056b3;
-        }
-
-        ul {
-            margin-left: 1.5rem;
-        }
-
-        a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin: 1rem;
-            padding: 1rem;
-        }
-    </style>
+    <meta name="theme-color" content="#071a33">
+    <link rel="preload" href="fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/sitio.css?1.0.0">
 </head>
 
-<body>
-    <header>
-        <div class="header">
-            <a href="./" class="logo hide-on-small"><img src="media/img/logo.png" alt="Inicio de la página" height="70"></a>
-            <nav class="nav hide-on-medium" id="nav">
-                <ul>
-                    <li><a href="./">Inicio</a></li>
-                    <li><a href="facturacion-electronica">Facturación electrónica</a></li>
-                    <li><a href="control-de-inventarios">Inventarios</a></li>
-                    <li><a href="sistema-contable">Contabilidad</a></li>
-                    <li><a href="software-para-consultorios-medicos">Consultorios</a></li>
-                    <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                    <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer" class="btn-sistema">Acceder al sistema</a></li>
-                </ul>
+<body class="c-fac">
+    <a class="saltar" href="#contenido">Ir al contenido</a>
+    <header class="cabecera oscuro">
+        <div class="envoltura cabecera-in">
+            <a href="./" class="marca"><img src="media/img/logo-blanco.png" alt="SysDevUp, ir al inicio" width="284" height="186"></a>
+            <nav class="nav" aria-label="Principal">
+                <details class="productos">
+                    <summary>Productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                    <div class="panel-productos">
+                        <ul class="lista-productos">
+                            <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Facturas, retenciones y guías del SRI, con inventario</span></span><em>desde $19/año</em></a></li>
+                            <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Existencias por bodega, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                            <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos que salen solos de tus facturas</span></span><em>$199/año</em></a></li>
+                            <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia clínica, recetas y factura</span></span><em>desde $39,99/mes</em></a></li>
+                            <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes, técnicos en el celular y la factura</span></span><em>desde $35/mes</em></a></li>
+                        </ul>
+                    </div>
+                </details>
+                <a class="nav-enlace" href="./#como-empezar">Cómo empezar</a>
+                <a class="nav-enlace nav-acceder" href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                <a class="boton boton-claro boton-chico" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </nav>
-            <a href="#¡" class="menu-btn" id="btn_menu_mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+            <details class="menu-movil">
+                <summary aria-label="Menú"><svg class="icono-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icono-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+                <div class="panel-movil">
+                    <ul class="lista-productos">
+                        <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Con inventario incluido</span></span><em>desde $19/año</em></a></li>
+                        <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Bodegas, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                        <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos desde tus facturas</span></span><em>$199/año</em></a></li>
+                        <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia y recetas</span></span><em>desde $39,99/mes</em></a></li>
+                        <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes y técnicos en el celular</span></span><em>desde $35/mes</em></a></li>
+                    </ul>
+                    <div class="otros">
+                        <a href="./#como-empezar">Cómo empezar</a>
+                        <a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                        <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>
+                    </div>
+                </div>
+            </details>
         </div>
     </header>
-    <main>
-        <section>
-            <h1>Términos y Condiciones de Uso</h1>
-            <p>SysDevUp</p>
-            <p>Al acceder a esta plataforma, aceptas los siguientes términos:</p>
-        </section>
 
-        <section>
-            <h2>Responsabilidad de los Datos Personales</h2>
-            <p>Cada Persona Usuaria es responsable de los datos personales que brinda al momento de registrarse y se obliga a mantenerlos actualizados. Además, es el único responsable del uso y resguardo de su contraseña.</p>
-        </section>
-
-        <section>
-            <h2>Aceptación de los Términos</h2>
-            <p>Las Personas Usuarias aceptan estos Términos y Condiciones desde el momento en que se registran en el Sitio y usan nuestro Ecosistema.</p>
-            <p>Las Personas Usuarias que no tengan obligaciones pendientes con SysDevUp o con otras Personas Usuarias, podrán finalizar la relación con SysDevUp cancelando su cuenta.</p>
-        </section>
-
-        <section>
-            <h2>Capacidad</h2>
-            <p>Podrán usar nuestros servicios las personas mayores de edad que tengan capacidad legal para contratar. Los menores de edad, a partir de los 13 años, sólo podrán utilizar su cuenta con autorización del representante legal, quien responderá por todas las acciones y obligaciones que se deriven de la utilización de esa cuenta y quien deberá velar por el uso responsable y adecuado de ella en atención a la madurez del menor.</p>
-            <p>Quien use nuestro Ecosistema en representación de una empresa deberá tener capacidad para contratar a nombre de ella. Además, para poder usar la cuenta, la Persona Usuaria debe encontrarse activa.</p>
-        </section>
-
-        <section>
-            <h2>Uso Permitido</h2>
-            <p>El incumplimiento de estas condiciones podrá dar lugar a la suspensión inmediata y sin previo aviso del acceso y uso de la cuenta, sin perjuicio de las acciones legales que puedan corresponder.</p>
-            <p>Te comprometes a:</p>
-            <ul>
-                <li>Brindar información verdadera.</li>
-                <li>No usar el sistema para actividades ilícitas.</li>
-                <li>No intentar vulnerar la seguridad del sistema.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Acceso y Cuentas</h2>
-            <p>Quien quiera usar nuestros servicios, deberá completar el formulario de registro con los datos que le sean requeridos. Al completarlo, se compromete a hacerlo de manera exacta, precisa y verdadera y a mantener sus datos siempre actualizados. La Persona Usuaria será la única responsable de la certeza de sus datos de registro.</p>
-            <p>Podremos solicitar y/o consultar información adicional para corroborar la identidad de la Persona Usuaria.</p>
-            <p>La cuenta es personal, única e intransferible, es decir que bajo ningún concepto se podrá vender o ceder a otra persona. Se accede a ella con la clave personal de seguridad que haya elegido y que deberá mantener bajo estricta confidencialidad.</p>
-            <p>Podremos rechazar una solicitud de registro o bien cancelar un registro ya aceptado, sin que esto genere derecho a un resarcimiento. No podrán registrarse nuevamente en el Sitio las Personas Usuarias que hayan sido inhabilitadas previamente.</p>
-            <p>Además, en caso de detectar el uso de más de una cuenta, podremos aplicar retenciones, débitos y/o cualquier otra medida si consideramos que ese accionar puede perjudicar al resto de las personas que usan el Sitio o a SysDevUp, más allá de las sanciones que pudieran corresponder.</p>
-        </section>
-
-        <section>
-            <h2>Modificaciones</h2>
-            <p>Nos reservamos el derecho de modificar estas condiciones. Se notificará a los usuarios en caso de cambios relevantes.</p>
-            <p>El uso continuo del sistema después de la notificación de los cambios implicará la aceptación de los nuevos términos y condiciones por parte del usuario.</p>
-        </section>
-
-        <section>
-            <h2>Sanciones</h2>
-            <p>En caso que la Persona Usuaria incumpliera una ley o los Términos y Condiciones, podremos advertir, suspender, restringir o inhabilitar temporal o definitivamente su cuenta, sin perjuicio de otras sanciones que se establezcan en las reglas de uso particulares de los servicios de SysDevUp.</p>
-        </section>
-
-        <section>
-            <h2>Propiedad Intelectual</h2>
-            <p>SysDevUp es titular de todos los derechos de propiedad intelectual sobre su sitio web, sus contenidos, servicios, productos, marcas, nombres comerciales, logotipos, diseños, imágenes, frases promocionales, derechos de autor, dominios, programas informáticos, códigos fuente, desarrollos tecnológicos, software, bases de datos, información técnica, tecnologías, patentes, modelos de utilidad, diseños industriales y secretos comerciales, entre otros elementos (en adelante, “Propiedad Intelectual”), los cuales se encuentran protegidos por las leyes nacionales del Ecuador y tratados internacionales aplicables.</p>
-            <p>El uso de los productos y servicios ofrecidos por SysDevUp no otorga en ningún caso autorización ni licencia para el uso de su Propiedad Intelectual, salvo autorización expresa y por escrito por parte de SysDevUp.</p>
-            <p>Los usuarios que accedan o contraten los servicios de SysDevUp se comprometen a no utilizar la Propiedad Intelectual de forma que pueda generar confusión, imitación o asociación indebida con SysDevUp, y deberán desarrollar sus actividades bajo una identidad comercial propia y claramente diferenciada de la marca SysDevUp.</p>
-            <p>Está prohibido usar nuestros productos o servicios para fines ilegales, realizar cualquier tipo de ingeniería inversa u obras derivadas, utilizar herramientas de búsqueda o de extracción de datos y contenidos de nuestra plataforma para su reutilización y/o crear bases de datos propias que incluyan en todo o en parte nuestro contenido sin nuestra expresa autorización.</p>
-            <p>Está también prohibido el uso indebido, sin autorización y/o contrario a la normativa vigente y/o que genere confusión o implique uso denigratorio y/o que le cause perjuicio, daños o pérdidas a SysDevUp.</p>
-            <p>La utilización de los productos y servicios de SysDevUp tampoco implica la autorización para usar propiedad intelectual de terceros que pueda estar involucrada, cuyo uso quedará bajo exclusiva responsabilidad del usuario.</p>
-            <p>En caso que una Persona Usuaria o cualquier publicación infrinja la Propiedad Intelectual de SysDevUp o de terceros, SysDevUp podrá remover dicha publicación total o parcialmente.</p>
-        </section>
-
-<section>
-            <h2>Naturaleza del servicio y rol de cada parte</h2>
-            <p>SysDevUp provee <strong>software como servicio</strong>. No presta asesoría contable, tributaria, legal ni comercial, y no interviene en las relaciones entre la Persona Usuaria y sus propios clientes.</p>
-        </section>
-
-        <section>
-            <h2>Facturación electrónica</h2>
-            <p>SysDevUp es un <strong>canal</strong> para generar y transmitir comprobantes electrónicos al Servicio de Rentas Internas. La autoridad tributaria es el SRI, y la validez, autorización o rechazo de un comprobante depende de él y no de nosotros.</p>
-            <p>La <strong>firma electrónica no está incluida</strong> en ningún plan: es un requisito que debes obtener y renovar por tu cuenta ante una entidad de certificación acreditada. Un certificado vencido o revocado impide emitir, y esa consecuencia no nos es imputable.</p>
-            <p><strong>SysDevUp no es una entidad de certificación de información</strong> y no emite, valida ni custodia certificados de firma electrónica. Nuestra función es generar el comprobante, firmarlo con el certificado que tú provees y transmitirlo al SRI.</p>
-            <p>Eres responsable de la veracidad y exactitud de los datos que emites, del cumplimiento de tus obligaciones tributarias y de conservar tus comprobantes. SysDevUp no responde por multas, sanciones o glosas derivadas de datos mal cargados, de emitir fuera de plazo o de incumplimientos tributarios.</p>
-        </section>
-
-        <section>
-            <h2>Servicios de terceros de los que depende la plataforma</h2>
-            <p>Parte del servicio funciona sobre proveedores externos —entre otros el SRI, el de alojamiento y el de correo— cuyas condiciones, disponibilidad y precios <strong>no controlamos</strong>.</p>
-            <p>Una interrupción, cambio de política, suspensión de cuenta, límite de uso o cambio de tarifa de cualquiera de ellos puede afectar total o parcialmente el servicio. SysDevUp no responde por esas causas, aunque hará lo razonable por informarte y por restablecer el servicio.</p>
-        </section>
-
-        <section>
-            <h2>Planes y pagos</h2>
-            <p>La falta de pago o la cancelación de una suscripción suspende el servicio correspondiente.</p>
-        </section>
-
-        <section>
-            <h2>Copias de seguridad, pérdida de datos y terminación</h2>
-            <p>Realizamos copias de seguridad periódicas como práctica de continuidad. No constituyen un servicio de resguardo contratado ni garantizan la recuperación íntegra de la información en todos los escenarios, por lo que <strong>te recomendamos exportar y conservar por tu cuenta</strong> la información que te resulte crítica, en especial tus comprobantes electrónicos.</p>
-            <p>El servicio se contrata por suscripción. Al vencer sin renovación, el acceso se suspende.</p>
-            <p>Tu información no se borra en ese momento: <strong>se conserva hasta 90 días después del vencimiento</strong>, por si decides renovar o necesitas recuperar algo. Cumplido ese plazo podemos eliminarla de forma definitiva, y a partir de entonces no garantizamos poder recuperarla.</p>
-            <p><strong>La obligación de conservar los comprobantes electrónicos es tuya</strong>, como contribuyente, en los plazos y condiciones que establece la normativa tributaria ecuatoriana. SysDevUp no es un servicio de archivo ni de custodia documental: los comprobantes se almacenan como parte del funcionamiento de la plataforma mientras tu suscripción esté vigente, no para cumplir esa obligación por ti.</p>
-            <p>Por eso, y con más razón que para el resto de tu información, <strong>descarga y guarda por tu cuenta tus comprobantes en XML y PDF</strong>. Cumplido el plazo de conservación posterior al vencimiento, podemos eliminarlos junto con el resto de tus datos.</p>
-            <p>Dentro de esos 90 días puedes pedirnos una copia de tu información o su eliminación anticipada. Pasado el plazo, el derecho de acceso y portabilidad que reconoce la Política de Privacidad se limita a lo que efectivamente sigamos conservando.</p>
-        </section>
-
-        <section>
-            <h2>Indemnidad</h2>
-            <p>Te comprometes a mantener indemne a SysDevUp frente a reclamos de terceros —incluidos tus clientes finales y las autoridades— que se originen en el uso que hagas de la plataforma, en la información que cargues, en los mensajes que se envíen desde tu número o en el incumplimiento de estos Términos o de la normativa aplicable.</p>
-        </section>
-
-        <section>
-            <h2>Ley aplicable y solución de controversias</h2>
-            <p>Estos Términos se rigen por las leyes de la República del Ecuador. Cualquier controversia se someterá a los jueces competentes de la ciudad de Quito, sin perjuicio de los derechos que la normativa de defensa del consumidor reconozca a quien tenga esa condición.</p>
-            <p>Nada en estos Términos excluye la responsabilidad que la ley no permite excluir, en particular la derivada de dolo o culpa grave, ni las obligaciones que la Ley Orgánica de Protección de Datos Personales impone y que no pueden ser dejadas de lado por acuerdo entre las partes.</p>
-            <p>Si alguna cláusula resultara inválida, las demás mantendrán su vigencia.</p>
-        </section>
-
-        <section>
-            <h2>Limitación de Responsabilidad</h2>
-            <p>SysDevUp no garantiza la disponibilidad, continuidad ni infalibilidad del funcionamiento de la plataforma y, en consecuencia, no será responsable por los daños y perjuicios de cualquier naturaleza que puedan derivarse de la falta de disponibilidad o de continuidad del funcionamiento del sistema y de los servicios habilitados en él.</p>
-            <p>Asimismo, SysDevUp no será responsable por errores u omisiones en los contenidos del sistema, fallas técnicas, vulneraciones de seguridad originadas por terceros, ni por cualquier daño directo o indirecto que pudiera causarse a los usuarios o a terceros en relación con el uso o mal uso del sistema o la información que allí se presente.</p>
-            <p>Cada persona usuaria es la única responsable del uso que haga de la plataforma, incluyendo cualquier relación comercial, contractual o extracontractual que establezca con otros usuarios o terceros. SysDevUp queda exento de cualquier reclamo, disputa o daño derivado de tales relaciones.</p>
-            <p><strong>Fecha de última actualización:</strong> 4 de septiembre de 2026.</p>
-
-        </section>
-    </main>
-    <footer>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 center">
-                <img src="media/img/logo_blanco.png" alt="SysDevUp" height="150">
-                <address class="contacto">
-                    <span>Quito, Ecuador</span>
-                    <a href="tel:+593999823447">+593 99 982 3447</a>
-                </address>
-                <p>&copy; 2026 <strong><a href="https://sysdevup.com" target="_blank">SysDevUp.</a></strong> Todos los derechos reservados.</p>
+    <main id="contenido">
+        <section class="portada portada-legal oscuro">
+            <div class="envoltura">
+                <nav class="migas" aria-label="Migas de pan"><a href="./">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Términos y condiciones</span></nav>
+                <h1>Términos y Condiciones de Uso</h1>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                <div class="site-map">
-                    <h3>Mapa del sitio</h3>
+        </section>
+        <div class="seccion">
+            <div class="envoltura">
+                <div class="legal">
+                    <section>
+                        <p>Al acceder a esta plataforma, aceptas los siguientes términos:</p>
+                    </section>
+                    <section>
+                        <h2>Responsabilidad de los Datos Personales</h2>
+                        <p>Cada Persona Usuaria es responsable de los datos personales que brinda al momento de registrarse y se obliga a mantenerlos actualizados. Además, es el único responsable del uso y resguardo de su contraseña.</p>
+                    </section>
+                    <section>
+                        <h2>Aceptación de los Términos</h2>
+                        <p>Las Personas Usuarias aceptan estos Términos y Condiciones desde el momento en que se registran en el Sitio y usan nuestro Ecosistema.</p>
+                        <p>Las Personas Usuarias que no tengan obligaciones pendientes con SysDevUp o con otras Personas Usuarias, podrán finalizar la relación con SysDevUp cancelando su cuenta.</p>
+                    </section>
+                    <section>
+                        <h2>Capacidad</h2>
+                        <p>Podrán usar nuestros servicios las personas mayores de edad que tengan capacidad legal para contratar. Los menores de edad, a partir de los 13 años, sólo podrán utilizar su cuenta con autorización del representante legal, quien responderá por todas las acciones y obligaciones que se deriven de la utilización de esa cuenta y quien deberá velar por el uso responsable y adecuado de ella en atención a la madurez del menor.</p>
+                        <p>Quien use nuestro Ecosistema en representación de una empresa deberá tener capacidad para contratar a nombre de ella. Además, para poder usar la cuenta, la Persona Usuaria debe encontrarse activa.</p>
+                    </section>
+                    <section>
+                        <h2>Uso Permitido</h2>
+                        <p>El incumplimiento de estas condiciones podrá dar lugar a la suspensión inmediata y sin previo aviso del acceso y uso de la cuenta, sin perjuicio de las acciones legales que puedan corresponder.</p>
+                        <p>Te comprometes a:</p>
+                        <ul>
+                        <li>Brindar información verdadera.</li>
+                        <li>No usar el sistema para actividades ilícitas.</li>
+                        <li>No intentar vulnerar la seguridad del sistema.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Acceso y Cuentas</h2>
+                        <p>Quien quiera usar nuestros servicios, deberá completar el formulario de registro con los datos que le sean requeridos. Al completarlo, se compromete a hacerlo de manera exacta, precisa y verdadera y a mantener sus datos siempre actualizados. La Persona Usuaria será la única responsable de la certeza de sus datos de registro.</p>
+                        <p>Podremos solicitar y/o consultar información adicional para corroborar la identidad de la Persona Usuaria.</p>
+                        <p>La cuenta es personal, única e intransferible, es decir que bajo ningún concepto se podrá vender o ceder a otra persona. Se accede a ella con la clave personal de seguridad que haya elegido y que deberá mantener bajo estricta confidencialidad.</p>
+                        <p>Podremos rechazar una solicitud de registro o bien cancelar un registro ya aceptado, sin que esto genere derecho a un resarcimiento. No podrán registrarse nuevamente en el Sitio las Personas Usuarias que hayan sido inhabilitadas previamente.</p>
+                        <p>Además, en caso de detectar el uso de más de una cuenta, podremos aplicar retenciones, débitos y/o cualquier otra medida si consideramos que ese accionar puede perjudicar al resto de las personas que usan el Sitio o a SysDevUp, más allá de las sanciones que pudieran corresponder.</p>
+                    </section>
+                    <section>
+                        <h2>Modificaciones</h2>
+                        <p>Nos reservamos el derecho de modificar estas condiciones. Se notificará a los usuarios en caso de cambios relevantes.</p>
+                        <p>El uso continuo del sistema después de la notificación de los cambios implicará la aceptación de los nuevos términos y condiciones por parte del usuario.</p>
+                    </section>
+                    <section>
+                        <h2>Sanciones</h2>
+                        <p>En caso que la Persona Usuaria incumpliera una ley o los Términos y Condiciones, podremos advertir, suspender, restringir o inhabilitar temporal o definitivamente su cuenta, sin perjuicio de otras sanciones que se establezcan en las reglas de uso particulares de los servicios de SysDevUp.</p>
+                    </section>
+                    <section>
+                        <h2>Propiedad Intelectual</h2>
+                        <p>SysDevUp es titular de todos los derechos de propiedad intelectual sobre su sitio web, sus contenidos, servicios, productos, marcas, nombres comerciales, logotipos, diseños, imágenes, frases promocionales, derechos de autor, dominios, programas informáticos, códigos fuente, desarrollos tecnológicos, software, bases de datos, información técnica, tecnologías, patentes, modelos de utilidad, diseños industriales y secretos comerciales, entre otros elementos (en adelante, “Propiedad Intelectual”), los cuales se encuentran protegidos por las leyes nacionales del Ecuador y tratados internacionales aplicables.</p>
+                        <p>El uso de los productos y servicios ofrecidos por SysDevUp no otorga en ningún caso autorización ni licencia para el uso de su Propiedad Intelectual, salvo autorización expresa y por escrito por parte de SysDevUp.</p>
+                        <p>Los usuarios que accedan o contraten los servicios de SysDevUp se comprometen a no utilizar la Propiedad Intelectual de forma que pueda generar confusión, imitación o asociación indebida con SysDevUp, y deberán desarrollar sus actividades bajo una identidad comercial propia y claramente diferenciada de la marca SysDevUp.</p>
+                        <p>Está prohibido usar nuestros productos o servicios para fines ilegales, realizar cualquier tipo de ingeniería inversa u obras derivadas, utilizar herramientas de búsqueda o de extracción de datos y contenidos de nuestra plataforma para su reutilización y/o crear bases de datos propias que incluyan en todo o en parte nuestro contenido sin nuestra expresa autorización.</p>
+                        <p>Está también prohibido el uso indebido, sin autorización y/o contrario a la normativa vigente y/o que genere confusión o implique uso denigratorio y/o que le cause perjuicio, daños o pérdidas a SysDevUp.</p>
+                        <p>La utilización de los productos y servicios de SysDevUp tampoco implica la autorización para usar propiedad intelectual de terceros que pueda estar involucrada, cuyo uso quedará bajo exclusiva responsabilidad del usuario.</p>
+                        <p>En caso que una Persona Usuaria o cualquier publicación infrinja la Propiedad Intelectual de SysDevUp o de terceros, SysDevUp podrá remover dicha publicación total o parcialmente.</p>
+                    </section>
+                    <section>
+                        <h2>Naturaleza del servicio y rol de cada parte</h2>
+                        <p>SysDevUp provee <strong>software como servicio</strong>. No presta asesoría contable, tributaria, legal ni comercial, y no interviene en las relaciones entre la Persona Usuaria y sus propios clientes.</p>
+                    </section>
+                    <section>
+                        <h2>Facturación electrónica</h2>
+                        <p>SysDevUp es un <strong>canal</strong> para generar y transmitir comprobantes electrónicos al Servicio de Rentas Internas. La autoridad tributaria es el SRI, y la validez, autorización o rechazo de un comprobante depende de él y no de nosotros.</p>
+                        <p>La <strong>firma electrónica no está incluida</strong> en ningún plan: es un requisito que debes obtener y renovar por tu cuenta ante una entidad de certificación acreditada. Un certificado vencido o revocado impide emitir, y esa consecuencia no nos es imputable.</p>
+                        <p><strong>SysDevUp no es una entidad de certificación de información</strong> y no emite, valida ni custodia certificados de firma electrónica. Nuestra función es generar el comprobante, firmarlo con el certificado que tú provees y transmitirlo al SRI.</p>
+                        <p>Eres responsable de la veracidad y exactitud de los datos que emites, del cumplimiento de tus obligaciones tributarias y de conservar tus comprobantes. SysDevUp no responde por multas, sanciones o glosas derivadas de datos mal cargados, de emitir fuera de plazo o de incumplimientos tributarios.</p>
+                    </section>
+                    <section>
+                        <h2>Servicios de terceros de los que depende la plataforma</h2>
+                        <p>Parte del servicio funciona sobre proveedores externos —entre otros el SRI, el de alojamiento y el de correo— cuyas condiciones, disponibilidad y precios <strong>no controlamos</strong>.</p>
+                        <p>Una interrupción, cambio de política, suspensión de cuenta, límite de uso o cambio de tarifa de cualquiera de ellos puede afectar total o parcialmente el servicio. SysDevUp no responde por esas causas, aunque hará lo razonable por informarte y por restablecer el servicio.</p>
+                    </section>
+                    <section>
+                        <h2>Planes y pagos</h2>
+                        <p>La falta de pago o la cancelación de una suscripción suspende el servicio correspondiente.</p>
+                    </section>
+                    <section>
+                        <h2>Copias de seguridad, pérdida de datos y terminación</h2>
+                        <p>Realizamos copias de seguridad periódicas como práctica de continuidad. No constituyen un servicio de resguardo contratado ni garantizan la recuperación íntegra de la información en todos los escenarios, por lo que <strong>te recomendamos exportar y conservar por tu cuenta</strong> la información que te resulte crítica, en especial tus comprobantes electrónicos.</p>
+                        <p>El servicio se contrata por suscripción. Al vencer sin renovación, el acceso se suspende.</p>
+                        <p>Tu información no se borra en ese momento: <strong>se conserva hasta 90 días después del vencimiento</strong>, por si decides renovar o necesitas recuperar algo. Cumplido ese plazo podemos eliminarla de forma definitiva, y a partir de entonces no garantizamos poder recuperarla.</p>
+                        <p><strong>La obligación de conservar los comprobantes electrónicos es tuya</strong>, como contribuyente, en los plazos y condiciones que establece la normativa tributaria ecuatoriana. SysDevUp no es un servicio de archivo ni de custodia documental: los comprobantes se almacenan como parte del funcionamiento de la plataforma mientras tu suscripción esté vigente, no para cumplir esa obligación por ti.</p>
+                        <p>Por eso, y con más razón que para el resto de tu información, <strong>descarga y guarda por tu cuenta tus comprobantes en XML y PDF</strong>. Cumplido el plazo de conservación posterior al vencimiento, podemos eliminarlos junto con el resto de tus datos.</p>
+                        <p>Dentro de esos 90 días puedes pedirnos una copia de tu información o su eliminación anticipada. Pasado el plazo, el derecho de acceso y portabilidad que reconoce la Política de Privacidad se limita a lo que efectivamente sigamos conservando.</p>
+                    </section>
+                    <section>
+                        <h2>Indemnidad</h2>
+                        <p>Te comprometes a mantener indemne a SysDevUp frente a reclamos de terceros —incluidos tus clientes finales y las autoridades— que se originen en el uso que hagas de la plataforma, en la información que cargues, en los mensajes que se envíen desde tu número o en el incumplimiento de estos Términos o de la normativa aplicable.</p>
+                    </section>
+                    <section>
+                        <h2>Ley aplicable y solución de controversias</h2>
+                        <p>Estos Términos se rigen por las leyes de la República del Ecuador. Cualquier controversia se someterá a los jueces competentes de la ciudad de Quito, sin perjuicio de los derechos que la normativa de defensa del consumidor reconozca a quien tenga esa condición.</p>
+                        <p>Nada en estos Términos excluye la responsabilidad que la ley no permite excluir, en particular la derivada de dolo o culpa grave, ni las obligaciones que la Ley Orgánica de Protección de Datos Personales impone y que no pueden ser dejadas de lado por acuerdo entre las partes.</p>
+                        <p>Si alguna cláusula resultara inválida, las demás mantendrán su vigencia.</p>
+                    </section>
+                    <section>
+                        <h2>Limitación de Responsabilidad</h2>
+                        <p>SysDevUp no garantiza la disponibilidad, continuidad ni infalibilidad del funcionamiento de la plataforma y, en consecuencia, no será responsable por los daños y perjuicios de cualquier naturaleza que puedan derivarse de la falta de disponibilidad o de continuidad del funcionamiento del sistema y de los servicios habilitados en él.</p>
+                        <p>Asimismo, SysDevUp no será responsable por errores u omisiones en los contenidos del sistema, fallas técnicas, vulneraciones de seguridad originadas por terceros, ni por cualquier daño directo o indirecto que pudiera causarse a los usuarios o a terceros en relación con el uso o mal uso del sistema o la información que allí se presente.</p>
+                        <p>Cada persona usuaria es la única responsable del uso que haga de la plataforma, incluyendo cualquier relación comercial, contractual o extracontractual que establezca con otros usuarios o terceros. SysDevUp queda exento de cualquier reclamo, disputa o daño derivado de tales relaciones.</p>
+                        <p><strong>Fecha de última actualización:</strong> 4 de septiembre de 2026.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="envoltura">
+            <div class="pie-grilla">
+                <div>
+                    <img src="media/img/logo-blanco.png" alt="SysDevUp" width="284" height="186" loading="lazy">
+                    <address>
+                        <span>Quito, Ecuador</span>
+                        <a href="tel:+593999823447">+593 99 982 3447</a>
+                    </address>
+                </div>
+                <div>
+                    <h2>Productos</h2>
                     <ul>
-                        <li><a href="./">Inicio</a></li>
                         <li><a href="facturacion-electronica">Facturación electrónica</a></li>
                         <li><a href="control-de-inventarios">Control de inventarios</a></li>
                         <li><a href="sistema-contable">Sistema contable</a></li>
                         <li><a href="software-para-consultorios-medicos">Consultorios médicos</a></li>
                         <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                        <li><a href="politica-de-privacidad">Política de Privacidad</a></li>
-                        <li><a href="terminos-y-condiciones">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>SysDevUp</h2>
+                    <ul>
+                        <li><a href="./#como-empezar">Cómo empezar</a></li>
+                        <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a></li>
+                        <li><a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="politica-de-privacidad">Política de privacidad</a></li>
+                        <li><a href="terminos-y-condiciones">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
+            <p class="pie-legal">&copy; 2026 SysDevUp. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="js/index.min.js?1.1.1"></script>
+    <a class="whatsapp-flotante" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg></a>
+    <script src="js/sitio.js?1.0.0" defer></script>
 </body>
 
 </html>
