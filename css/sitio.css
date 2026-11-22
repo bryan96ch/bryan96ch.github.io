@@ -175,11 +175,11 @@ a:hover{text-decoration-thickness:2px}
 
 .empezar{background:var(--claro)}
 .ruta{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;position:relative;counter-reset:paso}
-.ruta::before{content:"";position:absolute;left:27px;right:calc(100% - (100% + 4rem) * 2 / 3 - 27px);top:23px;height:8px;border-radius:8px;background:var(--fac)}
-.ruta li{position:relative;counter-increment:paso;padding-right:1rem}
-.ruta li::before{content:counter(paso);display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#fff;border:6px solid var(--fac);font:700 1.3rem/1 Barlow,sans-serif;color:var(--marino);margin-bottom:1.4rem;position:relative}
+.ruta::before{content:"";position:absolute;left:calc((100% - 4rem) / 6);right:calc((100% - 4rem) / 6);top:22.5px;height:9px;border-radius:9px;background:var(--fac)}
+.ruta li{position:relative;counter-increment:paso;text-align:center}
+.ruta li::before{content:counter(paso);display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#fff;border:6px solid var(--fac);font:700 1.3rem/1 Barlow,sans-serif;color:var(--marino);margin:0 auto 1.4rem;position:relative;z-index:1}
 .ruta h3{font-size:1.4rem;margin-bottom:.55rem}
-.ruta p{color:var(--tinta-suave);max-width:22rem}
+.ruta p{color:var(--tinta-suave);max-width:22rem;margin-inline:auto}
 .ruta p a{font-weight:600}
 
 .automatizar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem 3rem;align-items:center;padding:clamp(1.75rem,4vw,2.75rem);border-radius:var(--radio);border:1px solid var(--borde)}
@@ -250,9 +250,11 @@ a:hover{text-decoration-thickness:2px}
   .mapa .rotulo-precio{font-size:19px}
   .mapa .rotulo-chico{display:none}
   .ruta{grid-template-columns:1fr;gap:1.75rem}
-  .ruta::before{left:23px;right:auto;top:24px;bottom:24px;width:8px;height:auto}
-  .ruta li{display:grid;grid-template-columns:54px 1fr;column-gap:1.1rem;padding-right:0}
-  .ruta li::before{margin-bottom:0;grid-row:span 2}
+  .ruta::before{display:none}
+  .ruta li:not(:last-child)::after{content:"";position:absolute;left:22.5px;top:27px;width:9px;height:calc(100% + 1.75rem);background:var(--fac)}
+  .ruta li{display:grid;grid-template-columns:54px 1fr;column-gap:1.1rem;text-align:left}
+  .ruta li::before{margin:0;grid-row:span 2}
+  .ruta p{margin-inline:0}
   .automatizar{grid-template-columns:1fr}
   .garantias{grid-template-columns:1fr}
 }
