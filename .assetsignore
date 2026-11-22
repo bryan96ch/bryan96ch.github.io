@@ -1,0 +1,4 @@
+*.md
+.gitignore
+.assetsignore
+wrangler.jsonc
