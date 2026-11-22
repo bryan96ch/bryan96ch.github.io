@@ -153,14 +153,15 @@ a:hover{text-decoration-thickness:2px}
 .modulo .ver svg{width:1.05rem;height:1.05rem;transition:transform .2s var(--curva)}
 .modulo:hover .ver svg{transform:translateX(3px)}
 .modulo-ruta{display:block}
-.modulo-principal{--pad:clamp(1.75rem,3.5vw,2.75rem);grid-template-columns:1fr;row-gap:1.25rem;align-self:start;position:sticky;top:6.5rem}
-.modulo-principal .modulo-texto{display:flex;flex-direction:column;gap:1rem}
-.modulo-principal .modulo-ruta{display:flex;align-items:center;margin-right:calc(-1 * var(--pad))}
+.modulo-principal{--pad:clamp(1.75rem,3.5vw,2.75rem);grid-template-columns:minmax(0,1fr) auto;row-gap:1.25rem;align-self:start;position:sticky;top:6.5rem}
+.modulo-principal .modulo-texto{display:contents}
+.modulo-principal .modulo-ruta{grid-column:1/-1;display:flex;align-items:center;margin-right:calc(-1 * var(--pad))}
 .modulo-principal .modulo-ruta::after{content:"";flex:1;height:9px;margin-left:-4px;background:var(--fac)}
 .modulo-principal .modulo-ruta .punto{position:relative;z-index:1;width:34px;height:34px;border-width:8px}
-.modulo-principal h3{font-size:clamp(1.9rem,3.2vw,2.5rem)}
+.modulo-principal h3{grid-column:1;align-self:center;font-size:clamp(1.9rem,3.2vw,2.5rem)}
+.modulo-principal .incluye,.modulo-principal .precio-modulo,.modulo-principal .ver{grid-column:1/-1}
 .modulo-principal .precio-modulo strong{font-size:clamp(2.6rem,4.6vw,3.4rem)}
-.modulo-principal .modulo-dibujo{grid-column:1;grid-row:auto;align-self:end;width:100%;max-width:320px;justify-self:center}
+.modulo-principal .modulo-dibujo{grid-column:2;grid-row:2;align-self:center}
 .ramales{display:grid;gap:1rem;align-content:start}
 .ramales .modulo::before{content:"";position:absolute;right:100%;top:calc(var(--eje) - 4.5px);width:var(--hueco);height:9px;background:var(--c)}
 .ramales .modulo::after{content:"";position:absolute;left:calc(-1 * var(--hueco) - 5px);top:-1rem;bottom:0;width:10px;background:var(--fac)}
@@ -228,7 +229,7 @@ a:hover{text-decoration-thickness:2px}
   .portada-grilla{grid-template-columns:1fr}
   .mapa{max-width:520px}
   .estaciones{grid-template-columns:1fr}
-  .modulo-principal .modulo-dibujo{max-width:240px;justify-self:start;grid-row:1}
+  .modulo-principal .modulo-dibujo{grid-row:1}
   .modulo-principal{position:relative;top:auto}
   .modulo-principal .modulo-ruta{order:99;margin:0 0 0 calc(9px - var(--pad))}
   .modulo-principal .modulo-ruta::after{display:none}
@@ -245,7 +246,7 @@ a:hover{text-decoration-thickness:2px}
 @media (max-width:720px){
   .ramales .modulo>*{grid-column:1/-1}
   .ramales .modulo h3{grid-column:1}
-  .ramales .modulo-dibujo{grid-column:2;grid-row:1;width:64px;align-self:start}
+  .ramales .modulo-dibujo,.modulo-principal .modulo-dibujo{grid-column:2;grid-row:1;width:64px;align-self:start}
   .mapa .rotulo{font-size:24px}
   .mapa .rotulo-precio{font-size:19px}
   .mapa .rotulo-chico{display:none}
