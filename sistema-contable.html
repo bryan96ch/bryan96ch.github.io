@@ -72,7 +72,10 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="css/style.min.css?1.2.9">
+    <meta name="theme-color" content="#071a33">
+    <link rel="preload" href="fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/sitio.css?1.0.0">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -130,158 +133,207 @@
     }
     </script>
 </head>
-<body class="color-dark-blue">
-    <header>
-        <div class="header">
-            <a href="./" class="logo hide-on-small"><img src="media/img/logo.png" alt="SysDevUp" height="70"></a>
-            <nav class="nav hide-on-medium" id="nav">
-                <ul>
-                    <li><a href="./">Inicio</a></li>
-                    <li><a href="facturacion-electronica">Facturación electrónica</a></li>
-                    <li><a href="control-de-inventarios">Inventarios</a></li>
-                    <li><a href="sistema-contable">Contabilidad</a></li>
-                    <li><a href="software-para-consultorios-medicos">Consultorios</a></li>
-                    <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                    <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer" class="btn-sistema">Acceder al sistema</a></li>
-                </ul>
+
+<body class="c-con">
+    <a class="saltar" href="#contenido">Ir al contenido</a>
+    <header class="cabecera oscuro">
+        <div class="envoltura cabecera-in">
+            <a href="./" class="marca"><img src="media/img/logo-blanco.png" alt="SysDevUp, ir al inicio" width="284" height="186"></a>
+            <nav class="nav" aria-label="Principal">
+                <details class="productos">
+                    <summary>Productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                    <div class="panel-productos">
+                        <ul class="lista-productos">
+                            <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Facturas, retenciones y guías del SRI, con inventario</span></span><em>desde $19/año</em></a></li>
+                            <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Existencias por bodega, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                            <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos que salen solos de tus facturas</span></span><em>$199/año</em></a></li>
+                            <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia clínica, recetas y factura</span></span><em>desde $39,99/mes</em></a></li>
+                            <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes, técnicos en el celular y la factura</span></span><em>desde $35/mes</em></a></li>
+                        </ul>
+                    </div>
+                </details>
+                <a class="nav-enlace" href="./#como-empezar">Cómo empezar</a>
+                <a class="nav-enlace nav-acceder" href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                <a class="boton boton-claro boton-chico" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </nav>
-            <a href="#!" class="menu-btn" id="btn_menu_mobile" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+            <details class="menu-movil">
+                <summary aria-label="Menú"><svg class="icono-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icono-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+                <div class="panel-movil">
+                    <ul class="lista-productos">
+                        <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Con inventario incluido</span></span><em>desde $19/año</em></a></li>
+                        <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Bodegas, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                        <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos desde tus facturas</span></span><em>$199/año</em></a></li>
+                        <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia y recetas</span></span><em>desde $39,99/mes</em></a></li>
+                        <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes y técnicos en el celular</span></span><em>desde $35/mes</em></a></li>
+                    </ul>
+                    <div class="otros">
+                        <a href="./#como-empezar">Cómo empezar</a>
+                        <a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                        <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>
+                    </div>
+                </div>
+            </details>
         </div>
     </header>
-    <main>
-        <section class="inicio">
-            <div class="row middle-lg">
-                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-7">
-                    <h1 data-aos="fade-right">Sistema Contable</h1>
-                    <p data-aos="zoom-in">Tu contabilidad al día con lo que ya facturas: los asientos salen solos de tus ventas y de tus compras.</p>
-                    <nav class="breadcrumb" data-aos="fade-in" data-aos-delay="600">
-                        <a href="./">Inicio</a>&nbsp;/&nbsp;
-                        <span>Sistema Contable</span>
-                    </nav>
+
+    <main id="contenido">
+        <section class="portada portada-producto oscuro">
+            <div class="envoltura">
+                <div class="portada-grilla">
+                    <div>
+                        <nav class="migas" aria-label="Migas de pan"><a href="./">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Sistema contable</span></nav>
+                        <h1>Sistema contable <span class="precio">$199 <small>al año</small></span></h1>
+                        <p class="bajada">Tu contabilidad al día con lo que ya facturas: los asientos salen solos de tus ventas y de tus compras. <strong>Se suma a tu plan de facturación electrónica.</strong></p>
+                        <div class="acciones">
+                            <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, quiero información sobre el sistema contable. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
+                            <a class="enlace-flecha" href="#planes">Ver el plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <p class="nota-humana">Te responde una persona, y te acompaña también después de empezar.</p>
+                    </div>
+                    <img class="dibujo-producto" src="media/img/hero-contabilidad.svg" alt="Dibujo de un libro contable con sus estados financieros" width="360" height="350">
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-5">
-                    <img src="media/img/hero-contabilidad.svg" alt="Sistema contable SysDevUp" width="100%" data-aos="zoom-in">
+                <ul class="garantias">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg><div><strong>Sale de tus comprobantes</strong><span>Las ventas, las compras y las retenciones se contabilizan solas.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-2.5 6a2.5 2.5 0 0 0 5 0zM19 7l-2.5 6a2.5 2.5 0 0 0 5 0z"/></svg><div><strong>Cuadra contra todo</strong><span>El inventario, lo que te deben y lo que debes, comparados con los libros.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M9.5 14.5l2 2 4-4.5"/></svg><div><strong>Con el ATS</strong><span>Cada mes ves qué le falta a cada compra antes de generar el anexo.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></svg><div><strong>Con acompañamiento</strong><span>Te ayudamos a configurar tus cuentas y cargar tus saldos iniciales.</span></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-ad">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-ad">Tu contabilidad, hoy y con SysDevUp</h2>
+                    <p>La contabilidad que ya empieza hecha.</p>
+                </div>
+                <div class="ad-cabeza" aria-hidden="true"><span>Hoy</span><span></span><span>Con SysDevUp</span></div>
+                <ol class="antes-despues">
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Pasas cada factura de venta y de compra a otro sistema o a una hoja.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Cada factura que emites, cada compra que registras y cada retención que haces entran solas a los libros, en la cuenta que configuraste.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Lo que no tiene comprobante (un préstamo, el pago al IESS, una factura en papel) queda suelto.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Lo registras una vez como documento por pagar o por cobrar, y queda con su asiento y en tu cartera.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Al cerrar el mes no sabes si los libros coinciden con el inventario y la cartera.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Los cuadres te dicen si la contabilidad coincide con tu inventario, con lo que te deben y con lo que debes.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>El ATS se arma al final del mes, revisando compra por compra.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Cada mes ves las compras que reporta y lo que le falta a cada una, y generas el archivo en el formato del SRI.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Los estados financieros salen de una planilla aparte.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Diario, mayor, balance de comprobación y estados financieros, en PDF y en hoja de cálculo. <small>Los asientos salen de las facturas de tu <a href="facturacion-electronica">plan de facturación electrónica</a>.</small></p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion claro" aria-labelledby="titulo-incluye">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-incluye">Todo esto, en un solo plan</h2>
+                </div>
+                <ul class="incluye-todo">
+                    <li>Plan de cuentas basado en el de la Superintendencia de Compañías, o el tuyo importado</li>
+                    <li>Asientos automáticos de ventas, compras, retenciones e inventario</li>
+                    <li>Libro diario, mayor y balance de comprobación</li>
+                    <li>Estados de situación financiera, de resultados, de flujo de efectivo y de cambios en el patrimonio</li>
+                    <li>Cuentas por cobrar y por pagar, con cobros, pagos, antigüedad y estado de cuenta</li>
+                    <li>Cuentas bancarias y cajas, con conciliación contra el extracto</li>
+                    <li>Cierre de cada mes y del ejercicio</li>
+                    <li>El ATS de cada mes, en el formato del SRI</li>
+                    <li>Libros y estados en PDF y en hoja de cálculo</li>
+                    <li>Acceso desde computadora, tablet o celular</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" id="planes" aria-labelledby="titulo-planes">
+            <div class="envoltura">
+                <div class="planes-intro">
+                    <h2 id="titulo-planes">Plan de contabilidad</h2>
+                    <p class="texto-seccion">Un solo plan, con todas las funciones y una vigencia de 12 meses. No tiene límites propios: lo que contabilizas depende de los comprobantes de tu <a href="facturacion-electronica">plan de facturación</a>.</p>
+                </div>
+                <div class="planes-grilla planes-uno">
+                    <article class="plan plan-recomendado">
+                        <h3>Contabilidad</h3>
+                        <p class="lema">Para empresas obligadas a llevar contabilidad</p>
+                        <p class="plan-precio"><strong>$199</strong><span>al año</span></p>
+                        <ul class="plan-cupos"><li>Se suma a <strong>cualquier plan de facturación</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Plan de cuentas, asientos, libros y estados financieros</li>
+                            <li>Cartera de clientes y proveedores</li>
+                            <li>Bancos, cajas y conciliación bancaria</li>
+                            <li>Cierre de meses y del ejercicio</li>
+                            <li>El ATS de cada mes</li>
+                            <li>Sin límite propio de asientos ni de cuentas</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan de CONTABILIDAD." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                    <div class="planes-lado">
+                        <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></svg><span><strong>¿Eres RIMPE o no estás obligado a llevar contabilidad?</strong> Tu plan de facturación ya trae el libro de ingresos y gastos, sin costo adicional.</span></p>
+                        <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></svg><span><strong>¿Ya llevas tu contabilidad en otro sistema?</strong> <a href="https://wa.me/+593999823447?text=Hola, quiero pasar mi contabilidad a SysDevUp. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>: te ayudamos a cargar tu plan de cuentas y tus saldos iniciales para empezar desde el mes que elijas.</span></p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>La contabilidad que ya empieza hecha</h2>
-            <p>Cada factura que emites, cada compra que registras y cada retención que haces entran solas a los libros, en la cuenta que tú configuraste. Lo que no sale de un comprobante —un préstamo, el pago al IESS, una factura en papel— lo registras una vez y también queda con su asiento. Y al cerrar el mes, los cuadres te dicen si la contabilidad coincide con tu inventario, con lo que te deben y con lo que debes.</p>
-            <div class="aviso-arena">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M12 8v5M12 16.2v.1"></path></svg><span><strong>Se suma a tu facturación:</strong> la contabilidad se contrata aparte, sobre tu <a href="facturacion-electronica">plan de facturación electrónica</a>, porque los asientos salen de los comprobantes que emites y recibes.</span></p>
-            </div>
-            <h2>Todo esto, en un solo plan</h2>
-            <ul class="lista-check">
-                <li>Plan de cuentas basado en el de la Superintendencia de Compañías, o el tuyo importado</li>
-                <li>Asientos automáticos de ventas, compras, retenciones e inventario</li>
-                <li>Libro diario, mayor y balance de comprobación</li>
-                <li>Estados de situación financiera, de resultados, de flujo de efectivo y de cambios en el patrimonio</li>
-                <li>Cuentas por cobrar y por pagar, con cobros, pagos, antigüedad y estado de cuenta</li>
-                <li>Cuentas bancarias y cajas, con conciliación contra el extracto</li>
-                <li>Cierre de cada mes y del ejercicio</li>
-                <li>El ATS de cada mes, en el formato del SRI</li>
-                <li>Libros y estados en PDF y en hoja de cálculo</li>
-                <li>Acceso desde computadora, tablet o celular</li>
-            </ul>
-        </section>
-        <section style="max-width:1100px;margin:3rem auto;padding:1rem;">
-            <h2 style="text-align:center;">¿Por qué llevarla con SysDevUp?</h2>
-            <div class="row" style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-top:1.5rem;">
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon calido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16l-3.5-2.2L12 20l-3.5-2.2L5 20z"></path><path d="M8.5 9h7M8.5 13h4"></path></svg></div>
-                    <h3>Sale de tus comprobantes</h3>
-                    <p>Las ventas, las compras y las retenciones se contabilizan solas, sin volver a digitarlas.</p>
+
+        <section class="seccion claro" id="preguntas-frecuentes" aria-labelledby="titulo-preguntas">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-preguntas">Preguntas frecuentes sobre el sistema contable</h2>
                 </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg></div>
-                    <h3>Cuadra contra todo</h3>
-                    <p>El inventario, lo que te deben y lo que debes, comparados con los libros documento por documento.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V6.5M4 19.5h16"></path><path d="M7.5 16.5v-4M12 16.5v-8M16.5 16.5v-6"></path></svg></div>
-                    <h3>Con el ATS</h3>
-                    <p>Cada mes ves qué le falta a cada compra antes de generar el anexo, no después.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.6A8.5 8.5 0 1 1 20.5 12z"></path><path d="M8.5 11h7M8.5 14.5h4"></path></svg></div>
-                    <h3>Con acompañamiento</h3>
-                    <p>Cuenta con soporte para configurar tus cuentas y arrancar con tus saldos iniciales bien cargados.</p>
+                <div class="preguntas">
+                    <details><summary>¿Necesito facturar con ustedes? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. La contabilidad se suma a tu plan de facturación electrónica, porque los asientos automáticos salen de las facturas que emites y de las compras que registras en el sistema.</p></details>
+                    <details><summary>¿Para quién es? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Para empresas y personas obligadas a llevar contabilidad. Si eres RIMPE o no estás obligado, tu plan de facturación ya trae el libro de ingresos y gastos, sin costo adicional.</p></details>
+                    <details><summary>¿Puedo usar mi propio plan de cuentas? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Puedes importarlo desde un archivo, o empezar con el que trae el sistema, basado en el de la Superintendencia de Compañías, y adaptarlo: cambiar nombres, agregar subcuentas y desactivar las que no uses.</p></details>
+                    <details><summary>¿Y lo que no tiene comprobante electrónico? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Una factura en papel, un préstamo o el pago al IESS los registras una vez como documento por pagar o por cobrar, y quedan con su asiento y en tu cartera. Lo demás se carga como asiento manual.</p></details>
+                    <details><summary>¿Genera el ATS? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Cada mes te muestra las compras que reporta y lo que le falta a cada una, y genera el archivo comprimido en el formato del SRI.</p></details>
+                    <details><summary>¿Qué no incluye? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Nómina ni activos fijos. Los sueldos se registran como documento por pagar o asiento manual, y la depreciación de cada mes, como asiento manual.</p></details>
                 </div>
             </div>
         </section>
-        <section class="sec-planes">
-            <h2 style="text-align:center;">Plan de contabilidad</h2>
-            <p style="text-align:center;max-width:700px;margin:0 auto 2rem;">Un solo plan, con <strong>todas las funciones</strong> y una vigencia de 12 meses. No tiene límites propios: lo que contabilizas depende de los comprobantes de tu <a href="facturacion-electronica">plan de facturación</a>.</p>
-            <div class="planes" style="max-width:460px;">
-                <div class="plan empresa destacado" data-aos="fade-up">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16l-3.5-2.2L12 20l-3.5-2.2L5 20z"></path><path d="M8.5 9h7M8.5 13h4"></path></svg></div>
-                    <h3>Contabilidad</h3>
-                    <p class="tagline">Para empresas obligadas a llevar contabilidad</p>
-                    <p><span class="precio">$199</span> /año</p>
-                    <p>Se suma a <strong>cualquier plan de facturación</strong></p>
-                    <ul class="lista-check">
-                        <li>Plan de cuentas, asientos, libros y estados financieros</li>
-                        <li>Cartera de clientes y proveedores</li>
-                        <li>Bancos, cajas y conciliación bancaria</li>
-                        <li>Cierre de meses y del ejercicio</li>
-                        <li>El ATS de cada mes</li>
-                        <li>Sin límite propio de asientos ni de cuentas</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan de CONTABILIDAD." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
+
+        <section class="cierre oscuro" aria-labelledby="titulo-cierre">
+            <div class="envoltura">
+                <h2 id="titulo-cierre">¿Ponemos tu contabilidad al día?</h2>
+                <p>Cuéntanos cómo la llevas hoy y te ayudamos a empezar desde el mes que elijas.</p>
+                <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, quiero información sobre el sistema contable. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
             </div>
-            <div class="aviso-tarjeta">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 17v.1"></path></svg><span><strong>¿Ya llevas tu contabilidad en otro sistema?</strong> Escríbenos por WhatsApp: te ayudamos a cargar tu plan de cuentas y tus saldos iniciales para empezar desde el mes que elijas.</span></p>
-            </div>
-        </section>
-        <section id="preguntas-frecuentes" style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>Preguntas frecuentes sobre el sistema contable</h2>
-            <h3 style="margin-bottom:.35rem;">¿Necesito facturar con ustedes?</h3>
-            <p style="margin-top:0;">Sí. La contabilidad se suma a tu plan de facturación electrónica, porque los asientos automáticos salen de las facturas que emites y de las compras que registras en el sistema.</p>
-            <h3 style="margin-bottom:.35rem;">¿Para quién es?</h3>
-            <p style="margin-top:0;">Para empresas y personas obligadas a llevar contabilidad. Si eres RIMPE o no estás obligado, tu plan de facturación ya trae el libro de ingresos y gastos, sin costo adicional.</p>
-            <h3 style="margin-bottom:.35rem;">¿Puedo usar mi propio plan de cuentas?</h3>
-            <p style="margin-top:0;">Sí. Puedes importarlo desde un archivo, o empezar con el que trae el sistema, basado en el de la Superintendencia de Compañías, y adaptarlo: cambiar nombres, agregar subcuentas y desactivar las que no uses.</p>
-            <h3 style="margin-bottom:.35rem;">¿Y lo que no tiene comprobante electrónico?</h3>
-            <p style="margin-top:0;">Una factura en papel, un préstamo o el pago al IESS los registras una vez como documento por pagar o por cobrar, y quedan con su asiento y en tu cartera. Lo demás se carga como asiento manual.</p>
-            <h3 style="margin-bottom:.35rem;">¿Genera el ATS?</h3>
-            <p style="margin-top:0;">Sí. Cada mes te muestra las compras que reporta y lo que le falta a cada una, y genera el archivo comprimido en el formato del SRI.</p>
-            <h3 style="margin-bottom:.35rem;">¿Qué no incluye?</h3>
-            <p style="margin-top:0;">Nómina ni activos fijos. Los sueldos se registran como documento por pagar o asiento manual, y la depreciación de cada mes, como asiento manual.</p>
         </section>
     </main>
-    <footer>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 center">
-                <img src="media/img/logo_blanco.png" alt="SysDevUp" height="150">
-                <address class="contacto">
-                    <span>Quito, Ecuador</span>
-                    <a href="tel:+593999823447">+593 99 982 3447</a>
-                </address>
-                <p>&copy; 2026 <strong><a href="https://sysdevup.com" target="_blank" rel="noopener noreferrer">SysDevUp.</a></strong> Todos los derechos reservados.</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                <div class="site-map">
-                    <h3>Mapa del sitio</h3>
+
+    <footer class="pie">
+        <div class="envoltura">
+            <div class="pie-grilla">
+                <div>
+                    <img src="media/img/logo-blanco.png" alt="SysDevUp" width="284" height="186" loading="lazy">
+                    <address>
+                        <span>Quito, Ecuador</span>
+                        <a href="tel:+593999823447">+593 99 982 3447</a>
+                    </address>
+                </div>
+                <div>
+                    <h2>Productos</h2>
                     <ul>
-                        <li><a href="./">Inicio</a></li>
                         <li><a href="facturacion-electronica">Facturación electrónica</a></li>
                         <li><a href="control-de-inventarios">Control de inventarios</a></li>
                         <li><a href="sistema-contable">Sistema contable</a></li>
                         <li><a href="software-para-consultorios-medicos">Consultorios médicos</a></li>
                         <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                        <li><a href="politica-de-privacidad">Política de Privacidad</a></li>
-                        <li><a href="terminos-y-condiciones">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>SysDevUp</h2>
+                    <ul>
+                        <li><a href="./#como-empezar">Cómo empezar</a></li>
+                        <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a></li>
+                        <li><a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="politica-de-privacidad">Política de privacidad</a></li>
+                        <li><a href="terminos-y-condiciones">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
+            <p class="pie-legal">&copy; 2026 SysDevUp. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre el sistema contable. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="Consultar por WhatsApp"><img src="media/img/whatsapp.png" alt="WhatsApp" width="64"></a>
-    <script src="js/index.min.js?1.1.1"></script>
+    <a class="whatsapp-flotante" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg></a>
+    <script src="js/sitio.js?1.0.0" defer></script>
 </body>
+
 </html>

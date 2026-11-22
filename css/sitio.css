@@ -234,10 +234,12 @@ a:hover{text-decoration-thickness:2px}
 .aviso{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:1.15rem 1.35rem;border-radius:20px;background:var(--tinte);color:var(--tinta)}
 .aviso svg{width:22px;height:22px;color:var(--ct);margin-top:.15rem}
 .aviso a{font-weight:600}
-.planes-intro{display:grid;gap:1rem;max-width:46rem}
+.planes-intro{display:grid;gap:1rem}
 .planes-intro h2{font-size:clamp(2rem,3.8vw,2.9rem);letter-spacing:-.02em}
 .planes-intro .texto-seccion{font-size:1.15rem;color:var(--tinta-suave)}
 .planes-grilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:1rem;align-items:stretch;margin-block:3rem 1.5rem}
+.planes-uno{grid-template-columns:minmax(0,420px) minmax(0,1fr);align-items:start}
+.planes-lado{display:grid;gap:1rem;align-content:start}
 .plan{position:relative;display:flex;flex-direction:column;gap:1rem;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:2.1rem 1.6rem 1.6rem}
 .plan-recomendado{border:2px solid var(--ct);box-shadow:0 26px 46px -30px rgba(7,26,51,.45)}
 .plan-etiqueta{position:absolute;top:0;left:50%;translate:-50% -50%;padding:.38rem .95rem;border-radius:999px;background:var(--ct);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
@@ -254,14 +256,13 @@ a:hover{text-decoration-thickness:2px}
 .plan-funciones li::before{content:"";width:9px;height:9px;border-radius:50%;background:#fff;border:2.5px solid var(--c)}
 .plan .boton{margin-top:auto;width:100%}
 
-.preguntas{max-width:54rem}
 .preguntas details{border-top:1px solid var(--borde)}
 .preguntas details:last-child{border-bottom:1px solid var(--borde)}
 .preguntas summary{display:flex;justify-content:space-between;align-items:center;gap:1.25rem;padding:1.2rem 0;font-weight:600;font-size:1.15rem;line-height:1.35;cursor:pointer;list-style:none}
 .preguntas summary::-webkit-details-marker{display:none}
 .preguntas summary svg{flex:none;width:22px;height:22px;color:var(--ct);transition:transform .3s var(--curva)}
 .preguntas details[open] summary svg{transform:rotate(45deg)}
-.preguntas details p{padding:0 2.5rem 1.35rem 0;color:var(--tinta-suave);max-width:46rem}
+.preguntas details p{padding:0 2.5rem 1.35rem 0;color:var(--tinta-suave)}
 .claro{background:var(--claro)}
 
 @media (max-width:1100px){
@@ -312,6 +313,7 @@ a:hover{text-decoration-thickness:2px}
   .ad-hoy .ad-etiqueta{color:var(--tinta-suave)}
   .ad-con .ad-etiqueta{color:var(--ct)}
   .incluye-todo{columns:1}
+  .planes-uno{grid-template-columns:1fr}
   .ramales .modulo>*{grid-column:1/-1}
   .ramales .modulo h3{grid-column:1}
   .ramales .modulo-dibujo,.modulo-principal .modulo-dibujo{grid-column:2;grid-row:1;width:64px;align-self:start}

@@ -109,7 +109,10 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="css/style.min.css?1.2.9">
+    <meta name="theme-color" content="#071a33">
+    <link rel="preload" href="fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/sitio.css?1.0.0">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -162,204 +165,263 @@
                     "@type": "Answer",
                     "text": "Lo que pide la norma ecuatoriana: tus datos con cédula y registro profesional, la fecha, los datos del paciente, el diagnóstico, y de cada medicamento el nombre genérico, la dosis, la vía, la frecuencia y la duración, además de la numeración y un código de verificación."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Traen el catálogo CIE-10 completo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El sistema viene con los códigos más usados en consulta general, listos para usar desde el primer día. Si tu especialidad necesita otros, o quieres el listado oficial completo, lo cargamos nosotros sin costo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Hay portal para que el paciente vea su historial?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Todavía no. Hoy la historia clínica la consulta el profesional desde el sistema, y las recetas y resultados se le envían al paciente por correo."
+                }
             }
         ]
     }
     </script>
 </head>
-<body class="color-dark-blue">
-    <header>
-        <div class="header">
-            <a href="./" class="logo hide-on-small"><img src="media/img/logo.png" alt="SysDevUp" height="70"></a>
-            <nav class="nav hide-on-medium" id="nav">
-                <ul>
-                    <li><a href="./">Inicio</a></li>
-                    <li><a href="facturacion-electronica">Facturación electrónica</a></li>
-                    <li><a href="control-de-inventarios">Inventarios</a></li>
-                    <li><a href="sistema-contable">Contabilidad</a></li>
-                    <li><a href="software-para-consultorios-medicos">Consultorios</a></li>
-                    <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                    <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer" class="btn-sistema">Acceder al sistema</a></li>
-                </ul>
+
+<body class="c-cli">
+    <a class="saltar" href="#contenido">Ir al contenido</a>
+    <header class="cabecera oscuro">
+        <div class="envoltura cabecera-in">
+            <a href="./" class="marca"><img src="media/img/logo-blanco.png" alt="SysDevUp, ir al inicio" width="284" height="186"></a>
+            <nav class="nav" aria-label="Principal">
+                <details class="productos">
+                    <summary>Productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+                    <div class="panel-productos">
+                        <ul class="lista-productos">
+                            <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Facturas, retenciones y guías del SRI, con inventario</span></span><em>desde $19/año</em></a></li>
+                            <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Existencias por bodega, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                            <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos que salen solos de tus facturas</span></span><em>$199/año</em></a></li>
+                            <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia clínica, recetas y factura</span></span><em>desde $39,99/mes</em></a></li>
+                            <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes, técnicos en el celular y la factura</span></span><em>desde $35/mes</em></a></li>
+                        </ul>
+                    </div>
+                </details>
+                <a class="nav-enlace" href="./#como-empezar">Cómo empezar</a>
+                <a class="nav-enlace nav-acceder" href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                <a class="boton boton-claro boton-chico" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </nav>
-            <a href="#!" class="menu-btn" id="btn_menu_mobile" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+            <details class="menu-movil">
+                <summary aria-label="Menú"><svg class="icono-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icono-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+                <div class="panel-movil">
+                    <ul class="lista-productos">
+                        <li><a class="producto-fila c-fac" href="facturacion-electronica"><span class="punto" aria-hidden="true"></span><span><strong>Facturación electrónica</strong><span>Con inventario incluido</span></span><em>desde $19/año</em></a></li>
+                        <li><a class="producto-fila c-inv" href="control-de-inventarios"><span class="punto" aria-hidden="true"></span><span><strong>Control de inventarios</strong><span>Bodegas, kárdex y compras</span></span><em>desde $0/año</em></a></li>
+                        <li><a class="producto-fila c-con" href="sistema-contable"><span class="punto" aria-hidden="true"></span><span><strong>Sistema contable</strong><span>Asientos desde tus facturas</span></span><em>$199/año</em></a></li>
+                        <li><a class="producto-fila c-cli" href="software-para-consultorios-medicos"><span class="punto" aria-hidden="true"></span><span><strong>Consultorios médicos</strong><span>Agenda, historia y recetas</span></span><em>desde $39,99/mes</em></a></li>
+                        <li><a class="producto-fila c-st" href="software-para-servicio-tecnico"><span class="punto" aria-hidden="true"></span><span><strong>Servicio técnico</strong><span>Órdenes y técnicos en el celular</span></span><em>desde $35/mes</em></a></li>
+                    </ul>
+                    <div class="otros">
+                        <a href="./#como-empezar">Cómo empezar</a>
+                        <a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a>
+                        <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>
+                    </div>
+                </div>
+            </details>
         </div>
     </header>
-    <main>
-        <section class="inicio">
-            <div class="row middle-lg">
-                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-7">
-                    <h1 data-aos="fade-right">Gestión Clínica</h1>
-                    <p data-aos="zoom-in">La agenda, la historia clínica y las recetas de tu consultorio en un solo lugar, sin carpetas ni cuadernos.</p>
-                    <nav class="breadcrumb" data-aos="fade-in" data-aos-delay="600">
-                        <a href="./">Inicio</a>&nbsp;/&nbsp;
-                        <span>Consultorios médicos</span>
-                    </nav>
+
+    <main id="contenido">
+        <section class="portada portada-producto oscuro">
+            <div class="envoltura">
+                <div class="portada-grilla">
+                    <div>
+                        <nav class="migas" aria-label="Migas de pan"><a href="./">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Consultorios médicos</span></nav>
+                        <h1>Software para consultorios médicos <span class="precio"><small>desde</small> $39,99 <small>al mes</small></span></h1>
+                        <p class="bajada">La agenda, la historia clínica y las recetas de tu consultorio en un solo lugar, con la <strong>facturación electrónica incluida</strong>.</p>
+                        <div class="acciones">
+                            <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, quiero información sobre el software para consultorios. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
+                            <a class="enlace-flecha" href="#planes">Ver los planes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <p class="nota-humana">Te responde una persona, y te acompaña también después de empezar.</p>
+                    </div>
+                    <img class="dibujo-producto" src="media/img/hero-clinica.svg" alt="Dibujo de una agenda de citas y una historia clínica" width="360" height="350">
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-5">
-                    <img src="media/img/hero-clinica.svg" alt="Software para consultorios médicos SysDevUp" width="100%" data-aos="zoom-in">
+                <ul class="garantias">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3"/></svg><div><strong>La agenda primero</strong><span>Ves tu semana completa y agendas pulsando un hueco libre.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9.5a2 2 0 0 0-2-2h-7L10 5H5a2 2 0 0 0-2 2.5z"/></svg><div><strong>La historia completa</strong><span>Una consulta no se borra: se corrige abierta y se enmienda con otra.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h3.5a2 2 0 0 1 0 4H9V8zM9 12v4M12 12l3 4"/></svg><div><strong>Recetas como pide la norma</strong><span>Con tu registro profesional y cada medicamento con dosis, vía, frecuencia y duración.</span></div></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg><div><strong>Facturación incluida</strong><span>La factura sale de la consulta, con el paciente ya elegido.</span></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-ad">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-ad">Tu consultorio, hoy y con SysDevUp</h2>
+                    <p>Del turno a la receta, sin volver a escribir lo mismo.</p>
+                </div>
+                <div class="ad-cabeza" aria-hidden="true"><span>Hoy</span><span></span><span>Con SysDevUp</span></div>
+                <ol class="antes-despues">
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>La agenda va en un cuaderno o en el celular, y algún paciente olvida su cita.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Agendas en la semana de cada profesional y el paciente recibe el recordatorio por correo la tarde anterior.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>La historia clínica está en carpetas, y le vuelves a pedir la cédula en cada paso.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Abres la cita y desde ahí escribes la consulta en formato SOAP, con signos vitales, el diagnóstico CIE-10 y los adjuntos.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Escribes la receta a mano.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>La receta sale en PDF con numeración y código de verificación, lista para imprimir o enviar por correo.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Los certificados y las órdenes de exámenes se hacen aparte.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>Certificados de reposo con lo que se exige para justificarlos, y órdenes de exámenes con el diagnóstico ya impreso.</p></li>
+                    <li class="ad-fila"><p class="ad-hoy"><span class="ad-etiqueta">Hoy</span>Cobras la consulta y haces la factura en otro sistema.</p><span class="ad-paso" aria-hidden="true"></span><p class="ad-con"><span class="ad-etiqueta">Con SysDevUp</span>La factura se abre desde la consulta, con el paciente ya elegido como cliente, sale al SRI y le llega por correo. <small>Incluida en los tres planes; solo necesitas tu firma electrónica. <a href="facturacion-electronica">Ver facturación electrónica</a>.</small></p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion claro" aria-labelledby="titulo-incluye">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-incluye">Todo esto, en los tres planes</h2>
+                </div>
+                <ul class="incluye-todo">
+                    <li>Agenda semanal por profesional, con los horarios que tú defines</li>
+                    <li>Estados de la cita: agendada, confirmada, atendida o no se presentó</li>
+                    <li>Tasa de confirmación y de ausencias, a la vista en la misma agenda</li>
+                    <li>Recordatorio automático por correo, la tarde anterior a la cita</li>
+                    <li>Ficha del paciente con antecedentes, alergias, tipo de sangre y contacto de emergencia</li>
+                    <li>Historia clínica en formato SOAP, con signos vitales</li>
+                    <li>Diagnósticos codificados con CIE-10</li>
+                    <li>Adjuntos en la consulta: resultados de laboratorio o fotografías, en PDF o imagen</li>
+                    <li>Recetas en PDF con numeración y código de verificación, listas para imprimir o enviar por correo</li>
+                    <li>Certificados médicos de reposo con lo que se exige para justificarlos: la contingencia, el diagnóstico y los días en números y en letras</li>
+                    <li>Órdenes de exámenes para llevar al laboratorio, con el diagnóstico ya impreso</li>
+                    <li>La historia completa de un paciente en una sola pantalla, y su exportación en PDF cuando te la pida</li>
+                    <li>Informes: diagnósticos más frecuentes, citas por profesional y cuánta agenda se llenó</li>
+                    <li><a href="facturacion-electronica">Facturación electrónica</a> incluida: emites la factura de la consulta con el paciente ya elegido como cliente</li>
+                    <li>Pacientes sin límite, en los tres planes</li>
+                    <li>Acceso desde computadora, tablet o celular</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion" id="planes" aria-labelledby="titulo-planes">
+            <div class="envoltura">
+                <div class="planes-intro">
+                    <h2 id="titulo-planes">Planes de Gestión Clínica</h2>
+                    <p class="texto-seccion">Los tres planes tienen las mismas funciones; cambia cuántos profesionales atienden y cuántas citas puedes agendar al mes. Los pacientes nunca tienen tope.</p>
+                    <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></svg><span><strong>Se cobran por mes e incluyen la facturación electrónica.</strong> Para facturar necesitas tu firma electrónica, que es personal y la emite una entidad certificadora. El <a href="control-de-inventarios">control de inventarios</a> es aparte y se cobra por año.</span></p>
+                </div>
+                <div class="planes-grilla">
+                    <article class="plan">
+                        <h3>Consultorio</h3>
+                        <p class="lema">Para el profesional que atiende solo</p>
+                        <p class="plan-precio"><strong>$39,99</strong><span>al mes</span></p>
+                        <ul class="plan-cupos"><li>Profesionales <strong>1</strong></li><li>Citas al mes <strong>200</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Agenda, pacientes e historia clínica</li>
+                            <li>Recetas en PDF y por correo</li>
+                            <li>Certificados y órdenes de exámenes</li>
+                            <li>Facturación electrónica incluida</li>
+                            <li>Informes de tu consulta</li>
+                            <li>Recordatorio de la cita por correo</li>
+                            <li>Pacientes sin límite</li>
+                            <li>Adjuntos en cada consulta</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan CONSULTORIO de Gestión Clínica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                    <article class="plan plan-recomendado">
+                        <span class="plan-etiqueta">Recomendado</span>
+                        <h3>Clínica</h3>
+                        <p class="lema">Para consultorios con varios profesionales</p>
+                        <p class="plan-precio"><strong>$79,99</strong><span>al mes</span></p>
+                        <ul class="plan-cupos"><li>Profesionales <strong>hasta 4</strong></li><li>Citas al mes <strong>700</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Todo lo del plan Consultorio</li>
+                            <li>Agenda independiente para cada profesional</li>
+                            <li>Cada uno con su especialidad y su horario</li>
+                            <li>Tres veces y media más citas al mes</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan CLINICA de Gestión Clínica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                    <article class="plan">
+                        <h3>Centro</h3>
+                        <p class="lema">Para centros médicos con varias especialidades</p>
+                        <p class="plan-precio"><strong>$169,99</strong><span>al mes</span></p>
+                        <ul class="plan-cupos"><li>Profesionales <strong>hasta 12</strong></li><li>Citas al mes <strong>2.000</strong></li></ul>
+                        <ul class="plan-funciones">
+                            <li>Todo lo del plan Clínica</li>
+                            <li>Tres veces más profesionales</li>
+                            <li>Para centros con varias especialidades</li>
+                            <li>¿Más de 12 profesionales? Lo conversamos</li>
+                        </ul>
+                        <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan CENTRO de Gestión Clínica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
+                    </article>
+                </div>
+                <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></svg><span><strong>¿No sabes cuántas citas atiendes al mes?</strong> <a href="https://wa.me/+593999823447?text=Hola, necesito ayuda para elegir un plan para mi consultorio. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a>: lo revisamos contigo y te decimos con qué plan te alcanza. Si atiendes solo, casi siempre es el de Consultorio.</span></p>
+            </div>
+        </section>
+
+        <section class="seccion claro" id="preguntas-frecuentes" aria-labelledby="titulo-preguntas">
+            <div class="envoltura">
+                <div class="seccion-cabeza">
+                    <h2 id="titulo-preguntas">Preguntas frecuentes sobre Gestión Clínica</h2>
+                </div>
+                <div class="preguntas">
+                    <details><summary>¿La facturación electrónica está incluida? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No necesitas contratarla aparte: viene incluida en los tres planes. Desde la consulta abres la factura con el paciente ya elegido como cliente, sin volver a cargar sus datos. Lo único que tienes que conseguir por tu cuenta es la firma electrónica, que es personal y la emite una entidad certificadora.</p></details>
+                    <details><summary>¿Este plan se cobra por mes o por año? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Por mes, con la facturación electrónica ya incluida. El control de inventarios es aparte y se cobra por año.</p></details>
+                    <details><summary>¿Cuántos pacientes puedo tener? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Los que necesites. No hay tope de pacientes en ningún plan. Lo que cambia entre planes es cuántos profesionales atienden y cuántas citas puedes agendar al mes.</p></details>
+                    <details><summary>¿Se puede borrar una historia clínica? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No, y es a propósito. Una consulta se corrige mientras está abierta; una vez cerrada queda firme y se enmienda registrando otra consulta. Así el historial del paciente queda completo, que es lo que protege al paciente y al profesional.</p></details>
+                    <details><summary>¿El recordatorio de la cita llega por WhatsApp? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Hoy llega por correo, automáticamente la tarde anterior a la cita. El aviso por WhatsApp está en preparación.</p></details>
+                    <details><summary>¿Qué lleva la receta que imprime el sistema? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Lo que pide la norma ecuatoriana: tus datos con cédula y registro profesional, la fecha, los datos del paciente, el diagnóstico, y de cada medicamento el nombre genérico, la dosis, la vía, la frecuencia y la duración, además de la numeración y un código de verificación.</p></details>
+                    <details><summary>¿Traen el catálogo CIE-10 completo? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>El sistema viene con los códigos más usados en consulta general, listos para usar desde el primer día. Si tu especialidad necesita otros, o quieres el listado oficial completo, lo cargamos nosotros sin costo.</p></details>
+                    <details><summary>¿Hay portal para que el paciente vea su historial? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Todavía no. Hoy la historia clínica la consulta el profesional desde el sistema, y las recetas y resultados se le envían al paciente por correo.</p></details>
                 </div>
             </div>
         </section>
-        <section style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>Del turno a la receta, sin volver a escribir lo mismo</h2>
-            <p>Agendas la cita, la abres el día de la consulta y desde ahí escribes lo que pasó, dejas el diagnóstico y emites la receta. El paciente ya está cargado, así que no vuelves a preguntarle la cédula en cada paso. Y cuando toca cobrar, la factura se abre con él ya elegido como cliente.</p>
-            <div class="aviso-verde">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.2l2.6 2.6L16 9.4"></path></svg><span><strong>Facturas desde el mismo sistema, sin contratar nada aparte.</strong> Cada factura sale al SRI y le llega a tu paciente por correo.</span></p>
+
+        <section class="cierre oscuro" aria-labelledby="titulo-cierre">
+            <div class="envoltura">
+                <h2 id="titulo-cierre">¿Ordenamos tu consultorio?</h2>
+                <p>Cuéntanos cómo atiendes hoy y te ayudamos a dejar tu agenda andando: tus horarios y tus primeros pacientes.</p>
+                <a class="boton boton-claro" href="https://wa.me/+593999823447?text=Hola, quiero información sobre el software para consultorios. Vengo de la página web." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg> Escríbenos por WhatsApp</a>
             </div>
-            <h2>Todo esto, en los tres planes</h2>
-            <ul class="lista-check">
-                <li>Agenda semanal por profesional, con los horarios que tú defines</li>
-                <li>Estados de la cita: agendada, confirmada, atendida o no se presentó</li>
-                <li>Tasa de confirmación y de ausencias, a la vista en la misma agenda</li>
-                <li>Recordatorio automático por correo, la tarde anterior a la cita</li>
-                <li>Ficha del paciente con antecedentes, alergias, tipo de sangre y contacto de emergencia</li>
-                <li>Historia clínica en formato SOAP, con signos vitales</li>
-                <li>Diagnósticos codificados con CIE-10</li>
-                <li>Adjuntos en la consulta: resultados de laboratorio o fotografías, en PDF o imagen</li>
-                <li>Recetas en PDF con numeración y código de verificación, listas para imprimir o enviar por correo</li>
-                <li>Certificados médicos de reposo con lo que se exige para justificarlos: la contingencia, el diagnóstico y los días en números y en letras</li>
-                <li>Órdenes de exámenes para llevar al laboratorio, con el diagnóstico ya impreso</li>
-                <li>La historia completa de un paciente en una sola pantalla, y su exportación en PDF cuando te la pida</li>
-                <li>Informes: diagnósticos más frecuentes, citas por profesional y cuánta agenda se llenó</li>
-                <li><strong><a href="facturacion-electronica">Facturación electrónica</a> incluida</strong>: emites la factura de la consulta desde el sistema, con el paciente ya elegido como cliente</li>
-                <li>Pacientes sin límite, en los tres planes</li>
-                <li>Acceso desde computadora, tablet o celular</li>
-            </ul>
-        </section>
-        <section style="max-width:1100px;margin:3rem auto;padding:1rem;">
-            <h2 style="text-align:center;">¿Por qué llevarlo con SysDevUp?</h2>
-            <div class="row" style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-top:1.5rem;">
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon calido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"></rect><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"></path></svg></div>
-                    <h3>La agenda primero</h3>
-                    <p>Ves tu semana completa y agendas pulsando un hueco libre. Los tramos fuera de tu horario ni se ofrecen.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16l-3.5-2.2L12 20l-3.5-2.2L5 20z"></path><path d="M8.5 9h7M8.5 13h4"></path></svg></div>
-                    <h3>La historia completa</h3>
-                    <p>Una consulta no se borra nunca. Se corrige mientras está abierta y después se enmienda con otra, así el historial queda entero.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v15l-6.5-3-6.5 3V5A1.5 1.5 0 0 1 7 3.5z"></path><path d="M12 7v6M9 10h6"></path></svg></div>
-                    <h3>Recetas como pide la norma</h3>
-                    <p>Con tu registro profesional, el diagnóstico y cada medicamento con su dosis, vía, frecuencia y duración.</p>
-                </div>
-                <div style="flex:1;min-width:220px;max-width:260px;text-align:center;">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1-4.6A8.5 8.5 0 1 1 20.5 12z"></path><path d="M8.5 11h7M8.5 14.5h4"></path></svg></div>
-                    <h3>Con acompañamiento</h3>
-                    <p>Te ayudamos a arrancar: cargar tus horarios, tus primeros pacientes y dejar la agenda andando.</p>
-                </div>
-            </div>
-        </section>
-        <section class="sec-planes">
-            <h2 style="text-align:center;">Planes de Gestión Clínica</h2>
-            <p style="text-align:center;max-width:700px;margin:0 auto 1rem;">Los tres planes tienen <strong>las mismas funciones</strong>. Lo que cambia es cuántos profesionales atienden y cuántas citas puedes agendar al mes. <strong>Los pacientes nunca tienen tope.</strong></p>
-            <p style="text-align:center;max-width:700px;margin:0 auto 2rem;">Estos planes se cobran <strong>por mes</strong> e incluyen la facturación electrónica. El <a href="control-de-inventarios">control de inventarios</a> es aparte y se cobra por año.</p>
-            <div class="planes">
-                <div class="plan basico" data-aos="fade-up">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20.5c0-3.6 3.1-6 7-6s7 2.4 7 6"></path></svg></div>
-                    <h3>Consultorio</h3>
-                    <p class="tagline">Para el profesional que atiende solo</p>
-                    <p><span class="precio">$39,99</span> /mes</p>
-                    <p><strong>1 profesional</strong> · hasta <strong>200 citas al mes</strong></p>
-                    <ul class="lista-check">
-                        <li>Agenda, pacientes e historia clínica</li>
-                        <li>Recetas en PDF y por correo</li>
-                        <li>Certificados y órdenes de exámenes</li>
-                        <li>Facturación electrónica incluida</li>
-                        <li>Informes de tu consulta</li>
-                        <li>Recordatorio de la cita por correo</li>
-                        <li>Pacientes sin límite</li>
-                        <li>Adjuntos en cada consulta</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan CONSULTORIO de Gestión Clínica." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
-                <div class="plan profesional destacado" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 20.5c0-3.4 2.9-5.7 6.5-5.7s6.5 2.3 6.5 5.7"></path><path d="M16.5 5.2a3.2 3.2 0 0 1 0 6M18 14.9c2.1.6 3.5 2.3 3.5 4.6"></path></svg></div>
-                    <h3>Clínica</h3>
-                    <p class="tagline">Para consultorios con varios profesionales</p>
-                    <p><span class="precio">$79,99</span> /mes</p>
-                    <p>Hasta <strong>4 profesionales</strong> · <strong>700 citas al mes</strong></p>
-                    <ul class="lista-check">
-                        <li>Todo lo del plan Consultorio</li>
-                        <li>Agenda independiente para cada profesional</li>
-                        <li>Cada uno con su especialidad y su horario</li>
-                        <li>Tres veces y media más citas al mes</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan CLINICA de Gestión Clínica." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
-                <div class="plan empresa" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20.5h18"></path><rect x="4.5" y="6" width="15" height="14.5" rx="2"></rect><path d="M12 9.5v5M9.5 12h5"></path></svg></div>
-                    <h3>Centro</h3>
-                    <p class="tagline">Para centros médicos con varias especialidades</p>
-                    <p><span class="precio">$169,99</span> /mes</p>
-                    <p>Hasta <strong>12 profesionales</strong> · <strong>2.000 citas al mes</strong></p>
-                    <ul class="lista-check">
-                        <li>Todo lo del plan Clínica</li>
-                        <li>Tres veces más profesionales</li>
-                        <li>Para centros con varias especialidades</li>
-                        <li>¿Más de 12 profesionales? Lo conversamos</li>
-                    </ul>
-                    <a href="https://wa.me/+593999823447?text=Estoy interesado en el plan CENTRO de Gestión Clínica." target="_blank" rel="noopener noreferrer" class="btn-contactar">¡Lo quiero!</a>
-                </div>
-            </div>
-            <div class="aviso-tarjeta">
-                <p class="aviso" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4M12 17v.1"></path></svg><span><strong>¿No sabes cuántas citas atiendes al mes?</strong> Escríbenos por WhatsApp: lo revisamos contigo y te decimos con qué plan te alcanza. Si atiendes solo, casi siempre es el de Consultorio.</span></p>
-            </div>
-        </section>
-        <section id="preguntas-frecuentes" style="max-width:900px;margin:3rem auto;padding:1rem;">
-            <h2>Preguntas frecuentes sobre Gestión Clínica</h2>
-            <h3 style="margin-bottom:.35rem;">¿La facturación electrónica está incluida?</h3>
-            <p style="margin-top:0;">No necesitas contratarla aparte: viene incluida en los tres planes. Desde la consulta abres la factura con el paciente ya elegido como cliente, sin volver a cargar sus datos. Lo único que tienes que conseguir por tu cuenta es la firma electrónica, que es personal y la emite una entidad certificadora.</p>
-            <h3 style="margin-bottom:.35rem;">¿Este plan se cobra por mes o por año?</h3>
-            <p style="margin-top:0;">Por mes, con la facturación electrónica ya incluida. El control de inventarios es aparte y se cobra por año.</p>
-            <h3 style="margin-bottom:.35rem;">¿Cuántos pacientes puedo tener?</h3>
-            <p style="margin-top:0;">Los que necesites. No hay tope de pacientes en ningún plan. Lo que cambia entre planes es cuántos profesionales atienden y cuántas citas puedes agendar al mes.</p>
-            <h3 style="margin-bottom:.35rem;">¿Se puede borrar una historia clínica?</h3>
-            <p style="margin-top:0;">No, y es a propósito. Una consulta se corrige mientras está abierta; una vez cerrada queda firme y se enmienda registrando otra consulta. Así el historial del paciente queda completo, que es lo que protege al paciente y al profesional.</p>
-            <h3 style="margin-bottom:.35rem;">¿El recordatorio de la cita llega por WhatsApp?</h3>
-            <p style="margin-top:0;">Hoy llega por correo, automáticamente la tarde anterior a la cita. El aviso por WhatsApp está en preparación.</p>
-            <h3 style="margin-bottom:.35rem;">¿Qué lleva la receta que imprime el sistema?</h3>
-            <p style="margin-top:0;">Lo que pide la norma ecuatoriana: tus datos con cédula y registro profesional, la fecha, los datos del paciente, el diagnóstico, y de cada medicamento el nombre genérico, la dosis, la vía, la frecuencia y la duración, además de la numeración y un código de verificación.</p>
-            <h3 style="margin-bottom:.35rem;">¿Traen el catálogo CIE-10 completo?</h3>
-            <p style="margin-top:0;">El sistema viene con los códigos más usados en consulta general, listos para usar desde el primer día. Si tu especialidad necesita otros, o quieres el listado oficial completo, lo cargamos nosotros sin costo.</p>
-            <h3 style="margin-bottom:.35rem;">¿Hay portal para que el paciente vea su historial?</h3>
-            <p style="margin-top:0;">Todavía no. Hoy la historia clínica la consulta el profesional desde el sistema, y las recetas y resultados se le envían al paciente por correo.</p>
         </section>
     </main>
-    <footer>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 center">
-                <img src="media/img/logo_blanco.png" alt="SysDevUp" height="150">
-                <address class="contacto">
-                    <span>Quito, Ecuador</span>
-                    <a href="tel:+593999823447">+593 99 982 3447</a>
-                </address>
-                <p>&copy; 2026 <strong><a href="https://sysdevup.com" target="_blank" rel="noopener noreferrer">SysDevUp.</a></strong> Todos los derechos reservados.</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                <div class="site-map">
-                    <h3>Mapa del sitio</h3>
+
+    <footer class="pie">
+        <div class="envoltura">
+            <div class="pie-grilla">
+                <div>
+                    <img src="media/img/logo-blanco.png" alt="SysDevUp" width="284" height="186" loading="lazy">
+                    <address>
+                        <span>Quito, Ecuador</span>
+                        <a href="tel:+593999823447">+593 99 982 3447</a>
+                    </address>
+                </div>
+                <div>
+                    <h2>Productos</h2>
                     <ul>
-                        <li><a href="./">Inicio</a></li>
                         <li><a href="facturacion-electronica">Facturación electrónica</a></li>
                         <li><a href="control-de-inventarios">Control de inventarios</a></li>
                         <li><a href="sistema-contable">Sistema contable</a></li>
                         <li><a href="software-para-consultorios-medicos">Consultorios médicos</a></li>
                         <li><a href="software-para-servicio-tecnico">Servicio técnico</a></li>
-                        <li><a href="politica-de-privacidad">Política de Privacidad</a></li>
-                        <li><a href="terminos-y-condiciones">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>SysDevUp</h2>
+                    <ul>
+                        <li><a href="./#como-empezar">Cómo empezar</a></li>
+                        <li><a href="https://sistema.sysdevup.com/" target="_blank" rel="noopener noreferrer">Acceder al sistema</a></li>
+                        <li><a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="politica-de-privacidad">Política de privacidad</a></li>
+                        <li><a href="terminos-y-condiciones">Términos y condiciones</a></li>
                     </ul>
                 </div>
             </div>
+            <p class="pie-legal">&copy; 2026 SysDevUp. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <a href="https://wa.me/+593999823447?text=Hola, necesito más información sobre Gestión Clínica para consultorios. Vengo de la pagina web." target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="Consultar por WhatsApp"><img src="media/img/whatsapp.png" alt="WhatsApp" width="64"></a>
-    <script src="js/index.min.js?1.1.1"></script>
+    <a class="whatsapp-flotante" href="https://wa.me/+593999823447?text=Hola, necesito más información sobre tus servicios. Vengo de la página web." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.1 4 4.1-1.07A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15.03l-.28-.17-2.44.64.65-2.38-.18-.29A8.1 8.1 0 0 1 12.04 3.8zm-3.2 3.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.19 3.68 2.07.82 2.5.66 2.95.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.41z"/></svg></a>
+    <script src="js/sitio.js?1.0.0" defer></script>
 </body>
+
 </html>
