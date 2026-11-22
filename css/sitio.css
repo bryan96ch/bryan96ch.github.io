@@ -161,7 +161,7 @@ a:hover{text-decoration-thickness:2px}
 .modulo-principal h3{grid-column:1;align-self:center;font-size:clamp(1.9rem,3.2vw,2.5rem)}
 .modulo-principal .incluye,.modulo-principal .precio-modulo,.modulo-principal .ver{grid-column:1/-1}
 .modulo-principal .precio-modulo strong{font-size:clamp(2.6rem,4.6vw,3.4rem)}
-.modulo-principal .modulo-dibujo{grid-column:2;grid-row:2;align-self:center}
+.modulo-principal .modulo-dibujo{grid-column:2;grid-row:2;align-self:center;width:clamp(72px,6.5vw,96px)}
 .ramales{display:grid;gap:1rem;align-content:start}
 .ramales .modulo::before{content:"";position:absolute;right:100%;top:calc(var(--eje) - 4.5px);width:var(--hueco);height:9px;background:var(--c)}
 .ramales .modulo::after{content:"";position:absolute;left:calc(-1 * var(--hueco) - 5px);top:-1rem;bottom:0;width:10px;background:var(--fac)}
