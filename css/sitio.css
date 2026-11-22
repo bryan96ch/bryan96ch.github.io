@@ -89,7 +89,7 @@ a:hover{text-decoration-thickness:2px}
 .portada h1{font-size:clamp(2.4rem,4.6vw,3.6rem);font-weight:600;letter-spacing:-.02em;line-height:1.05}
 .portada h1 .precio{display:block;margin-top:.15em;font-size:clamp(3.6rem,8.4vw,6rem);font-weight:700;letter-spacing:-.035em;line-height:.95;font-variant-numeric:tabular-nums}
 .portada h1 .precio small{font-size:.42em;font-weight:600;letter-spacing:-.01em;color:var(--sobre-oscuro)}
-.bajada{margin-top:1.4rem;max-width:34rem;font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5;color:var(--sobre-oscuro)}
+.bajada{margin-top:1.4rem;font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5;color:var(--sobre-oscuro)}
 .bajada strong{color:#fff;font-weight:600}
 .acciones{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem;margin-top:2rem}
 .portada .enlace-flecha{color:#fff}
@@ -127,9 +127,9 @@ a:hover{text-decoration-thickness:2px}
 .garantias span{display:block;font-size:.95rem;line-height:1.45;color:var(--sobre-oscuro)}
 
 .seccion{padding-block:clamp(4rem,9vw,7.5rem)}
-.seccion-cabeza{max-width:44rem;margin-bottom:clamp(2rem,4vw,3.25rem)}
+.seccion-cabeza{margin-bottom:clamp(2rem,4vw,3.25rem)}
 .seccion-cabeza h2,.nosotros h2,.automatizar h2{font-size:clamp(2rem,3.8vw,2.9rem);letter-spacing:-.02em}
-.seccion-cabeza p{margin-top:1rem;font-size:1.15rem;color:var(--tinta-suave);max-width:38rem}
+.seccion-cabeza p{margin-top:1rem;font-size:1.15rem;color:var(--tinta-suave)}
 
 .estaciones{--hueco:clamp(2.5rem,5vw,4.5rem);display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);column-gap:var(--hueco);align-items:stretch}
 .modulo{--pad:clamp(1.5rem,3vw,2.1rem);--h3:clamp(1.45rem,2.2vw,1.75rem);--eje:calc(var(--pad) + .55 * var(--h3));position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:1.5rem;row-gap:.9rem;align-content:start;background:var(--tinte);border-radius:var(--radio);padding:var(--pad);transition:transform .3s var(--curva),box-shadow .3s var(--curva)}
@@ -141,7 +141,6 @@ a:hover{text-decoration-thickness:2px}
 .modulo h3 a:focus-visible{outline:none}
 .modulo:has(h3 a:focus-visible){outline:3px solid var(--foco);outline-offset:3px}
 .modulo p,.conexiones-titulo{color:var(--tinta-suave);color:color-mix(in oklab,var(--ct) 38%,var(--tinta))}
-.modulo p{max-width:30rem}
 .precio-modulo{display:flex;align-items:baseline;gap:.4rem;color:var(--tinta);font-weight:500}
 .precio-modulo strong{font-size:2.1rem;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--ct);font-variant-numeric:tabular-nums}
 .conexiones{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;margin:.35rem 0 0;padding:0}
@@ -180,12 +179,12 @@ a:hover{text-decoration-thickness:2px}
 .ruta li{position:relative;counter-increment:paso;text-align:center}
 .ruta li::before{content:counter(paso);display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#fff;border:6px solid var(--fac);font:700 1.3rem/1 Barlow,sans-serif;color:var(--marino);margin:0 auto 1.4rem;position:relative;z-index:1}
 .ruta h3{font-size:1.4rem;margin-bottom:.55rem}
-.ruta p{color:var(--tinta-suave);max-width:22rem;margin-inline:auto}
+.ruta p{color:var(--tinta-suave)}
 .ruta p a{font-weight:600}
 
 .automatizar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem 3rem;align-items:center;padding:clamp(1.75rem,4vw,2.75rem);border-radius:var(--radio);border:1px solid var(--borde)}
 .automatizar h2{font-size:clamp(1.6rem,2.8vw,2.1rem)}
-.automatizar p{margin-top:.7rem;color:var(--tinta-suave);max-width:40rem}
+.automatizar p{margin-top:.7rem;color:var(--tinta-suave)}
 
 .nosotros{margin-top:clamp(4rem,8vw,6.5rem);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(1.5rem,5vw,5rem);align-items:start}
 .nosotros p{font-size:clamp(1.2rem,2vw,1.45rem);line-height:1.55;color:var(--tinta)}
@@ -193,7 +192,7 @@ a:hover{text-decoration-thickness:2px}
 
 .cierre{background:var(--marino);color:#fff;border-radius:clamp(36px,6vw,72px) clamp(36px,6vw,72px) 0 0;padding-block:clamp(3.5rem,8vw,6rem);text-align:center}
 .cierre h2{font-size:clamp(2.1rem,4.4vw,3.4rem);letter-spacing:-.02em}
-.cierre p{margin:1.1rem auto 2.1rem;max-width:36rem;font-size:1.15rem;color:var(--sobre-oscuro)}
+.cierre p{margin:1.1rem auto 2.1rem;font-size:1.15rem;color:var(--sobre-oscuro)}
 
 .pie{background:var(--marino-3);color:var(--sobre-oscuro);padding-block:clamp(2.5rem,5vw,3.5rem) 2rem;font-size:.98rem}
 .pie-grilla{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:2rem}
@@ -267,7 +266,6 @@ a:hover{text-decoration-thickness:2px}
 .portada-legal{padding-block:clamp(2rem,5vw,3.25rem) clamp(2.5rem,5vw,3.5rem)}
 .portada-legal h1{font-size:clamp(2.2rem,4.2vw,3.2rem);letter-spacing:-.02em}
 .portada-legal .migas{margin-bottom:1.1rem}
-.legal{max-width:50rem}
 .legal section{padding-block:1.75rem;border-top:1px solid var(--borde)}
 .legal section:first-child{border-top:0;padding-top:0}
 .legal h2{font-size:clamp(1.4rem,2.2vw,1.75rem);margin-bottom:1rem}
