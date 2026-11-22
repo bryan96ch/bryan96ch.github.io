@@ -73,6 +73,8 @@ El sitio sirve para que el visitante entienda qué le sirve a él, vea el precio
   - el RUC de SysDevUp;
   - el nombre de quien está detrás: la experiencia se dice sin nombres.
 
+  **Excepción decidida por el usuario el 2026-11-21:** la política de privacidad identifica al responsable del tratamiento con su nombre y su RUC, como pide la ley de protección de datos.
+
 ## Brand Commitments
 
 - Nombre: SysDevUp, dominio sysdevup.com.

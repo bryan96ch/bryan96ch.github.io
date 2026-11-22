@@ -207,8 +207,12 @@ a:hover{text-decoration-thickness:2px}
 .whatsapp-flotante{display:none}
 .js .whatsapp-flotante:not(.visible){opacity:0;pointer-events:none;transform:translateY(10px)}
 
-.migas{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.6rem;font-size:.95rem;color:var(--sobre-oscuro)}
-.migas a{color:#fff;font-weight:500}
+.migas{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-bottom:1.6rem;font-size:.95rem;color:var(--sobre-oscuro)}
+.migas a{display:inline-flex;align-items:center;color:#fff;font-weight:500}
+.migas a::before,.migas [aria-current]::before{content:"";display:inline-block;flex:none;width:15px;height:15px;margin-right:.55rem;border-radius:50%;background:#fff;border:4px solid var(--fac)}
+.migas [aria-current]{display:inline-flex;align-items:center}
+.migas [aria-current]::before{border-color:var(--c)}
+.migas span[aria-hidden]{flex:none;width:44px;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--fac),var(--c));font-size:0;color:transparent}
 .portada-producto h1{font-size:clamp(2.2rem,4.2vw,3.3rem)}
 .dibujo-producto{width:100%;max-width:420px;height:auto;justify-self:center}
 
@@ -222,8 +226,8 @@ a:hover{text-decoration-thickness:2px}
 .ad-con{color:var(--tinta);font-weight:500}
 .ad-con small{display:block;margin-top:.4rem;font-size:.93rem;font-weight:400;color:var(--tinta-suave);color:color-mix(in oklab,var(--ct) 38%,var(--tinta))}
 .ad-paso{position:relative;height:26px}
-.ad-paso::before{content:"";position:absolute;left:0;right:0;top:50%;height:9px;translate:0 -50%;border-radius:9px;background:linear-gradient(90deg,#cfd8e5 50%,var(--c) 50%)}
-.ad-paso::after{content:"";position:absolute;left:50%;top:50%;width:26px;height:26px;translate:-50% -50%;border-radius:50%;background:#fff;border:6px solid var(--c)}
+.ad-paso::before{content:"";position:absolute;left:0;right:13px;top:50%;height:9px;translate:0 -50%;border-radius:9px 0 0 9px;background:linear-gradient(90deg,#cfd8e5 45%,var(--c) 45%)}
+.ad-paso::after{content:"";position:absolute;right:0;top:50%;width:26px;height:26px;translate:0 -50%;border-radius:50%;background:#fff;border:6px solid var(--c)}
 .ad-etiqueta{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 .incluye-todo{list-style:none;margin:0;padding:0;columns:2;column-gap:3.5rem}
@@ -232,15 +236,18 @@ a:hover{text-decoration-thickness:2px}
 
 .aviso{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:1.15rem 1.35rem;border-radius:20px;background:var(--tinte);color:var(--tinta)}
 .aviso svg{width:22px;height:22px;color:var(--ct);margin-top:.15rem}
-.aviso a{font-weight:600}
+.aviso a{font-weight:600;color:var(--ct)}
+.aviso a[href^="facturacion"]{color:var(--fac-texto)}
 .planes-intro{display:grid;gap:1rem}
 .planes-intro h2{font-size:clamp(2rem,3.8vw,2.9rem);letter-spacing:-.02em}
 .planes-intro .texto-seccion{font-size:1.15rem;color:var(--tinta-suave)}
-.planes-grilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:1rem;align-items:stretch;margin-block:3rem 1.5rem}
-.planes-uno{grid-template-columns:minmax(0,420px) minmax(0,1fr);align-items:start}
-.planes-lado{display:grid;gap:1rem;align-content:start}
+.planes-grilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:2.25rem 1rem;align-items:stretch;margin-block:3rem 1.5rem}
+.plan.plan-ancho{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);column-gap:3rem;row-gap:1.25rem;align-items:center}
+.plan-cabeza{display:flex;flex-direction:column;gap:1rem}
+.plan-ancho .plan-funciones{display:block;columns:2;column-gap:2rem}
+.plan-ancho .plan-funciones li{break-inside:avoid;margin-bottom:.6rem}
 .plan{position:relative;display:flex;flex-direction:column;gap:1rem;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:2.1rem 1.6rem 1.6rem}
-.plan-recomendado{border:2px solid var(--ct);box-shadow:0 26px 46px -30px rgba(7,26,51,.45)}
+.plan-recomendado{border:2px solid var(--ct)}
 .plan-etiqueta{position:absolute;top:0;left:50%;translate:-50% -50%;padding:.38rem .95rem;border-radius:999px;background:var(--ct);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
 .plan h3{font-size:1.55rem}
 .plan .lema{color:var(--tinta-suave);font-size:.98rem;line-height:1.45;min-height:2.9em}
@@ -315,13 +322,14 @@ a:hover{text-decoration-thickness:2px}
   .ad-hoy{grid-column:2;grid-row:1}
   .ad-con{grid-column:2;grid-row:2}
   .ad-paso{grid-column:1;grid-row:1/3;height:auto;align-self:stretch}
-  .ad-paso::before{left:50%;right:auto;top:.7em;bottom:13px;width:7px;height:auto;translate:-50% 0;background:linear-gradient(180deg,#cfd8e5 40%,var(--c) 60%)}
-  .ad-paso::after{top:auto;bottom:0;translate:-50% 0;width:24px;height:24px;border-width:5px}
+  .ad-paso::before{left:50%;right:auto;top:.7em;bottom:13px;border-radius:9px;width:7px;height:auto;translate:-50% 0;background:linear-gradient(180deg,#cfd8e5 40%,var(--c) 60%)}
+  .ad-paso::after{left:50%;right:auto;top:auto;bottom:0;translate:-50% 0;width:24px;height:24px;border-width:5px}
   .ad-etiqueta{position:static;width:auto;height:auto;overflow:visible;clip:auto;display:block;margin-bottom:.15rem;font-size:.78rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase}
   .ad-hoy .ad-etiqueta{color:var(--tinta-suave)}
   .ad-con .ad-etiqueta{color:var(--ct)}
   .incluye-todo{columns:1}
-  .planes-uno{grid-template-columns:1fr}
+  .plan.plan-ancho{grid-template-columns:1fr}
+  .plan-ancho .plan-funciones{columns:1}
   .ramales .modulo>*{grid-column:1/-1}
   .ramales .modulo h3{grid-column:1}
   .ramales .modulo-dibujo,.modulo-principal .modulo-dibujo{grid-column:2;grid-row:1;width:64px;align-self:start}
