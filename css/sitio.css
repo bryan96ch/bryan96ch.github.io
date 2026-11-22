@@ -277,8 +277,9 @@ a:hover{text-decoration-thickness:2px}
 .legal section:first-child{border-top:0;padding-top:0}
 .legal h2{font-size:clamp(1.4rem,2.2vw,1.75rem);margin-bottom:1rem}
 .legal p{margin:0 0 1rem}
-.legal ul{margin:0 0 1rem;padding-left:1.3rem;display:grid;gap:.5rem}
-.legal li::marker{color:var(--ct)}
+.legal ul{margin:0 0 1rem;padding:0;list-style:none;display:grid;gap:.5rem}
+.legal li{position:relative;padding-left:1.5rem}
+.legal li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;border-radius:50%;background:#fff;border:3px solid var(--ct)}
 
 @media (max-width:1100px){
   .garantias{grid-template-columns:repeat(2,minmax(0,1fr))}
