@@ -218,6 +218,8 @@ a:hover{text-decoration-thickness:2px}
 .dibujo-producto{width:100%;max-width:420px;height:auto;justify-self:center}
 
 .antes-despues{list-style:none;margin:0;padding:0}
+.ad-grupo{display:flex;align-items:center;gap:.75rem;font-size:1.4rem;margin:0 0 1.1rem}
+.antes-despues+.ad-grupo{margin-top:clamp(2.5rem,5vw,3.5rem)}
 .ad-cabeza,.ad-fila{display:grid;grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr);column-gap:1.25rem;align-items:center}
 .ad-cabeza{padding-bottom:.9rem;font-size:.9rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-suave)}
 .ad-cabeza span:last-child{color:var(--ct)}

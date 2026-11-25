@@ -394,6 +394,8 @@ Banda marino con resplandor del módulo (ver la regla del resplandor) y costura 
 ### Antes y después (componente de producto)
 Lista ordenada de filas entre filetes `borde`. Cada fila: lo que el cliente hace hoy, un tramo que nace gris y llega del color del módulo a una estación, y el mismo trabajo con SysDevUp, con su condición en letra chica teñida (`color-mix` al 38 %). La cabecera de columnas «Hoy / Con SysDevUp» es un rótulo en mayúsculas (la segunda en `--ct`) y es decorativa para lectores; en celular la cabecera desaparece y cada lado lleva su propia etiqueta visible, mientras el tramo se vuelve vertical.
 
+**En grupos**, cuando el producto se usa de dos maneras (Servicio Técnico: a domicilio y en el taller): cada grupo lleva un título `h3.ad-grupo` —1.4rem a 600, precedido de un punto de estación de 16/4px del color del módulo— y su propia cabecera «Hoy / Con SysDevUp» y su lista. Entre una lista y el título siguiente, `clamp(2.5rem,5vw,3.5rem)` de aire. La bajada de la sección nombra las dos maneras.
+
 ### Portada legal y texto legal
 Banda marino compacta con migas y h1, sin resplandor. El texto va en una columna de secciones con h2 a tamaño título y filete `borde` entre ellas; las viñetas de lista son estaciones de 11px en `--ct`, no puntos sólidos.
 
