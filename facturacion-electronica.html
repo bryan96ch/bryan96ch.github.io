@@ -142,10 +142,50 @@
             },
             {
                 "@type": "Question",
+                "name": "¿Puedo probarlo antes de contratar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Te abrimos una prueba gratis de 15 días con tu empresa y tu firma electrónica, en el ambiente de pruebas del SRI: emites los cinco tipos de comprobante, el SRI los autoriza igual que en producción, aunque sin validez tributaria, y el PDF llega al correo. Incluye hasta 25 documentos y 25 productos. Si decides contratar, sigues con la misma cuenta, con tus clientes y productos ya cargados, y pasas a producción. Si todavía no tienes firma, te mostramos el sistema en una videollamada."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "¿Qué tipos de comprobantes puedo emitir?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Puedes emitir facturas, notas de crédito, notas de débito, retenciones y guías de remisión."
+                    "text": "Puedes emitir facturas, notas de crédito, notas de débito, retenciones y guías de remisión. Los cinco vienen en todos los planes y cuentan para el mismo cupo anual de documentos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿SysDevUp cumple con lo que exige el SRI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, y lo mantenemos al día sin que tengas que hacer nada. Cada comprobante lleva en su información adicional el RUC de SysDevUp como proveedor del sistema, como pide la Resolución NAC-DGERCGC26-00000027, en los cinco tipos. Si eres RIMPE, eliges tu leyenda, emprendedor o negocio popular, en la configuración de facturación, y sale en el XML y en el PDF. Y el sistema aplica las reglas de consumidor final: el tope de $50 por factura y que, una vez autorizadas, esas facturas no se anulan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa si el SRI no responde?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tu comprobante queda guardado y el sistema lo vuelve a enviar solo, varias veces y cada vez con más espacio entre intentos, hasta que el SRI lo reciba. Además, un vigilante revisa cada minuto que nada se quede detenido y, si algo no avanza, te avisa por correo. En los cortes habituales del SRI no tienes que hacer nada más."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo sé si el SRI autorizó mi comprobante?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cada comprobante muestra su estado: en proceso, autorizado, devuelto o no autorizado. En el monitor de comprobantes los ves todos juntos, con la respuesta del SRI y su motivo cuando lo devuelve, y desde ahí puedes reintentar el envío o reenviarle el correo a tu cliente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo hago una nota de crédito o anulo un comprobante?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La nota de crédito se hace desde la factura original: el sistema trae el mismo cliente y sus productos con la tarifa de IVA con que se facturaron, y no te deja devolver más de lo que queda de esa factura. Para anular, el sistema registra la anulación y te indica qué falta hacer en el SRI según el tipo de comprobante, porque el SRI solo acepta anulaciones desde su portal en línea."
                 }
             },
             {
@@ -158,6 +198,22 @@
             },
             {
                 "@type": "Question",
+                "name": "¿Los precios incluyen IVA?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Son precios finales: no se les suma IVA."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa si llego al límite de documentos de mi plan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Al llegar al tope, el sistema no te deja emitir más hasta que ampliemos tu cupo. Si ves que te vas a quedar corto, escríbenos y lo conversamos según cuántos documentos te falten para terminar tu año."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "¿El control de inventario está incluido?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -166,10 +222,10 @@
             },
             {
                 "@type": "Question",
-                "name": "¿La firma electrónica está incluida en el precio del plan?",
+                "name": "¿Puedo usar mi propia firma electrónica?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "No. La firma electrónica es un requisito aparte que debes tramitar por tu cuenta, y no está incluida en ninguno de los planes."
+                    "text": "Sí, es la que se usa: la firma no está incluida en los planes. Subes tú mismo el archivo .p12 con su contraseña en la pantalla de certificado de firma, y el sistema lee su fecha de caducidad: te avisa por correo 30 días antes de que venza y otra vez cuando faltan 7. Si prefieres, te ayudamos a configurarla."
                 }
             },
             {
@@ -202,6 +258,30 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Sí. Subes sus XML o el reporte del SRI en línea, el sistema comprueba cada factura con el SRI y la conviertes en compra de inventario o en gasto. Viene incluido en todos los planes: registrar cuenta hasta el mismo número de documentos del plan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa con mis comprobantes si dejo el servicio?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Mientras tu plan esté vigente puedes descargar cada comprobante en XML y PDF. Si no renuevas, tu información se conserva 90 días más: en ese plazo puedes volver o pedirnos una copia. Igual te recomendamos guardar tus comprobantes por tu cuenta, porque conservarlos es una obligación tributaria del contribuyente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Respaldan mi información?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Cada noche se hace una copia de seguridad cifrada de tu información y de tus comprobantes autorizados, y se guarda fuera del servidor donde trabaja el sistema."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo me atienden si tengo una duda o un problema?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Por WhatsApp, y te responde una persona. Te acompañamos también después de empezar: con la firma, con la configuración y con las dudas del día a día. En los planes Negocio y superiores tu consulta tiene prioridad."
                 }
             }
         ]
@@ -336,6 +416,7 @@
                             <li>Consulta de documentos</li>
                             <li>Soporte por chat</li>
                             <li>Acceso desde computadora y celular</li>
+                            <li>Copias de seguridad cada noche</li>
                         </ul>
                         <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan INICIO de facturación electrónica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
                     </article>
@@ -350,10 +431,9 @@
                             <li>Clientes ilimitados</li>
                             <li>Catálogo de productos</li>
                             <li>Plantillas personalizables</li>
-                            <li>Reportes y descarga masiva</li>
+                            <li>Reportes y exportación a Excel (CSV)</li>
                             <li>Historial y búsqueda avanzada</li>
                             <li>Multiusuario + soporte prioritario</li>
-                            <li>Copias de seguridad</li>
                         </ul>
                         <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan NEGOCIO de facturación electrónica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
                     </article>
@@ -392,7 +472,7 @@
                         <a class="boton boton-oscuro" href="https://wa.me/+593999823447?text=Estoy interesado en el plan EMPRESA de facturación electrónica." target="_blank" rel="noopener noreferrer">Lo quiero</a>
                     </article>
                 </div>
-                <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></svg><span><strong>¿Necesitas ayuda para elegir?</strong> <a href="https://wa.me/+593999823447?text=Hola, necesito ayuda para elegir un plan de facturación electrónica. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a> y te orientamos según el volumen de documentos y las necesidades de tu negocio.</span></p>
+                <p class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></svg><span><strong>Pruébalo 15 días gratis.</strong> Te abrimos una prueba con tu empresa y tu firma electrónica, en el ambiente de pruebas del SRI. <a href="https://wa.me/+593999823447?text=Hola, quiero la prueba gratis de facturación electrónica. Vengo de la página web." target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a> y también te ayudamos a elegir el plan según el volumen de documentos de tu negocio.</span></p>
             </div>
         </section>
 
@@ -403,14 +483,24 @@
                 </div>
                 <div class="preguntas">
                     <details><summary>¿Qué necesito para emitir comprobantes electrónicos en Ecuador? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Necesitas una firma electrónica vigente. La firma no está incluida en los planes de SysDevUp: si ya tienes una, puedes utilizarla; si necesitas obtenerla o renovarla, te orientamos durante el proceso.</p></details>
-                    <details><summary>¿Qué tipos de comprobantes puedo emitir? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Puedes emitir facturas, notas de crédito, notas de débito, retenciones y guías de remisión.</p></details>
+                    <details><summary>¿Puedo probarlo antes de contratar? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Te abrimos una prueba gratis de 15 días con tu empresa y tu firma electrónica, en el ambiente de pruebas del SRI: emites los cinco tipos de comprobante, el SRI los autoriza igual que en producción —aunque sin validez tributaria— y el PDF llega al correo. Incluye hasta 25 documentos y 25 productos. Si decides contratar, sigues con la misma cuenta, con tus clientes y productos ya cargados, y pasas a producción. Si todavía no tienes firma, te mostramos el sistema en una videollamada.</p></details>
+                    <details><summary>¿Qué tipos de comprobantes puedo emitir? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Puedes emitir facturas, notas de crédito, notas de débito, retenciones y guías de remisión. Los cinco vienen en todos los planes y cuentan para el mismo cupo anual de documentos.</p></details>
+                    <details><summary>¿SysDevUp cumple con lo que exige el SRI? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí, y lo mantenemos al día sin que tengas que hacer nada. Cada comprobante lleva en su información adicional el RUC de SysDevUp como proveedor del sistema, como pide la Resolución NAC-DGERCGC26-00000027, en los cinco tipos. Si eres RIMPE, eliges tu leyenda —emprendedor o negocio popular— en la configuración de facturación, y sale en el XML y en el PDF. Y el sistema aplica las reglas de consumidor final: el tope de $50 por factura y que, una vez autorizadas, esas facturas no se anulan.</p></details>
+                    <details><summary>¿Qué pasa si el SRI no responde? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Tu comprobante queda guardado y el sistema lo vuelve a enviar solo, varias veces y cada vez con más espacio entre intentos, hasta que el SRI lo reciba. Además, un vigilante revisa cada minuto que nada se quede detenido y, si algo no avanza, te avisa por correo. En los cortes habituales del SRI no tienes que hacer nada más.</p></details>
+                    <details><summary>¿Cómo sé si el SRI autorizó mi comprobante? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Cada comprobante muestra su estado: en proceso, autorizado, devuelto o no autorizado. En el monitor de comprobantes los ves todos juntos, con la respuesta del SRI y su motivo cuando lo devuelve, y desde ahí puedes reintentar el envío o reenviarle el correo a tu cliente.</p></details>
+                    <details><summary>¿Cómo hago una nota de crédito o anulo un comprobante? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>La nota de crédito se hace desde la factura original: el sistema trae el mismo cliente y sus productos con la tarifa de IVA con que se facturaron, y no te deja devolver más de lo que queda de esa factura. Para anular, el sistema registra la anulación y te indica qué falta hacer en el SRI según el tipo de comprobante, porque el SRI solo acepta anulaciones desde su portal en línea.</p></details>
                     <details><summary>¿Cuánto cuesta la facturación electrónica? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Hay cuatro planes anuales, y todos traen el control de inventario incluido: Inicio a $19 por año hasta 100 documentos y 25 productos, Negocio a $59 hasta 500 documentos y 250 productos, Profesional a $149 hasta 1.500 documentos y 1.500 productos, y Empresa a $399 hasta 4.000 documentos y 4.500 productos. Todos los planes tienen una vigencia de 12 meses.</p></details>
+                    <details><summary>¿Los precios incluyen IVA? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Son precios finales: no se les suma IVA.</p></details>
+                    <details><summary>¿Qué pasa si llego al límite de documentos de mi plan? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Al llegar al tope, el sistema no te deja emitir más hasta que ampliemos tu cupo. Si ves que te vas a quedar corto, escríbenos y lo conversamos según cuántos documentos te falten para terminar tu año.</p></details>
                     <details><summary>¿El control de inventario está incluido? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Cada plan trae el control de inventarios con su cupo de productos activos: 25, 250, 1.500 o 4.500. Llevas existencias por bodega, kardex, compras con costo promedio e informes, y si lo activas, cada factura autorizada por el SRI descuenta el stock sola. Si necesitas más de 4.500 productos, lo conversamos.</p></details>
-                    <details><summary>¿La firma electrónica está incluida en el precio del plan? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. La firma electrónica es un requisito aparte que debes tramitar por tu cuenta, y no está incluida en ninguno de los planes.</p></details>
+                    <details><summary>¿Puedo usar mi propia firma electrónica? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí, es la que se usa: la firma no está incluida en los planes. Subes tú mismo el archivo .p12 con su contraseña en la pantalla de certificado de firma, y el sistema lee su fecha de caducidad: te avisa por correo 30 días antes de que venza y otra vez cuando faltan 7. Si prefieres, te ayudamos a configurarla.</p></details>
                     <details><summary>¿Puedo facturar desde el celular? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. El sistema funciona desde computadora, tablet o celular, sin necesidad de instalar programas.</p></details>
                     <details><summary>¿Pueden emitirse solas mis facturas mensuales? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Si les cobras lo mismo a los mismos clientes cada mes, el sistema puede emitir esas facturas automáticamente el día que elijas. Se agrega sobre tu plan actual —no es un servicio aparte— y las facturas descuentan de tu mismo cupo. Escríbenos y lo coordinamos según cuántos clientes fijos tengas.</p></details>
                     <details><summary>¿En qué formatos obtengo los comprobantes? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Cada comprobante se genera en PDF y XML, con su clave de acceso, y puede enviarse automáticamente al correo de tu cliente.</p></details>
                     <details><summary>¿Puedo registrar las facturas de mis proveedores? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Subes sus XML o el reporte del SRI en línea, el sistema comprueba cada factura con el SRI y la conviertes en compra de inventario o en gasto. Viene incluido en todos los planes: registrar cuenta hasta el mismo número de documentos del plan.</p></details>
+                    <details><summary>¿Qué pasa con mis comprobantes si dejo el servicio? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Mientras tu plan esté vigente puedes descargar cada comprobante en XML y PDF. Si no renuevas, tu información se conserva 90 días más: en ese plazo puedes volver o pedirnos una copia. Igual te recomendamos guardar tus comprobantes por tu cuenta, porque conservarlos es una obligación tributaria del contribuyente.</p></details>
+                    <details><summary>¿Respaldan mi información? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Sí. Cada noche se hace una copia de seguridad cifrada de tu información y de tus comprobantes autorizados, y se guarda fuera del servidor donde trabaja el sistema.</p></details>
+                    <details><summary>¿Cómo me atienden si tengo una duda o un problema? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Por WhatsApp, y te responde una persona. Te acompañamos también después de empezar: con la firma, con la configuración y con las dudas del día a día. En los planes Negocio y superiores tu consulta tiene prioridad.</p></details>
                 </div>
             </div>
         </section>
